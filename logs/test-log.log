@@ -41,3 +41,18 @@ Saygılarımla.
 2026-04-18 01:29:53 [main] INFO  stepdefinitions.exampleSteps - ✅ Kullanıcı kayıt oldu
 2026-04-18 01:29:53 [main] INFO  utils.LoggerHelper - Test başarıyla tamamlandı: Yeni kullanici kayit islemi
 2026-04-18 01:29:53 [main] INFO  utils.LoggerHelper - Driver kapatıldı.
+2026-04-18 01:54:02 [main] INFO  runners.TestRunner - Cucumber Test Runner başlatılıyor...
+2026-04-18 01:54:02 [main] INFO  utils.LoggerHelper - Test Başlıyor: Kullanici login islemlerini yapar
+2026-04-18 01:54:04 [main] INFO  utils.LoggerHelper - Driver başlatıldı
+2026-04-18 01:54:08 [main] INFO  stepdefinitions.exampleSteps - 🌏 Kullanıcı login sayfasına gitti
+2026-04-18 01:54:08 [main] ERROR utils.LoggerHelper - Test başarısız oldu: Kullanici login islemlerini yapar
+2026-04-18 01:54:08 [main] INFO  utils.LoggerHelper - Driver kapatıldı.
+2026-04-18 01:54:13 [main] INFO  runners.TestRunner - Cucumber Test Runner başlatılıyor...
+2026-04-18 01:54:14 [main] INFO  utils.LoggerHelper - Test Başlıyor: Kullanici login islemlerini yapar
+2026-04-18 01:54:15 [main] INFO  utils.LoggerHelper - Driver başlatıldı
+2026-04-18 01:54:17 [main] INFO  stepdefinitions.exampleSteps - 🌏 Kullanıcı login sayfasına gitti
+2026-04-18 01:54:17 [main] INFO  stepdefinitions.exampleSteps - 🔓 Email alanına: ahmet.student@instuLearn.com değeri başarıyla girildi
+2026-04-18 01:54:17 [main] INFO  stepdefinitions.exampleSteps - 🔓 Password alanına: InstuLearn.2026! değeri başarıyla girildi
+2026-04-18 01:54:19 [main] INFO  stepdefinitions.exampleSteps - ✅ Kullanıcı submit butonuna tıkladı
+2026-04-18 01:54:19 [main] INFO  utils.LoggerHelper - Test başarıyla tamamlandı: Kullanici login islemlerini yapar
+2026-04-18 01:54:19 [main] INFO  utils.LoggerHelper - Driver kapatıldı.

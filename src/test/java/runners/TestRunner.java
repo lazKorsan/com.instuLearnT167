@@ -17,9 +17,17 @@ import org.junit.runner.RunWith;
 				"json:target/cucumber-reports/cucumber.json",
 				"io.qameta.allure.cucumber7jvm.AllureCucumber7Jvm"
 		},
-		monochrome = true,
-		tags = "@LoginIslemleri",
-		publish=true
+		monochrome = true, // orjinal konum 20nci satir
+
+
+
+
+		tags = "@loginProccess", // orjinal konum 25. satir
+
+
+
+
+		publish=true  // orjinal konum 30. satir
 )
 public class TestRunner {
 	private static final Logger logger = LogManager.getLogger(TestRunner.class);
