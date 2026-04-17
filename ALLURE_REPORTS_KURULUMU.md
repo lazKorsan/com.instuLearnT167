@@ -1,90 +1,118 @@
-Allure Raporları Kurulum ve Kullanım Rehberi
-Allure, test otomasyonu sonuçlarınızı zengin, interaktif ve anlaşılır web raporlarına dönüştüren esnek bir raporlama aracıdır. Bu rehber, Maven tabanlı bir Java projesine Allure'un nasıl entegre edileceğini adım adım açıklamaktadır.
+# 📊 Allure Reports: Kurulum ve Kullanım Rehberi
 
-1. Adım: Maven Bağımlılıklarını Ekleme (pom.xml)
-Allure'un testleriniz sırasında veri toplayabilmesi için projenizin pom.xml dosyasına gerekli bağımlılıkları eklemeniz gerekir.
+Allure, test otomasyonu sonuçlarınızı zengin, interaktif ve anlaşılır web raporlarına dönüştüren esnek, çok dilli bir raporlama aracıdır. Bu rehber, Maven tabanlı projenize Allure entegrasyonunu adım adım açıklar.
 
-Allure Adaptörü Ekleme: Kullandığınız test çatısına (TestNG, JUnit 5 vb.) uygun Allure adaptörünü ekleyin.
+---
 
-TestNG için:
+## 🚀 1. Maven Bağımlılıklarını Ekleme (`pom.xml`)
 
-<dependency>
-    <groupId>io.qameta.allure</groupId>
-    <artifactId>allure-testng</artifactId>
-    <version>2.21.0</version> <!-- En güncel sürümü kontrol edin -->
-</dependency>
-JUnit 5 için:
+Allure'un testlerinizden veri toplayabilmesi için `pom.xml` dosyanıza gerekli kütüphaneleri eklemelisiniz.
 
+### 📦 Adaptör Seçimi
+Kullandığınız test framework'üne uygun olan bağımlılığı seçin:
+
+**JUnit 5 için:**
+```xml
 <dependency>
     <groupId>io.qameta.allure</groupId>
     <artifactId>allure-junit5</artifactId>
-    <version>2.21.0</version> <!-- En güncel sürümü kontrol edin -->
+    <version>2.24.0</version>
 </dependency>
-AspectJ Weaver Eklenmesi (ÇOK ÖNEMLİ): Allure'un @Step gibi anotasyonları doğru bir şekilde işleyebilmesi için aspectjweaver gereklidir. Bu, Maven Surefire Plugin'in bir parçası olarak yapılandırılır. pom.xml dosyanızın <build> bölümüne ekleyin:
+```
 
-<build>
-    <plugins>
-        <plugin>
-            <groupId>org.apache.maven.plugins</groupId>
-            <artifactId>maven-surefire-plugin</artifactId>
-            <version>3.0.0-M5</version>
-            <configuration>
-                <argLine>
-                    -javaagent:"${settings.localRepository}/org/aspectj/aspectjweaver/1.9.7/aspectjweaver-1.9.7.jar"
-                </argLine>
-            </configuration>
-            <dependencies>
-                <dependency>
-                    <groupId>org.aspectj</groupId>
-                    <artifactId>aspectjweaver</artifactId>
-                    <version>1.9.7</version>
-                </dependency>
-            </dependencies>
-        </plugin>
-    </plugins>
-</build>
-Not: aspectjweaver versiyonunu Maven Central'dan kontrol edebilirsiniz.
+**Cucumber 7 için:**
+```xml
+<dependency>
+    <groupId>io.qameta.allure</groupId>
+    <artifactId>allure-cucumber7-jvm</artifactId>
+    <version>2.24.0</version>
+</dependency>
+```
 
-2. Adım: Allure Komut Satırı Aracını Kurma
-Testler çalıştıktan sonra oluşan JSON dosyalarından HTML raporunu oluşturmak için Allure'un komut satırı aracına (Commandline Tool) ihtiyacınız vardır.
+> [!IMPORTANT]
+> **AspectJ Weaver Yapılandırması:**
+> Allure'un `@Step` gibi anotasyonları işleyebilmesi için `maven-surefire-plugin` içinde AspectJ Weaver tanımlanmalıdır.
 
-Windows için (Scoop ile):
+```xml
+<plugin>
+    <groupId>org.apache.maven.plugins</groupId>
+    <artifactId>maven-surefire-plugin</artifactId>
+    <version>3.1.2</version>
+    <configuration>
+        <argLine>
+            -javaagent:"${settings.localRepository}/org/aspectj/aspectjweaver/1.9.7/aspectjweaver-1.9.7.jar"
+        </argLine>
+    </configuration>
+</plugin>
+```
 
-scoop install allure
-macOS için (Homebrew ile):
+---
 
-brew install allure
-Manuel Kurulum (Tüm İşletim Sistemleri):
+## 🛠️ 2. Allure Komut Satırı Aracını (CLI) Kurma
 
-Maven Central adresinden en son allure-commandline.zip dosyasını indirin.
-Zip dosyasını istediğiniz bir klasöre (örn: C:/allure) çıkarın.
-Çıkardığınız klasörün içindeki bin dizinini (C:/allure/bin) sisteminizin PATH ortam değişkenine ekleyin.
-Kurulum Doğrulama: Terminali yeniden başlatıp aşağıdaki komutu çalıştırın. Eğer versiyon numarası görüyorsanız, kurulum başarılıdır.
+JSON verilerini görsel raporlara dönüştürmek için Allure CLI gereklidir.
 
-allure --version
-3. Adım: Rapor Oluşturma ve Görüntüleme
-Testleri Çalıştırın: Projenizin ana dizininde terminali açın ve standart Maven test komutunu çalıştırın.
+| İşletim Sistemi | Komut |
+| :--- | :--- |
+| **Windows (Scoop)** | `scoop install allure` |
+| **macOS (Homebrew)** | `brew install allure` |
+| **Linux** | [GitHub Releases](https://github.com/allure-framework/allure2/releases) üzerinden manuel kurulum. |
 
+> [!TIP]
+> Kurulum sonrası terminalde `allure --version` komutuyla kurulumu doğrulayın.
+
+---
+
+## 📈 3. Rapor Oluşturma ve Görüntüleme
+
+### 🏁 Testleri Çalıştırma
+Öncelikle testleri koşturarak sonuç verilerini (`allure-results`) üretin:
+```bash
 mvn clean test
-Bu komut, testler tamamlandığında target/allure-results adında bir klasör oluşturacak ve içine test sonuçlarını içeren JSON dosyaları üretecektir.
+```
 
-Raporu Oluşturun ve Görüntüleyin: Testler bittikten sonra, raporu oluşturmak için aşağıdaki komutu kullanın.
-
+### 🖼️ Raporu Görüntüleme
+Verileri anlık olarak bir web sunucusu üzerinden açmak için:
+```bash
 allure serve target/allure-results
-Bu komut, allure-results klasöründeki verileri okur, bir web raporu oluşturur ve bu raporu otomatik olarak tarayıcınızda geçici bir web sunucusu üzerinden açar. Terminali kapattığınızda rapor da kapanır.
+```
 
-Kalıcı Rapor Oluşturma (CI/CD için): Raporu paylaşmak veya bir sunucuda barındırmak isterseniz, aşağıdaki komutu kullanın:
-
+### 📂 Kalıcı Rapor Üretme (CI/CD)
+Paylaşılabilir statik bir HTML klasörü oluşturmak için:
+```bash
 allure generate target/allure-results -o target/allure-report --clean
-Bu komut, target/allure-report adında statik bir HTML raporu oluşturur. Bu klasörü zipleyip başkalarına gönderebilir veya bir web sunucusuna yükleyebilirsiniz.
+```
 
-4. Adım (İsteğe Bağlı): Raporları Zenginleştirme
-Allure'un gücü, kodunuza ekleyeceğiniz basit anotasyonlarla raporlarınızı çok daha anlamlı hale getirmesinden gelir.
+---
 
-@Description("Kullanıcı adı ve şifre doğru girildiğinde başarılı bir şekilde giriş yapılmalıdır.")
-@Epic("Kimlik Doğrulama")
-@Feature("Login Fonksiyonu")
-@Story("Başarılı Giriş Senaryosu")
-@Step("Login butonuna tıkla")
-@Attachment(value = "Ekran Görüntüsü", type = "image/png")
-Bu anotasyonları test metodlarınıza ve yardımcı fonksiyonlarınıza ekleyerek raporlarınızda daha detaylı adımlar, açıklamalar ve hiyerarşiler oluşturabilirsiniz.
+## ✨ 4. Raporları Zenginleştirme (Anotasyonlar)
+
+Kodunuzun içine ekleyeceğiniz bu anotasyonlar, raporun okunabilirliğini %100 artırır:
+
+| Anotasyon | Açıklama |
+| :--- | :--- |
+| `@Epic` / `@Feature` | Testleri modüllere göre gruplar. |
+| `@Story` | Kullanıcı hikayesini belirtir. |
+| `@Description` | Testin amacını detaylı açıklar. |
+| `@Step` | Rapor içerisinde adım adım izleme sağlar. |
+| `@Attachment` | Hata anında ekran görüntüsü eklemek için kullanılır. |
+
+**Örnek Kullanım:**
+```java
+@Test
+@Feature("Giriş Paneli")
+@Story("Geçerli bilgilerle login")
+@Description("Kullanıcının sisteme sorunsuz giriş yaptığının doğrulanması")
+public void testLogin() {
+    // Test adımları...
+}
+```
+
+---
+
+## 💡 İpuçları
+- `allure-results` klasörünü `.gitignore` dosyanıza eklemeyi unutmayın.
+- Jenkins veya GitHub Actions kullanıyorsanız, Allure eklentilerini kurarak her build sonrası otomatik rapor üretebilirsiniz.
+
+---
+⭐ *Daha fazla bilgi için [Allure Documentation](https://docs.qameta.io/allure/) sayfasını ziyaret edebilirsiniz.*
