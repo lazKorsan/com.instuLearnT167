@@ -27,7 +27,8 @@ import org.junit.runner.RunWith;
 
 
 
-		publish=true  // orjinal konum 30. satir
+		publish=true,  // orjinal konum 30. satir
+        dryRun = false
 )
 public class TestRunner {
 	private static final Logger logger = LogManager.getLogger(TestRunner.class);
