@@ -22,7 +22,7 @@ import org.junit.runner.RunWith;
 
 
 
-		tags = "@loginProccess", // orjinal konum 25. satir
+		tags = "@US_25", // orjinal konum 25. satir
 
 
 
