@@ -42,4 +42,4 @@ build/
 .DS_Store
 
 ### runners ###
-src/test/java/runners/TestRunner.java
+src/test/java/runners/
