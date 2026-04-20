@@ -1,0 +1,6 @@
+2026-04-20 13:16:17 [main] INFO  runners.TestRunner - Cucumber Test Runner başlatılıyor...
+2026-04-20 13:16:17 [main] INFO  utils.LoggerHelper - Test Başlıyor: Kullanici method cagrisi ile login olur
+2026-04-20 13:16:19 [main] INFO  utils.LoggerHelper - Driver başlatıldı
+2026-04-20 13:17:03 [main] INFO  stepdefinitions.exampleSteps - 🌏 Kullanıcı login sayfasına gitti
+2026-04-20 13:17:03 [main] ERROR utils.LoggerHelper - Test başarısız oldu: Kullanici method cagrisi ile login olur
+2026-04-20 13:17:04 [main] INFO  utils.LoggerHelper - Driver kapatıldı.
