@@ -22,7 +22,7 @@ import org.junit.runner.RunWith;
 
 
 
-		tags = "@loginProccess", // orjinal konum 25. satir
+		tags = "@loginWithMethod", // orjinal konum 25. satir
 
 
 
