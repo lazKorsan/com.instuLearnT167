@@ -43,3 +43,5 @@ build/
 
 ### runners ###
 src/test/java/runners/
+
+logs/
