@@ -1,0 +1,16 @@
+2026-04-20 13:39:17 [main] INFO  runners.TestRunner - Cucumber Test Runner başlatılıyor...
+2026-04-20 13:39:17 [main] INFO  utils.LoggerHelper - Test Başlıyor: Kullanici method cagrisi ile login olur
+2026-04-20 13:39:18 [main] INFO  utils.LoggerHelper - Driver başlatıldı
+2026-04-20 13:39:31 [main] INFO  runners.TestRunner - Cucumber Test Runner başlatılıyor...
+2026-04-20 13:39:31 [main] INFO  utils.LoggerHelper - Test Başlıyor: Kullanici method cagrisi ile login olur
+2026-04-20 13:39:33 [main] INFO  utils.LoggerHelper - Driver başlatıldı
+2026-04-20 13:39:39 [main] INFO  stepdefinitions.exampleSteps - 🌏 Kullanıcı login sayfasına gitti
+2026-04-20 13:39:39 [main] ERROR utils.LoggerHelper - Test başarısız oldu: Kullanici method cagrisi ile login olur
+2026-04-20 13:39:39 [main] INFO  utils.LoggerHelper - Driver kapatıldı.
+2026-04-20 13:39:44 [main] INFO  runners.TestRunner - Cucumber Test Runner başlatılıyor...
+2026-04-20 13:39:44 [main] INFO  utils.LoggerHelper - Test Başlıyor: Kullanici method cagrisi ile login olur
+2026-04-20 13:39:45 [main] INFO  utils.LoggerHelper - Driver başlatıldı
+2026-04-20 13:39:47 [main] INFO  stepdefinitions.exampleSteps - 🌏 Kullanıcı login sayfasına gitti
+2026-04-20 13:39:54 [main] INFO  stepdefinitions.exampleSteps - ✅ Kullanıcı loginMethod çağrısı ile login oldu
+2026-04-20 13:39:54 [main] INFO  utils.LoggerHelper - Test başarıyla tamamlandı: Kullanici method cagrisi ile login olur
+2026-04-20 13:39:55 [main] INFO  utils.LoggerHelper - Driver kapatıldı.
