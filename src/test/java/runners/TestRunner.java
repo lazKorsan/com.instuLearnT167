@@ -22,7 +22,7 @@ import org.junit.runner.RunWith;
 
 
 
-		tags = "@scanarioOutline", // orjinal konum 25. satir
+		tags = "@studentRegister", // orjinal konum 25. satir scanarioOutline
 
 
 
