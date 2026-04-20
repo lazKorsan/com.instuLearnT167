@@ -22,7 +22,7 @@ import org.junit.runner.RunWith;
 
 
 
-		tags = "@loginProccess", // orjinal konum 25. satir
+		tags = "@lylDynamicRegister", // orjinal konum 25. satir
 
 
 
