@@ -263,4 +263,30 @@ public class US039BecomeInstructorSteps {
     }
 
 
+    @When("Kullanici {string} gunu icin {string} saatinde {string} tipinde toplanti ekler")
+    public void kullaniciGunuIcinSaatindeTipindeToplantiEkler(String day, String time, String meetingType) {
+
+        // JavaScript ile doğrudan AJAX/Axios POST isteği gönder
+        String jsScript =
+                "var data = {" +
+                        "    day: '" + day + "'," +
+                        "    time: '" + time + "'," +
+                        "    meeting_type: '" + meetingType + "'," +
+                        "    description: 'Cucumber test ile eklenen toplantı'" +
+                        "};" +
+                        "$.post('/panel/meetings/saveTime', data, function(result) {" +
+                        "    console.log('Toplantı eklendi:', result);" +
+                        "});";
+
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        js.executeScript(jsScript);
+
+        logger.info("✅ " + day + " günü " + time + " saatinde toplantı eklendi");
+
+        // İsteğin işlenmesi için bekle
+        ReusableMethods.bekle(3);
+
+
+
+    }
 }

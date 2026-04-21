@@ -55,3 +55,7 @@
       * Kullanici sendRequestButton a tiklar
       * Kullanici acilan sayfada arama kutusuna "met" kelimesini aratir
       * Kullanici arama sonucu cikan yazinin "met" oldugunu dogrular
+
+
+    Scenario: Toplantı reserve meetings saatleri girmek için
+      * Kullanici "Monday" gunu icin "AM" saatinde "online" tipinde toplanti ekler

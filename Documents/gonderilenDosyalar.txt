@@ -1,0 +1,11 @@
+
+
+C:\Users\user\IdeaProjects\com.instuLearnT167\src\main\java\pages\BecomeInstructorPage.java
+
+C:\Users\user\IdeaProjects\com.instuLearnT167\src\test\java\features\US039BecomeInstructor.feature
+
+C:\Users\user\IdeaProjects\com.instuLearnT167\src\test\java\stepdefinitions\US039BecomeInstructorSteps.java
+
+git add "C:\Users\user\IdeaProjects\com.instuLearnT167\src\main\java\pages\BecomeInstructorPage.java"
+git add "C:\Users\user\IdeaProjects\com.instuLearnT167\src\test\java\features\US039BecomeInstructor.feature"
+git add "C:\Users\user\IdeaProjects\com.instuLearnT167\src\test\java\stepdefinitions\US039BecomeInstructorSteps.java"
