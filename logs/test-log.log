@@ -235,3 +235,34 @@ Saygılarımla.
 2026-04-20 23:30:47 [main] INFO  stepdefinitions.US035_StepDefinitions - Giris sonrasi URL: https://qa.instulearn.com/search?search=
 2026-04-20 23:30:47 [main] INFO  utils.LoggerHelper - Test başarıyla tamamlandı: Kayitli kullanici gecerli bilgilerle basariyla giris yapar
 2026-04-20 23:30:47 [main] INFO  utils.LoggerHelper - Driver kapatıldı.
+2026-04-20 23:43:30 [main] INFO  runners.TestRunner - Cucumber Test Runner başlatılıyor...
+2026-04-20 23:43:30 [main] INFO  utils.LoggerHelper - Test Başlıyor: Kayitli kullanici gecerli bilgilerle basariyla giris yapar
+2026-04-20 23:43:32 [main] INFO  utils.LoggerHelper - Driver başlatıldı
+2026-04-20 23:43:40 [main] INFO  stepdefinitions.US035_StepDefinitions - Anasayfaya gidildi: https://qa.instulearn.com
+2026-04-20 23:43:40 [main] INFO  pages.US035 - Login linkine tıklanıyor...
+2026-04-20 23:43:42 [main] INFO  pages.US035 - Email giriliyor: tural.seyidov.student@instulearn.com
+2026-04-20 23:43:42 [main] INFO  pages.US035 - Password giriliyor...
+2026-04-20 23:43:42 [main] INFO  pages.US035 - Login butonuna tıklanıyor...
+2026-04-20 23:43:44 [main] INFO  stepdefinitions.US035_StepDefinitions - Giris sonrasi URL: https://qa.instulearn.com/search?search=
+2026-04-20 23:43:44 [main] INFO  utils.LoggerHelper - Test başarıyla tamamlandı: Kayitli kullanici gecerli bilgilerle basariyla giris yapar
+2026-04-20 23:43:45 [main] INFO  utils.LoggerHelper - Driver kapatıldı.
+2026-04-20 23:47:52 [main] INFO  utils.LoggerHelper - Test Başlıyor: Kayitli kullanici gecerli bilgilerle basariyla giris yapar
+2026-04-20 23:47:54 [main] INFO  utils.LoggerHelper - Driver başlatıldı
+2026-04-20 23:47:59 [main] INFO  stepdefinitions.US035_StepDefinitions - Anasayfaya gidildi: https://qa.instulearn.com
+2026-04-20 23:47:59 [main] INFO  pages.US035 - Login linkine tıklanıyor...
+2026-04-20 23:48:02 [main] INFO  pages.US035 - Email giriliyor: tural.seyidov.student@instulearn.com
+2026-04-20 23:48:02 [main] INFO  pages.US035 - Password giriliyor...
+2026-04-20 23:48:03 [main] INFO  pages.US035 - Login butonuna tıklanıyor...
+2026-04-20 23:48:04 [main] INFO  stepdefinitions.US035_StepDefinitions - Giris sonrasi URL: https://qa.instulearn.com/search?search=
+2026-04-20 23:48:04 [main] INFO  utils.LoggerHelper - Test başarıyla tamamlandı: Kayitli kullanici gecerli bilgilerle basariyla giris yapar
+2026-04-20 23:48:05 [main] INFO  utils.LoggerHelper - Driver kapatıldı.
+2026-04-20 23:54:21 [main] INFO  utils.LoggerHelper - Test Başlıyor: Kayitli kullanici gecerli bilgilerle basariyla giris yapar
+2026-04-20 23:54:24 [main] INFO  utils.LoggerHelper - Driver başlatıldı
+2026-04-20 23:54:30 [main] INFO  stepdefinitions.US035_StepDefinitions - Anasayfaya gidildi: https://qa.instulearn.com
+2026-04-20 23:54:30 [main] INFO  pages.US035 - Login linkine tıklanıyor...
+2026-04-20 23:54:33 [main] INFO  pages.US035 - Email giriliyor: tural.seyidov.student@instulearn.com
+2026-04-20 23:54:34 [main] INFO  pages.US035 - Password giriliyor...
+2026-04-20 23:54:35 [main] INFO  pages.US035 - Login butonuna tıklanıyor...
+2026-04-20 23:54:36 [main] INFO  stepdefinitions.US035_StepDefinitions - Giris sonrasi URL: https://qa.instulearn.com/search?search=
+2026-04-20 23:54:36 [main] INFO  utils.LoggerHelper - Test başarıyla tamamlandı: Kayitli kullanici gecerli bilgilerle basariyla giris yapar
+2026-04-20 23:54:36 [main] INFO  utils.LoggerHelper - Driver kapatıldı.

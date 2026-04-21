@@ -11,7 +11,7 @@ Feature: US035 - Kullanıcı giriş işlemi
     And Kullanici Login butonuna tiklar
     Then Kullanici basariyla giris yapmis olmali
 
-  @US035TC02
+  @US035TC02Negative
   Scenario: Kayitsiz kullanici gecersiz bilgilerle giris yapamaz
     When Kullanici Login linkine tiklar
     And Kullanici email alanina "invalid@test.com" girer
