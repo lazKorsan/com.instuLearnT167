@@ -13,12 +13,18 @@
       @studentRegister
     Scenario: Kullanici student olarak sayfaya kayt olur
       * Kullanici registerPage sayfasina gider
+      * Kullanici "ahmet" ve "InstuLearn.2026!" bilgileri ile student kayit yapar
       * Kullanici "met" ve "InstuLearn.2026!" bilgileri ile student kayit yapar
 
       # Stdudent kaydı yapıldıgında açılan sayfada "Become Instructor" butonu çıkıyor
       * Kullanici 10 saniye bekler
 
     @preCondtionLogin
+    Scenario:
+      * Kullanici login page sayfasina gider
+      * Kullanici mail adresi "ahmet.student@InstuLearn.com" ve tanimli password ile  "InstuLearn.2026!" giris yapar
+      * Kullanici becomeInstructorButtona tiklar
+      * Kullanici 10 saniye bekler
     Scenario: Static Method
     Kayıtlı kullanici role degistrime. Bu test methodu tek kullanımlık. İkinci defa calismaz
       Degerlerin degistirilemsi gerekir

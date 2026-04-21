@@ -4,6 +4,8 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.When;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.*;
 import org.openqa.selenium.support.ui.Select;
 import pages.BecomeInstructorPage;
@@ -20,6 +22,7 @@ public class US039BecomeInstructorSteps {
     BecomeInstructorPage becomeInstructorPage = new BecomeInstructorPage(driver);
 
 
+
     @Given("Kullanici registerPage sayfasina gider")
     public void kullanici_register_page_sayfasina_gider() {
 
@@ -31,6 +34,13 @@ public class US039BecomeInstructorSteps {
         String actualUrl = driver.getCurrentUrl();
 
         if (actualUrl.equals(expectedUrl)) {
+            logger.info("Beklenen url: "+expectedUrl+"ile"+actualUrl+"aynı degerde");
+
+        }else{
+            logger.error("Beklenen url: "+expectedUrl+"ile"+actualUrl+"farklı degerde");
+        }
+
+    }
             logger.info("Beklenen url: " + expectedUrl + "ile" + actualUrl + "aynı degerde");
 
         } else {
@@ -43,6 +53,7 @@ public class US039BecomeInstructorSteps {
     public void kullanici_ve_bilgileri_ile_student_kayit_yapar(String name, String password) {
 
         ClickUtils.clickByXpath(driver, "//*[@class=\"font-12 cursor-pointer px-15 py-10\"]");
+        String dynamicStudentMail = name+System.currentTimeMillis()+"@gmail.com";
         String dynamicStudentMail = name + System.currentTimeMillis() + "@gmail.com";
 
         ReusableMethods.bekle(2);
@@ -74,6 +85,14 @@ public class US039BecomeInstructorSteps {
         ClickUtils.clickByXpath(driver, "//button[@class=\"btn btn-primary btn-block mt-20\"]");
 
 
+
+
+
+
+
+
+
+    }
     }
 
     @Given("Kullanici {int} saniye bekler")
