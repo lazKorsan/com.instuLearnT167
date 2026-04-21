@@ -354,3 +354,41 @@ Saygılarımla.
 2026-04-20 23:21:35 [main] INFO  stepdefinitions.US_25 - ✅ Kullanıcı Filter Results gorunduyunu test etdi
 2026-04-20 23:21:35 [main] INFO  utils.LoggerHelper - Test başarıyla tamamlandı: TC_02 Quiz linkleri aktif olmalidir
 2026-04-20 23:21:35 [main] INFO  utils.LoggerHelper - Driver kapatıldı.
+2026-04-20 23:54:08 [main] INFO  runners.TestRunner - Cucumber Test Runner başlatılıyor...
+2026-04-20 23:54:09 [main] INFO  utils.LoggerHelper - Test Başlıyor: TC_01 Quiz linkleri sidebar'da gorunmelidir
+2026-04-20 23:54:14 [main] INFO  utils.LoggerHelper - Driver başlatıldı
+2026-04-20 23:54:17 [main] INFO  stepdefinitions.US_25 - 🌏 Kullanıcı ana sayfaya gitti
+2026-04-20 23:54:18 [main] INFO  stepdefinitions.US_25 - 🌏 Kullanıcı login sayfasına gitti
+2026-04-20 23:54:19 [main] INFO  stepdefinitions.US_25 - 🔓 Email alanına: ilkin.abakarov.teacher@instulearn.com değeri başarıyla girildi
+2026-04-20 23:54:19 [main] INFO  stepdefinitions.US_25 - 🔓 Password alanına: Learn.123! değeri başarıyla girildi
+2026-04-20 23:54:21 [main] INFO  stepdefinitions.US_25 - ✅ Kullanıcı submit butonuna tıkladı
+2026-04-20 23:54:21 [main] INFO  stepdefinitions.US_25 - ✅ Kullanıcı Dashboard sayfasını gore bildi
+2026-04-20 23:54:21 [main] INFO  stepdefinitions.US_25 - ✅ Kullanıcı Quizzes butonuna tıkladı
+2026-04-20 23:54:21 [main] INFO  stepdefinitions.US_25 - ✅ New Quiz linki gorundu
+2026-04-20 23:54:21 [main] INFO  stepdefinitions.US_25 - ✅ List linki gorundu
+2026-04-20 23:54:21 [main] INFO  stepdefinitions.US_25 - ✅ Results linki gorundu
+2026-04-20 23:54:21 [main] INFO  stepdefinitions.US_25 - ✅ My results linki gorundu
+2026-04-20 23:54:21 [main] INFO  stepdefinitions.US_25 - ✅ Not Participated linki gorundu
+2026-04-20 23:54:21 [main] INFO  utils.LoggerHelper - Test başarıyla tamamlandı: TC_01 Quiz linkleri sidebar'da gorunmelidir
+2026-04-20 23:54:22 [main] INFO  utils.LoggerHelper - Driver kapatıldı.
+2026-04-20 23:54:22 [main] INFO  utils.LoggerHelper - Test Başlıyor: TC_02 Quiz linkleri aktif olmalidir
+2026-04-20 23:54:23 [main] INFO  utils.LoggerHelper - Driver başlatıldı
+2026-04-20 23:54:27 [main] INFO  stepdefinitions.US_25 - 🌏 Kullanıcı ana sayfaya gitti
+2026-04-20 23:54:27 [main] INFO  stepdefinitions.US_25 - 🌏 Kullanıcı login sayfasına gitti
+2026-04-20 23:54:28 [main] INFO  stepdefinitions.US_25 - 🔓 Email alanına: ilkin.abakarov.teacher@instulearn.com değeri başarıyla girildi
+2026-04-20 23:54:28 [main] INFO  stepdefinitions.US_25 - 🔓 Password alanına: Learn.123! değeri başarıyla girildi
+2026-04-20 23:54:29 [main] INFO  stepdefinitions.US_25 - ✅ Kullanıcı submit butonuna tıkladı
+2026-04-20 23:54:29 [main] INFO  stepdefinitions.US_25 - ✅ Kullanıcı Dashboard sayfası gorundu
+2026-04-20 23:54:30 [main] INFO  stepdefinitions.US_25 - ✅ Kullanıcı Quizzes butonuna tıkladı
+2026-04-20 23:54:31 [main] INFO  stepdefinitions.US_25 - ✅ Kullanıcı New Quiz linkinin tiklanildigini test etdi
+2026-04-20 23:54:31 [main] INFO  stepdefinitions.US_25 - ✅ Kullanıcı New Quiz sayfasinin gorunduyunu test etdi
+2026-04-20 23:54:32 [main] INFO  stepdefinitions.US_25 - ✅ Kullanıcı List linkinin tiklanildigini test etdi
+2026-04-20 23:54:32 [main] INFO  stepdefinitions.US_25 - ✅ Kullanıcı Comments statistics gorunduyunu test etdi
+2026-04-20 23:54:33 [main] INFO  stepdefinitions.US_25 - ✅ Kullanıcı Results linkinin tiklanildigini test etdi
+2026-04-20 23:54:33 [main] INFO  stepdefinitions.US_25 - ✅ Kullanıcı Student Results gorunduyunu test etdi
+2026-04-20 23:54:34 [main] INFO  stepdefinitions.US_25 - ✅ Kullanıcı My Results linkinin tiklanildigini test etdi
+2026-04-20 23:54:34 [main] INFO  stepdefinitions.US_25 - ✅ Kullanıcı My quizzes gorunduyunu test etdi
+2026-04-20 23:54:35 [main] INFO  stepdefinitions.US_25 - ✅ Kullanıcı Not Participated linkinin tiklanildigini test etdi
+2026-04-20 23:54:35 [main] INFO  stepdefinitions.US_25 - ✅ Kullanıcı Filter Results gorunduyunu test etdi
+2026-04-20 23:54:35 [main] INFO  utils.LoggerHelper - Test başarıyla tamamlandı: TC_02 Quiz linkleri aktif olmalidir
+2026-04-20 23:54:35 [main] INFO  utils.LoggerHelper - Driver kapatıldı.
