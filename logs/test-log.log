@@ -56,3 +56,27 @@ Saygılarımla.
 2026-04-18 01:54:19 [main] INFO  stepdefinitions.exampleSteps - ✅ Kullanıcı submit butonuna tıkladı
 2026-04-18 01:54:19 [main] INFO  utils.LoggerHelper - Test başarıyla tamamlandı: Kullanici login islemlerini yapar
 2026-04-18 01:54:19 [main] INFO  utils.LoggerHelper - Driver kapatıldı.
+2026-04-19 07:45:12 [main] INFO  runners.TestRunner - Cucumber Test Runner başlatılıyor...
+2026-04-19 07:45:13 [main] INFO  utils.LoggerHelper - Test Başlıyor: Kullanici login islemlerini yapar
+2026-04-19 07:45:17 [main] INFO  utils.LoggerHelper - Driver başlatıldı
+2026-04-19 07:45:21 [main] INFO  stepdefinitions.exampleSteps - 🌏 Kullanıcı login sayfasına gitti
+2026-04-19 07:45:36 [main] ERROR utils.LoggerHelper - Test başarısız oldu: Kullanici login islemlerini yapar
+2026-04-19 07:45:37 [main] INFO  utils.LoggerHelper - Driver kapatıldı.
+2026-04-21 00:02:16 [main] INFO  runners.TestRunner - Cucumber Test Runner başlatılıyor...
+2026-04-21 00:02:17 [main] INFO  utils.LoggerHelper - Test Başlıyor: Kullanici login islemlerini yapar
+2026-04-21 00:02:26 [main] INFO  utils.LoggerHelper - Driver başlatıldı
+2026-04-21 00:02:57 [main] INFO  runners.TestRunner - Cucumber Test Runner başlatılıyor...
+2026-04-21 00:02:58 [main] INFO  utils.LoggerHelper - Test Başlıyor: Kullanici login islemlerini yapar
+2026-04-21 00:03:03 [main] INFO  utils.LoggerHelper - Driver başlatıldı
+2026-04-21 00:03:07 [main] INFO  stepdefinitions.exampleSteps - 🌏 Kullanıcı login sayfasına gitti
+2026-04-21 00:03:09 [main] INFO  stepdefinitions.exampleSteps - 🔓 Email alanına: ahmet.student@instuLearn.com değeri başarıyla girildi
+2026-04-21 00:03:09 [main] INFO  stepdefinitions.exampleSteps - 🔓 Password alanına: InstuLearn.2026! değeri başarıyla girildi
+2026-04-21 00:03:12 [main] INFO  stepdefinitions.exampleSteps - ✅ Kullanıcı submit butonuna tıkladı
+2026-04-21 00:03:12 [main] INFO  utils.LoggerHelper - Test başarıyla tamamlandı: Kullanici login islemlerini yapar
+2026-04-21 00:03:12 [main] INFO  utils.LoggerHelper - Driver kapatıldı.
+2026-04-21 00:21:58 [main] INFO  runners.TestRunner - Cucumber Test Runner başlatılıyor...
+2026-04-21 00:21:59 [main] INFO  utils.LoggerHelper - Test Başlıyor: Kullanici login islemlerini yapar
+2026-04-21 00:22:00 [main] INFO  utils.LoggerHelper - Driver başlatıldı
+2026-04-21 00:23:41 [main] INFO  runners.TestRunner - Cucumber Test Runner başlatılıyor...
+2026-04-21 00:23:41 [main] INFO  utils.LoggerHelper - Test Başlıyor: Kullanici login islemlerini yapar
+2026-04-21 00:23:43 [main] INFO  utils.LoggerHelper - Driver başlatıldı
