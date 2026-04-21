@@ -21,8 +21,8 @@ import org.junit.runner.RunWith;
 
 
 
-
-		tags = "@loginProccess", // orjinal konum 25. satir
+		
+		tags = "@US035TC04", // orjinal konum 25. satir scanarioOutline
 
 
 
