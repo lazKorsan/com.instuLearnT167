@@ -16,7 +16,7 @@ public class LoginSteps {
 	@Given("the user is on the login page")
 	public void theUserIsOnTheLoginPage() {
 
-		driver.get(ConfigReader.getProperty("url"));
+		driver.get(ConfigReader.getProperty("login_url"));
 	}
 
 	@When("the user enters valid credentials")
@@ -28,7 +28,7 @@ public class LoginSteps {
 
 	@Then("the user should see the home page")
 	public void theUserShouldSeeTheHomePage() {
-		// Assertion logic
+		driver.get(ConfigReader.getProperty("url"));
 	}
 }
 
