@@ -101,25 +101,31 @@ public class US32 {
     }
 
 
+
+
     @Then("about linki altında ilgili içerik görüntülenir")
     public void about_linki_altında_ilgili_içerik_görüntülenir() {
-
+        Assertions.assertTrue(instructorProfilePage.aboutLink.isDisplayed());
     }
+
     @Then("courses linki altında ilgili içerik görüntülenir")
     public void courses_linki_altında_ilgili_içerik_görüntülenir() {
-
+        Assertions.assertTrue(instructorProfilePage.coursesLink.isDisplayed());
     }
+
     @Then("articles linki altında ilgili içerik görüntülenir")
     public void articles_linki_altında_ilgili_içerik_görüntülenir() {
-
+        Assertions.assertTrue(instructorProfilePage.articlesLink.isDisplayed());
     }
+
     @Then("badges linki altında ilgili içerik görüntülenir")
     public void badges_linki_altında_ilgili_içerik_görüntülenir() {
-
+        Assertions.assertTrue(instructorProfilePage.badgesLink.isDisplayed());
     }
+
     @Then("reserve a meeting linki altında ilgili içerik görüntülenir")
     public void reserve_a_meeting_linki_altında_ilgili_içerik_görüntülenir() {
-
+        Assertions.assertTrue(instructorProfilePage.reserveMeetingLink.isDisplayed());
     }
 
 

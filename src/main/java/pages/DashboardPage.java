@@ -62,5 +62,18 @@ public class DashboardPage extends BasePage {
         @FindBy(xpath = "(//h2[@class='section-title'])[1]")
         public WebElement FilterResults;
 
+        @FindBy(xpath = "//span[text()=\"Marketing\"]")
+        public  WebElement sidebarMarketingLink;
+
+        @FindBy(xpath = "//a[text()=\"Discounts\"]")
+        public WebElement discountsLinkByMarketing;
+
+        @FindBy(xpath = "//a[text()=\"Promotions\"]")
+        public WebElement promotionsLinkByMarketing;
+
+
+
+
+
 
     }

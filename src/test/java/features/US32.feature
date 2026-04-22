@@ -3,7 +3,7 @@
 Feature: Kayıtlı bir kullanıcı olarak profil bilgilerimi görüntüleyebilecegim bir alan olmasını istiyorum
 
   @TC-01
-  Scenario: Login olmuş instructor Dashboard sidebar'da My Profile linkine erişir
+  Scenario: Login olmuş instructor Dashboard sidebar'da My Profile linkine erişebilmeli
 
     Given kullanıcı login olur
     When dashboard sayfasının açıldığı doğrulanır
