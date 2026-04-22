@@ -1,64 +1,66 @@
 package pages;
 
+
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.PageFactory;
 
-public class DashboardPage extends BasePage{
+public class DashboardPage extends BasePage {
+
+    private static final Logger logger = LogManager.getLogger(DashboardPage.class);
 
     public DashboardPage(WebDriver driver) {
         super(driver);
         org.openqa.selenium.support.PageFactory.initElements(driver, this);
     }
 
-    @FindBy(xpath = "(//*[.='Dashboard'])[2]")
-    public WebElement Dashboard;
 
-    @FindBy(xpath = "//span[.='Quizzes']")
-    public WebElement QuizzesButtonu;
+        @FindBy(xpath = "//h1[@class=\"section-title\"]")
+        public WebElement dashboardTitle;
 
-    @FindBy(xpath = "//*[.='New quiz']")
-    public WebElement NewquizButtonu;
+        @FindBy(xpath = "(//div[@class=\"simplebar-mask\"])[10]")
+        public WebElement sidebar;
 
-    @FindBy(xpath = "(//*[.='List'])[1]")
-    public WebElement ListButtonu;
+        @FindBy(xpath = "//*[text()=\"My Profile\"]")
+        public WebElement sidebarMyProfileLink;
 
-    @FindBy(xpath = "(//*[.='Results'])[1]")
-    public WebElement ResultButtonu;
+        @FindBy(xpath = "(//*[.='Dashboard'])[2]")
+        public WebElement Dashboard;
 
-    @FindBy(xpath = "(//*[.='My results'])[1]")
-    public WebElement MyresultsButtonu;
+        @FindBy(xpath = "//span[.='Quizzes']")
+        public WebElement QuizzesButtonu;
 
-    @FindBy(xpath = "(//*[.='Not Participated'])[1]")
-    public WebElement NotParticipatedButtonu;
+        @FindBy(xpath = "//*[.='New quiz']")
+        public WebElement NewquizButtonu;
 
-    @FindBy(xpath = "//h2[.='New quiz']")
-    public WebElement NewQuiz;
+        @FindBy(xpath = "(//*[.='List'])[1]")
+        public WebElement ListButtonu;
 
-    @FindBy(xpath = "(//h2[@class='section-title'])[1]")
-    public WebElement CommentsStatistics;
+        @FindBy(xpath = "(//*[.='Results'])[1]")
+        public WebElement ResultButtonu;
 
-    @FindBy(xpath = "(//h2[@class='section-title'])[3]")
-    public WebElement StudentResults;
+        @FindBy(xpath = "(//*[.='My results'])[1]")
+        public WebElement MyresultsButtonu;
 
-    @FindBy(xpath = "(//h2[@class='section-title'])[3]")
-    public WebElement MyQuizzess;
+        @FindBy(xpath = "(//*[.='Not Participated'])[1]")
+        public WebElement NotParticipatedButtonu;
 
-    @FindBy(xpath = "(//h2[@class='section-title'])[1]")
-    public WebElement FilterResults;
+        @FindBy(xpath = "//h2[.='New quiz']")
+        public WebElement NewQuiz;
 
+        @FindBy(xpath = "(//h2[@class='section-title'])[1]")
+        public WebElement CommentsStatistics;
 
+        @FindBy(xpath = "(//h2[@class='section-title'])[3]")
+        public WebElement StudentResults;
 
+        @FindBy(xpath = "(//h2[@class='section-title'])[3]")
+        public WebElement MyQuizzess;
 
-
-
-
-
-
-
-
-
+        @FindBy(xpath = "(//h2[@class='section-title'])[1]")
+        public WebElement FilterResults;
 
 
-}
+    }
