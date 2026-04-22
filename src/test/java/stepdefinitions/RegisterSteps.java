@@ -5,9 +5,7 @@ import io.cucumber.java.en.When;
 import org.openqa.selenium.JavascriptExecutor;
 import pages.ExamplePage;
 import pages.RegisterPage;
-import utils.ExcelUtils;
-import utils.JSUtilities;
-import utils.ReusableMethods;
+import utils.*;
 
 public class RegisterSteps {
 
@@ -28,25 +26,26 @@ public class RegisterSteps {
         String actualUrl = driver.getCurrentUrl();
 
         if (actualUrl.equals(expectedUrl)) {
-            logger.info("Beklenen url: "+expectedUrl+"ile"+actualUrl+"aynı degerde");
+            logger.info("Beklenen url: " + expectedUrl + "ile" + actualUrl + "aynı degerde");
 
-        }else{
-            logger.error("Beklenen url: "+expectedUrl+"ile"+actualUrl+"farklı degerde");
+        } else {
+            logger.error("Beklenen url: " + expectedUrl + "ile" + actualUrl + "farklı degerde");
         }
     }
 
     @Given("Teacher instructor Buttonunu secer")
     public void teacher_instructor_buttonunu_secer() {
 
-        logger.info(" Teacher kullanicisi "+"instructorButton seçti" );
+        logger.info(" Teacher kullanicisi " + "instructorButton seçti");
 
         JSUtilities.scrollToElement(driver, registerPage.instructorButton);
         registerPage.instructorButton.click();
         ReusableMethods.bekle(2);
 
-        logger.info(" Teacher kullanicisi "+"instructorButton seçti" );
+        logger.info(" Teacher kullanicisi " + "instructorButton seçti");
 
     }
+
     @Given("Teacher mailBox kutusuna {string} degerini girer")
     public void teacher_mail_box_kutusuna_degerini_girer(String mail) {
         examplePage.mailBox.sendKeys(mail);
@@ -55,6 +54,7 @@ public class RegisterSteps {
         logger.info("Teacher mail adresini doldurdu ");
 
     }
+
     @Given("Teacher fullnameBox kutusuna {string} degerini girer")
     public void teacher_fullname_box_kutusuna_degerini_girer(String fullName) {
         registerPage.fullName.sendKeys(fullName);
@@ -64,6 +64,7 @@ public class RegisterSteps {
 
 
     }
+
     @Given("Teacher passwordBox kotusuna {string} degerini gire")
     public void teacher_password_box_kotusuna_degerini_gire(String password) {
         examplePage.passwordBox.sendKeys(password);
@@ -72,8 +73,8 @@ public class RegisterSteps {
         logger.info("Teacher password adresini doldurdu ");
 
 
-
     }
+
     @Given("Teacher reTypePassword kutusuna {string} degerini girer")
     public void teacher_re_type_password_kutusuna_degerini_girer(String rePassword) {
         registerPage.confirmPassword.sendKeys(rePassword);
@@ -82,14 +83,13 @@ public class RegisterSteps {
         logger.info("Teacher rePassword adresini doldurdu ");
 
 
-
     }
 
 
     @When("Kullanici checkBox kutusunu isaretler")
     public void kullaniciCheckBoxKutusunuIsaretler() {
 
-       // JSUtilities.scrollToElement(driver, RegisterPage.checkBox);
+        // JSUtilities.scrollToElement(driver, RegisterPage.checkBox);
         JavascriptExecutor js = (JavascriptExecutor) driver;
         js.executeScript("document.getElementById('term').checked = true;");
         System.out.println("✅ Terms kabul edildi");
@@ -100,25 +100,68 @@ public class RegisterSteps {
     @When("Teacher {string} ve {string} bilgileri ile gecerli kayıt olusturur")
     public void teacherVeBilgileriIleGecerliKayıtOlusturur(String name, String password) {
 
-        String dynamicEmail=name+System.currentTimeMillis()+"@InstuLearn.com";
+        String dynamicEmail = name + System.currentTimeMillis() + "@InstuLearn.com";
         examplePage.mailBox.sendKeys(dynamicEmail);
         ReusableMethods.bekle(2);
-        logger.info("Testte olusturulan :" +dynamicEmail);
+        logger.info("Testte olusturulan :" + dynamicEmail);
 
         registerPage.fullName.sendKeys(name);
         ReusableMethods.bekle(2);
-        logger.info("Testte kullanilan :" +name);
+        logger.info("Testte kullanilan :" + name);
 
         examplePage.passwordBox.sendKeys(password);
         ReusableMethods.bekle(2);
-        logger.info("Testte kullanilan :" +password);
+        logger.info("Testte kullanilan :" + password);
 
 
         registerPage.confirmPassword.sendKeys(password);
         ReusableMethods.bekle(2);
-        logger.info("Testte kullanilan :" +password);
+        logger.info("Testte kullanilan :" + password);
 
         ExcelUtils.saveTestData(name, dynamicEmail, password);
 
     }
+
+
+    @When("Instructor {string} mail adresi ve {string} sifresi kayit olur")
+    public void instructorMailAdresiVeSifresiKayitOlur(String mail, String password) {
+
+        driver.get("https://qa.instulearn.com/register");
+
+
+        ClickUtils.clickByXpath(driver, "(//*[@class=\"font-12 cursor-pointer px-15 py-10\"])[2]");
+        ReusableMethods.bekle(2);
+        logger.info("Instructor Butonuna tiklandi");
+
+        SendKeysUtils.sendByXpath(driver, "//input[@id=\"email\"]", mail);
+        ReusableMethods.bekle(2);
+        logger.info("Instructor mail adresini doldurdu ");
+
+        SendKeysUtils.sendByXpath(driver, "//input[@name=\"full_name\"]", "ahmet");
+        ReusableMethods.bekle(2);
+        logger.info("Instructor fullname adresini doldurdu ");
+
+        SendKeysUtils.sendByXpath(driver, "//input[@id=\"password\"]", password);
+        ReusableMethods.bekle(2);
+        logger.info("Instructor password adresini doldurdu ");
+
+        SendKeysUtils.sendByXpath(driver, "//input[@id=\"confirm_password\"]", password);
+        ReusableMethods.bekle(2);
+        logger.info("Instructor rePassword adresini doldurdu ");
+
+        // JSUtilities.scrollToElement(driver, RegisterPage.checkBox);
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        js.executeScript("document.getElementById('term').checked = true;");
+        System.out.println("✅ Terms kabul edildi");
+        logger.info("Kullanici checkBox kutusunu isaretler");
+
+        ClickUtils.clickByXpath(driver, "//button[@class=\"btn btn-primary btn-block mt-20\"]");
+        ReusableMethods.bekle(2);
+        logger.info("Kullanici checkBox kutusunu isaretler");
+
+    }
+
+
+
+
 }
