@@ -1,6 +1,5 @@
 package pages;
 
-<<<<<<< HEAD
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.WebDriver;
@@ -17,6 +16,7 @@ public class HomePage extends BasePage{
         org.openqa.selenium.support.PageFactory.initElements(driver, this);
     }
 
+
     @FindBy (xpath = "(//a[@href=\"/login\"])[1]")
     public WebElement homePageLoginLink;
 
@@ -31,9 +31,6 @@ public class HomePage extends BasePage{
 
     @FindBy(xpath = "//span[text()=\"Profile\"]")
     public WebElement profileLinkInInstructorProfileIconDropdownMenu;
-=======
-
-public class HomePage {
 
 
 
@@ -41,5 +38,7 @@ public class HomePage {
 
 
 
->>>>>>> 9bcf56850d741688067b28d7a74e10f58bd73119
+
+
+
 }

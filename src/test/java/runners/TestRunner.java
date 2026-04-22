@@ -22,7 +22,7 @@ import org.junit.runner.RunWith;
 
 
 
-		tags = "@loginWithMethod", // orjinal konum 25. satir scanarioOutline
+		tags = "loginWithMethod", // orjinal konum 25. satir scanarioOutline
 
 
 
