@@ -74,7 +74,7 @@ public class US035_StepDefinitions {
                 currentUrl.contains("/login"));
     }
 
-    // ========== STORE / PRODUCTS STEPS (TC03) ==========
+    // ========== STORE / PRODUCTS STEPS ==========
 
     @And("Kullanici Store linkine tiklar")
     public void kullanici_store_linkine_tiklar() {
@@ -106,9 +106,7 @@ public class US035_StepDefinitions {
         Assert.assertTrue("Search button aktif degil!", isEnabled);
     }
 
-    // ========== FILTER STEPS (TC04) ==========
-
-    // ---------- FREE ----------
+    // ========== LEFT FILTER STEPS ==========
 
     @When("Kullanici Free toggle'ini aktif eder")
     public void kullanici_free_toggle_ini_aktif_eder() {
@@ -134,8 +132,6 @@ public class US035_StepDefinitions {
         Assert.assertFalse("Free filtresi hala aktif!", isSelected);
     }
 
-    // ---------- FREE SHIPPING ----------
-
     @When("Kullanici Free Shipping toggle'ini aktif eder")
     public void kullanici_free_shipping_toggle_ini_aktif_eder() {
         us035Page.clickFreeShippingToggle();
@@ -159,8 +155,6 @@ public class US035_StepDefinitions {
         logger.info("Free Shipping filtresi isSelected: " + isSelected);
         Assert.assertFalse("Free Shipping filtresi hala aktif!", isSelected);
     }
-
-    // ---------- DISCOUNT ----------
 
     @When("Kullanici Discount toggle'ini aktif eder")
     public void kullanici_discount_toggle_ini_aktif_eder() {
@@ -186,8 +180,6 @@ public class US035_StepDefinitions {
         Assert.assertFalse("Discount filtresi hala aktif!", isSelected);
     }
 
-    // ---------- SORT BY ----------
-
     @When("Kullanici Sort by dropdown'ini acar")
     public void kullanici_sort_by_dropdown_ini_acar() {
         us035Page.openSortDropdown();
@@ -196,15 +188,6 @@ public class US035_StepDefinitions {
     @When("Kullanici Sort by dropdown'dan {string} secer")
     public void kullanici_sort_by_dropdown_dan_secer(String value) {
         us035Page.selectSortByValue(value);
-    }
-
-    /**
-     * "All" option'u value'su bos oldugu icin visible text ile secmek gerekli.
-     * Bu step, value yerine gorunur metin ile secim yapar.
-     */
-    @When("Kullanici Sort by dropdown'dan {string} secer (metin ile)")
-    public void kullanici_sort_by_dropdown_dan_metin_ile_secer(String text) {
-        us035Page.selectSortByVisibleText(text);
     }
 
     @Then("Sort by dropdown secimi {string} olmali")
@@ -217,22 +200,90 @@ public class US035_StepDefinitions {
                 expectedValue, actualValue);
     }
 
-    /**
-     * Sort by secimi visible text ile dogrular.
-     * "All" gibi value'su bos olan option'lar icin kullanilir.
-     */
-    @Then("Sort by dropdown secimi metin olarak {string} olmali")
-    public void sort_by_dropdown_secimi_metin_olarak_olmali(String expectedText) {
-        Select select = new Select(us035Page.sortDropdown);
-        String actualText = select.getFirstSelectedOption().getText();
-        logger.info("Sort by secilmis text: '" + actualText + "'");
+    // ========== RIGHT FILTER STEPS ==========
 
-        Assert.assertEquals("Sort by secimi beklenen metin ile eslesmedi!",
-                expectedText, actualText);
+    @When("Kullanici Virtual filter'ini aktif eder")
+    public void kullanici_virtual_filter_ini_aktif_eder() {
+        us035Page.clickVirtualFilter();
     }
 
-    @And("Kullanici Sort by dropdown icinde scroll yapar")
-    public void kullanici_sort_by_dropdown_icinde_scroll_yapar() {
-        us035Page.scrollInsideSortDropdown();
+    @Then("Virtual filter aktif olmali")
+    public void virtual_filter_aktif_olmali() {
+        boolean isSelected = us035Page.virtualCheckbox.isSelected();
+        logger.info("Virtual filter isSelected: " + isSelected);
+        Assert.assertTrue("Virtual filter aktif degil!", isSelected);
+    }
+
+    @When("Kullanici Physical filter'ini aktif eder")
+    public void kullanici_physical_filter_ini_aktif_eder() {
+        us035Page.clickPhysicalFilter();
+    }
+
+    @Then("Physical filter aktif olmali")
+    public void physical_filter_aktif_olmali() {
+        boolean isSelected = us035Page.physicalCheckbox.isSelected();
+        logger.info("Physical filter isSelected: " + isSelected);
+        Assert.assertTrue("Physical filter aktif degil!", isSelected);
+    }
+
+    @And("Kullanici Type bolumundeki Filter items butonuna tiklar")
+    public void kullanici_type_bolumundeki_filter_items_butonuna_tiklar() {
+        us035Page.clickTypeFilterItemsButton();
+    }
+
+    @When("Kullanici Only Available Products filter'ini aktif eder")
+    public void kullanici_only_available_products_filter_ini_aktif_eder() {
+        us035Page.clickOnlyAvailableProductsFilter();
+    }
+
+    @Then("Only Available Products filter aktif olmali")
+    public void only_available_products_filter_aktif_olmali() {
+        boolean isSelected = us035Page.onlyAvailableProductsCheckbox.isSelected();
+        logger.info("Only Available Products filter isSelected: " + isSelected);
+        Assert.assertTrue("Only Available Products filter aktif degil!", isSelected);
+    }
+
+    @And("Kullanici Options bolumundeki Filter items butonuna tiklar")
+    public void kullanici_options_bolumundeki_filter_items_butonuna_tiklar() {
+        us035Page.clickOptionsFilterItemsButton();
+    }
+
+    // ========== CATEGORIES STEP ==========
+
+    @When("Kullanici Science Tools kategorisine tiklar")
+    public void kullanici_science_tools_kategorisine_tiklar() {
+        us035Page.clickScienceToolsCategory();
+    }
+
+    // ========== TC05 - HOVER STEPS ==========
+
+    @When("Kullanici Updated Product Title urun resmine hover yapar")
+    public void kullanici_updated_product_title_urun_resmine_hover_yapar() {
+        us035Page.hoverProductImg();
+    }
+
+    @And("Kullanici stars card alanina hover yapar")
+    public void kullanici_stars_card_alanina_hover_yapar() {
+        us035Page.hoverStarsCard();
+    }
+
+    @And("Kullanici Add to Cart butonuna hover yapar")
+    public void kullanici_add_to_cart_butonuna_hover_yapar() {
+        us035Page.hoverAddToCartButton();
+    }
+
+    @And("Kullanici Add to Wishlist butonuna hover yapar")
+    public void kullanici_add_to_wishlist_butonuna_hover_yapar() {
+        us035Page.hoverAddToWishlistButton();
+    }
+
+    @And("Kullanici sayfayi asagi kaydirir")
+    public void kullanici_sayfayi_asagi_kaydirir() {
+        us035Page.scrollDownForDescription();
+    }
+
+    @And("Kullanici Description tab'a hover yapar")
+    public void kullanici_description_tab_a_hover_yapar() {
+        us035Page.hoverDescriptionTab();
     }
 }
