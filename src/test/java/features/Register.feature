@@ -52,3 +52,5 @@ Feature: Kullanici teacher kaydi olusturur
     Examples:
       | mail                          | name  | password         |
       | zafer3.student@instuLearn.com | zafer | InstuLearn.2026! |
+
+

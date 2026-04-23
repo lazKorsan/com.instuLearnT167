@@ -22,7 +22,7 @@ import org.junit.runner.RunWith;
 
 
 
-		tags = "@wip", // orjinal konum 25. satir scanarioOutline
+		tags = "@US29_TC01", // orjinal konum 25. satir scanarioOutline
 
 
 

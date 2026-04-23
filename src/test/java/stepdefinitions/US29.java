@@ -48,6 +48,7 @@ public class US29 {
     @And("kullanıcı dashboard sayfasındadır")
     public void kullanıcı_dashboard_sayfasındadır() {
         Assertions.assertTrue(dashboardPage.dashboardTitle.isDisplayed());
+        System.out.println("sonra eklenecek");
     }
 
 

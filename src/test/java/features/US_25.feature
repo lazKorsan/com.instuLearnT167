@@ -1,7 +1,7 @@
 
 Feature: Quiz sidebar navigasyonu
 
-  @US_25
+
   Scenario: TC_01 Quiz linkleri sidebar'da gorunmelidir
     * kullanici qa.instulearn.com sayfasina gider
     * Kullanici login page sayfasina kecid eder
@@ -17,7 +17,7 @@ Feature: Quiz sidebar navigasyonu
     * Not Participated linki gorunur olmali
 
 
-  @US_25
+
   Scenario: TC_02 Quiz linkleri aktif olmalidir
 
     * kullanici qa.instulearn.com sayfasina gecer
@@ -37,3 +37,96 @@ Feature: Quiz sidebar navigasyonu
     * kullanici My quizzes sayfasina yonlendirilmelidir
     * kullanici Not Participated linkine tiklar
     * kullanici Filter Results sayfasina yonlendirilmelidir
+
+
+
+
+
+  Scenario: TC_03 Instructor yeni quiz yarada bilmelidir
+
+    * kullanici sisteme giris yapar
+    * kullanici New Quiz buttonuna tiklar
+    * kullanici Quiz title dahil eder
+    * kullanici Pass mark dahil edir
+    * kullanici Create duymesine tiklar
+    * kullanici list sayfasina gider
+    * yeni sinav basariyla olusdurulmalidir
+
+
+
+
+  Scenario: TC_04 Add multiple choice butonu gorunur ve aktif olmalidir
+
+    * kullanici siteye giris yapar
+    * Add a multiple choice butonu gorunur olmali
+    * Add a multiple choice butonu aktif olmali
+    * kullanici Add a multiple choice butonuna tiklar
+    * Multiple choice question yaratma sayfasi acilmalidir
+    * kullanici question title soru kaydi daxil edir
+    * kullanici grade soru kaydi daxil edir
+    * kullanici Add an Answer butonunu tiklar
+    * Answer title bolumunu cavab ekler
+    * kullanici correct answer secir
+    * kullanici yeniden Answer title bolumunu cavab ekler
+    * kullanici correct answer secir
+    * kullanici save duymesine tiklar
+    * sual ugurla yaradilmali
+
+
+
+  @US_25
+  Scenario: TC_05 Add Descriptive butonu gorunur ve aktifdir
+
+    * kullanici siteye giris yapar
+    * Add a Descriptive butonu gorunur olmali
+    * Add a Descriptive butonu aktif olmali
+    * kullanici Add a Descriptive butonuna tiklar
+    * New descriptive question question sayfasi acilmalidir
+    * kullanici Question title  daxil edir
+    * kullanici Grade daxil edir
+    * kullanici Correct answer bilgileri daxil edir
+    * kullanici Save duymesine tiklar
+    * kullanici List linkine gecis yapar
+    * Soru kaydi  ugurla yaradildi
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
