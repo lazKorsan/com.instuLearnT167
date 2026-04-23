@@ -93,6 +93,19 @@ public class DashboardPage extends BasePage{
     @FindBy(xpath = "//*[@*='quizzes_questions']")
     public List<WebElement> QuestionsList;
 
+        @FindBy(xpath = "//span[text()=\"Marketing\"]")
+        public  WebElement sidebarMarketingLink;
+
+        @FindBy(xpath = "//a[text()=\"Discounts\"]")
+        public WebElement discountsLinkByMarketing;
+
+        @FindBy(xpath = "//a[text()=\"Promotions\"]")
+        public WebElement promotionsLinkByMarketing;
+
+
+
+
+
 
 
 
