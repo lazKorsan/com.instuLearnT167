@@ -23,7 +23,30 @@ Feature: CreateBundele
     * Kullanici basicInformation sayfasi bilgilerini doldurur
 
 
-    @preConditionStep3
+    @preConditionStep2
   Scenario: step2 adimlari
     * Instructor "ahmet.instructor2@InstuLearn.com" adresi ve "InsruLearn.2026!" ile sisteme giris yapar
     * Kullanici extraInformation sayfasi bilgilerini doldurur
+
+
+  @preConditionStep3
+  Scenario: step2 adimlari
+    * Instructor "ahmet.instructor2@InstuLearn.com" adresi ve "InsruLearn.2026!" ile sisteme giris yapar
+    * Kullanici pricingPage sayfasi bilgilerini doldurur
+
+  @preConditionStep4
+  Scenario: step2 adimlari
+    * Instructor "ahmet.instructor2@InstuLearn.com" adresi ve "InsruLearn.2026!" ile sisteme giris yapar
+    * Kullanici contentPage sayfasi bilgilerini doldurur
+
+  @preConditionStep5
+  Scenario: step2 adimlari
+    * Instructor "ahmet.instructor2@InstuLearn.com" adresi ve "InsruLearn.2026!" ile sisteme giris yapar
+    * Kullanici prerequisitesPage sayfasi bilgilerini doldurur
+
+
+  @preConditionStep6
+  Scenario: step2 adimlari
+    * Instructor "ahmet.instructor2@InstuLearn.com" adresi ve "InsruLearn.2026!" ile sisteme giris yapar
+    * Kullanici FAQpage sayfasi bilgilerini doldurur
+
