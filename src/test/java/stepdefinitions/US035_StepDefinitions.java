@@ -74,7 +74,7 @@ public class US035_StepDefinitions {
                 currentUrl.contains("/login"));
     }
 
-    // ========== STORE / PRODUCTS STEPS (TC03) ==========
+    // ========== STORE / PRODUCTS STEPS ==========
 
     @And("Kullanici Store linkine tiklar")
     public void kullanici_store_linkine_tiklar() {
@@ -106,9 +106,7 @@ public class US035_StepDefinitions {
         Assert.assertTrue("Search button aktif degil!", isEnabled);
     }
 
-    // ========== FILTER STEPS (TC04) ==========
-
-    // ---------- FREE ----------
+    // ========== LEFT FILTER STEPS ==========
 
     @When("Kullanici Free toggle'ini aktif eder")
     public void kullanici_free_toggle_ini_aktif_eder() {
@@ -134,8 +132,6 @@ public class US035_StepDefinitions {
         Assert.assertFalse("Free filtresi hala aktif!", isSelected);
     }
 
-    // ---------- FREE SHIPPING ----------
-
     @When("Kullanici Free Shipping toggle'ini aktif eder")
     public void kullanici_free_shipping_toggle_ini_aktif_eder() {
         us035Page.clickFreeShippingToggle();
@@ -159,8 +155,6 @@ public class US035_StepDefinitions {
         logger.info("Free Shipping filtresi isSelected: " + isSelected);
         Assert.assertFalse("Free Shipping filtresi hala aktif!", isSelected);
     }
-
-    // ---------- DISCOUNT ----------
 
     @When("Kullanici Discount toggle'ini aktif eder")
     public void kullanici_discount_toggle_ini_aktif_eder() {
@@ -186,8 +180,6 @@ public class US035_StepDefinitions {
         Assert.assertFalse("Discount filtresi hala aktif!", isSelected);
     }
 
-    // ---------- SORT BY ----------
-
     @When("Kullanici Sort by dropdown'ini acar")
     public void kullanici_sort_by_dropdown_ini_acar() {
         us035Page.openSortDropdown();
@@ -196,15 +188,6 @@ public class US035_StepDefinitions {
     @When("Kullanici Sort by dropdown'dan {string} secer")
     public void kullanici_sort_by_dropdown_dan_secer(String value) {
         us035Page.selectSortByValue(value);
-    }
-
-    /**
-     * "All" option'u value'su bos oldugu icin visible text ile secmek gerekli.
-     * Bu step, value yerine gorunur metin ile secim yapar.
-     */
-    @When("Kullanici Sort by dropdown'dan {string} secer (metin ile)")
-    public void kullanici_sort_by_dropdown_dan_metin_ile_secer(String text) {
-        us035Page.selectSortByVisibleText(text);
     }
 
     @Then("Sort by dropdown secimi {string} olmali")
@@ -217,22 +200,149 @@ public class US035_StepDefinitions {
                 expectedValue, actualValue);
     }
 
-    /**
-     * Sort by secimi visible text ile dogrular.
-     * "All" gibi value'su bos olan option'lar icin kullanilir.
-     */
-    @Then("Sort by dropdown secimi metin olarak {string} olmali")
-    public void sort_by_dropdown_secimi_metin_olarak_olmali(String expectedText) {
-        Select select = new Select(us035Page.sortDropdown);
-        String actualText = select.getFirstSelectedOption().getText();
-        logger.info("Sort by secilmis text: '" + actualText + "'");
+    // ========== RIGHT FILTER STEPS ==========
 
-        Assert.assertEquals("Sort by secimi beklenen metin ile eslesmedi!",
-                expectedText, actualText);
+    @When("Kullanici Virtual filter'ini aktif eder")
+    public void kullanici_virtual_filter_ini_aktif_eder() {
+        us035Page.clickVirtualFilter();
     }
 
-    @And("Kullanici Sort by dropdown icinde scroll yapar")
-    public void kullanici_sort_by_dropdown_icinde_scroll_yapar() {
-        us035Page.scrollInsideSortDropdown();
+    @Then("Virtual filter aktif olmali")
+    public void virtual_filter_aktif_olmali() {
+        boolean isSelected = us035Page.virtualCheckbox.isSelected();
+        logger.info("Virtual filter isSelected: " + isSelected);
+        Assert.assertTrue("Virtual filter aktif degil!", isSelected);
+    }
+
+    @When("Kullanici Physical filter'ini aktif eder")
+    public void kullanici_physical_filter_ini_aktif_eder() {
+        us035Page.clickPhysicalFilter();
+    }
+
+    @Then("Physical filter aktif olmali")
+    public void physical_filter_aktif_olmali() {
+        boolean isSelected = us035Page.physicalCheckbox.isSelected();
+        logger.info("Physical filter isSelected: " + isSelected);
+        Assert.assertTrue("Physical filter aktif degil!", isSelected);
+    }
+
+    @And("Kullanici Type bolumundeki Filter items butonuna tiklar")
+    public void kullanici_type_bolumundeki_filter_items_butonuna_tiklar() {
+        us035Page.clickTypeFilterItemsButton();
+    }
+
+    @When("Kullanici Only Available Products filter'ini aktif eder")
+    public void kullanici_only_available_products_filter_ini_aktif_eder() {
+        us035Page.clickOnlyAvailableProductsFilter();
+    }
+
+    @Then("Only Available Products filter aktif olmali")
+    public void only_available_products_filter_aktif_olmali() {
+        boolean isSelected = us035Page.onlyAvailableProductsCheckbox.isSelected();
+        logger.info("Only Available Products filter isSelected: " + isSelected);
+        Assert.assertTrue("Only Available Products filter aktif degil!", isSelected);
+    }
+
+    @And("Kullanici Options bolumundeki Filter items butonuna tiklar")
+    public void kullanici_options_bolumundeki_filter_items_butonuna_tiklar() {
+        us035Page.clickOptionsFilterItemsButton();
+    }
+
+    // ========== CATEGORIES STEP ==========
+
+    @When("Kullanici Science Tools kategorisine tiklar")
+    public void kullanici_science_tools_kategorisine_tiklar() {
+        us035Page.clickScienceToolsCategory();
+    }
+
+    // ========== TC05 - HOVER + ADD TO CART STEPS ==========
+
+    @When("Kullanici Updated Product Title urun resmine hover yapar")
+    public void kullanici_updated_product_title_urun_resmine_hover_yapar() {
+        us035Page.hoverProductImg();
+    }
+
+    @And("Kullanici stars card alanina hover yapar")
+    public void kullanici_stars_card_alanina_hover_yapar() {
+        us035Page.hoverStarsCard();
+    }
+
+    @And("Kullanici Add to Cart ikonuna hover yapar")
+    public void kullanici_add_to_cart_ikonuna_hover_yapar() {
+        us035Page.hoverAddToCartIcon();
+    }
+
+    @When("Kullanici Add to Cart ikonuna tiklar")
+    public void kullanici_add_to_cart_ikonuna_tiklar() {
+        us035Page.clickAddToCartIcon();
+    }
+
+    @Then("Added to cart toast mesaji beklenen metni icermeli")
+    public void added_to_cart_toast_mesaji_beklenen_metni_icermeli() {
+        String actualText = us035Page.getToastMessageText();
+
+        String expectedFullText =
+                "Added to cart!\n" +
+                        "You can continue shopping or go to cart to finalize your order.";
+
+        String actualCleaned = actualText.replace("×", "").trim();
+        logger.info("Kapatma butonu (×) temizlendi.");
+
+        String actualNormalized = actualCleaned.replaceAll("\\s+", " ").trim();
+        String expectedNormalized = expectedFullText.replaceAll("\\s+", " ").trim();
+
+        logger.info("Beklenen metin (normalized): '" + expectedNormalized + "'");
+        logger.info("Gercek metin   (normalized): '" + actualNormalized + "'");
+
+        Assert.assertEquals("Toast mesaji beklenen metinle eslesmedi!",
+                expectedNormalized, actualNormalized);
+
+        logger.info("Toast mesaji dogrulandi! Urun basariyla sepete eklendi.");
+    }
+
+    // ========== TC06 - CHECKOUT & PAYMENT STEPS ==========
+
+    @When("Kullanici navbar'daki sepet ikonuna tiklar")
+    public void kullanici_navbar_daki_sepet_ikonuna_tiklar() {
+        us035Page.clickShoppingCartLink();
+    }
+
+    @And("Kullanici Go to cart butonuna tiklar")
+    public void kullanici_go_to_cart_butonuna_tiklar() {
+        us035Page.clickGoToCartButton();
+    }
+
+    @And("Kullanici Checkout butonuna scroll edip tiklar")
+    public void kullanici_checkout_butonuna_scroll_edip_tiklar() {
+        us035Page.scrollToAndClickCheckout();
+    }
+
+    @And("Kullanici Pay with Stripe'i secer ve Start Payment butonuna tiklar")
+    public void kullanici_pay_with_stripe_i_secer_ve_start_payment_butonuna_tiklar() {
+        us035Page.selectStripeAndStartPayment();
+    }
+
+    @And("Kullanici Stripe odeme formunu doldurur ve Pay butonuna tiklar")
+    public void kullanici_stripe_odeme_formunu_doldurur_ve_pay_butonuna_tiklar() {
+        // Stripe'in resmi TEST karti - gercek para cekilmez
+        String testCardNumber = "4242 4242 4242 4242";
+        String testExpiry = "01/30";
+        String testCvc = "321";
+        String testCardholder = "Nihat Ozturk";
+
+        us035Page.fillStripePaymentFormAndPay(testCardNumber, testExpiry,
+                testCvc, testCardholder);
+    }
+
+    @Then("Odeme basariyla tamamlanmis olmali ve basari mesaji gorunmeli")
+    public void odeme_basariyla_tamamlanmis_olmali_ve_basari_mesaji_gorunmeli() {
+        boolean success = us035Page.verifyPaymentSuccessMessage();
+
+        Assert.assertTrue(
+                "Odeme basari mesaji ('Your payment successfully done...') gorunmedi! " +
+                        "Odeme basarisiz olmus olabilir veya mesaj locator'i farkli olabilir.",
+                success);
+
+        logger.info("TC06 BASARIYLA TAMAMLANDI! Odeme gerceklesti, basari mesaji dogrulandi.");
     }
 }
