@@ -56,14 +56,13 @@ public class US023CreateBundleSteps {
         ReusableMethods.bekle(2);
         logger.info("✅  Kullanici dashBoard Menuye Hover yapti");
 
+        // todo dashBoard islemleri
         ClickUtils.clickByXpath(driver, "(//span[@class='font-14 text-dark-blue font-weight-500'])[2]");
         ReusableMethods.bekle(2);
         logger.info("✅ Kullanici dashboard menu altindan coursesButtona tikladi ");
 
 
-        logger.info("✅ Kullanici newCourses Butonuna tikladi");
-
-
+        // todo newCourses islemleri
         ClickUtils.clickByXpath(driver, "//*[@class=\"mt-5 \"]");
         ReusableMethods.bekle(2);
         logger.info("✅ Kullanici newCourses Butonuna tikladi");
@@ -170,18 +169,18 @@ public class US023CreateBundleSteps {
         driver.get("https://qa.instulearn.com/panel/webinars/4130/step/2");
         ReusableMethods.bekle(4);
 
-        // capacityBox
+        // todo capacityBox islemleri
         SendKeysUtils.sendByXpath(driver, "//input[@name=\"capacity\"]", "12");
         ReusableMethods.bekle(2);
         logger.info("Kullanici capacityBox alanini doldurdu");
 
-        // durationOfMinutesBox
+        // todo durationOfMinutesBox islemleri
         String durationOfMinutesBox="//input[@name=\"duration\"]";
         SendKeysUtils.sendByXpath(driver, durationOfMinutesBox, "120");
         ReusableMethods.bekle(2);
         logger.info("Kullanici durationOfMinutesBox alanini doldurdu");
 
-        // supportCheckBox
+        //  todo supportCheckBox islemleri
         WebElement supportCheckbox = driver.findElement(By.id("supportSwitch"));
         ReusableMethods.highLightToElement(supportCheckbox);
         JavascriptExecutor js = (JavascriptExecutor) driver;
@@ -189,8 +188,7 @@ public class US023CreateBundleSteps {
         logger.info(" ✅ Kullanici supportCheckBox alanini vurguladı ve doldurdu");
         ReusableMethods.bekle(2);
 
-        // completionCertificateBox
-        // certificateSwitch
+        //  todo completionCertificateBox islemleri
         WebElement completionCertificateBox = driver.findElement(By.id("certificateSwitch"));
         ReusableMethods.highLightToElement(completionCertificateBox);
         JavascriptExecutor js2 = (JavascriptExecutor) driver;
@@ -198,8 +196,7 @@ public class US023CreateBundleSteps {
         logger.info(" ✅ Kullanici completionCertificateBox alanini vurguladı ve doldurdu");
         ReusableMethods.bekle(2);
 
-        // downloadableCheckBox
-        // downloadableSwitch
+        //  todo downloadableCheckBox islemleri
         WebElement downloadableCheckBox = driver.findElement(By.id("downloadableSwitch"));
         ReusableMethods.highLightToElement(downloadableCheckBox);
         JavascriptExecutor js3 = (JavascriptExecutor) driver;
@@ -207,22 +204,19 @@ public class US023CreateBundleSteps {
         logger.info(" ✅ Kullanici downloadableCheckBox alanini vurguladı ve doldurdu");
         ReusableMethods.bekle(2);
 
-        // tagsBox
+        // todo  tagsBox islemleri
         String tagsBox="//input[@placeholder=\"Type tag name and press enter (Max : 5)\"]";
         SendKeysUtils.sendByXpath(driver, tagsBox, "Math");
         ReusableMethods.bekle(2);
         logger.info("Kullanici tagsBox alanini doldurdu");
 
-        // CategoryDropDownMenu
-        // 1027
-        // dropDownMenu selecet options ile doldur
-        // todo  ***Dikkat  buradaki xpath iki kisimdan olusuyor
+        // todo CategoryDropDownMenu islemleri
          String targetXpath = "//select[@name=\"category_id\"]/option[@value='1027']";
          ClickUtils.clickByXpath(driver, targetXpath);
          logger.info("Kullanici CategoryDropDownMenu alanini doldurdu");
          ReusableMethods.bekle(2);
 
-         // nextButton
+         // todo nextButton
          ClickUtils.clickByXpath(driver, nextButton);
          ReusableMethods.bekle(3);
 
@@ -236,8 +230,7 @@ public class US023CreateBundleSteps {
         // bu satır sonra silinecek
         driver.get("https://qa.instulearn.com/panel/webinars/4130/step/3");
 
-        // subscribeSwitchCheckBox
-        // id = subscribeSwitch
+        // todo subscribeSwitchCheckBox islemleri
         WebElement subscribeSwitchCheckBox = driver.findElement(By.id("subscribeSwitch"));
         ReusableMethods.highLightToElement(subscribeSwitchCheckBox);
         JavascriptExecutor js = (JavascriptExecutor) driver;
@@ -245,19 +238,19 @@ public class US023CreateBundleSteps {
         logger.info(" ✅ Kullanici subscribeSwitchCheckBox alanini vurguladı ve doldurdu");
         ReusableMethods.bekle(2);
 
-        // accessPeriodBox = "//input[@name="access_days"]"
+        // todo accessPeriodBox islemleri
         String accesPeriodBox ="//input[@name=\"access_days\"]";
         SendKeysUtils.sendByXpath(driver, accesPeriodBox, "30");
         ReusableMethods.bekle(2);
         logger.info("Kullanici accessPeriodBox alanini doldurdu");
 
-        // priceBox ="//input[@placeholder="Enter 0 for Free"]"
+        // todo priceBox islemleri
         String priceBox ="//input[@placeholder=\"Enter 0 for Free\"]";
         SendKeysUtils.sendByXpath(driver, priceBox, "100");
         ReusableMethods.bekle(2);
         logger.info("Kullanici priceBox alanini doldurdu");
 
-        // nextStepButton
+        // todo nextStepButton
         ClickUtils.clickByXpath(driver, nextButton);
         ReusableMethods.bekle(3);
 
@@ -274,18 +267,19 @@ public class US023CreateBundleSteps {
         // bu satır sonra sil
         driver.get("https://qa.instulearn.com/panel/webinars/4130/step/4");
 
-        // newSectionButton="//button[@class="js-add-chapter btn btn-primary btn-sm mt-15"]"
+        // todo newSectionButton islemleri
         String newSectionButton="//button[@class=\"js-add-chapter btn btn-primary btn-sm mt-15\"]";
         ClickUtils.clickByXpath(driver, newSectionButton);
         ReusableMethods.bekle(2);
         logger.info("Kullanici newSectionButton alanini doldurdu");
 
-        // sectionTitleBox="(//input[@class=\"form-control js-ajax-title\"])[2]"
+        // todo sectionTitleBox islemleri
         SendKeysUtils.sendByXpath(driver, "(//input[@class=\"form-control js-ajax-title\"])[2]","Spring Semester Courses");
         ReusableMethods.bekle(2);
         logger.info("Kullanici sectionTitleBox alanini doldurdu");
 
 
+        // todo modalSavebutton islemleri
         // modalSavebutton="(//button[@class="save-chapter btn btn-sm btn-primary"])[2]";
         String modalSavebutton="(//button[@class=\"save-chapter btn btn-sm btn-primary\"])[2]";
         ClickUtils.clickByXpath(driver, modalSavebutton);
@@ -307,22 +301,18 @@ public class US023CreateBundleSteps {
         driver.get("https://qa.instulearn.com/panel/webinars/4130/step/5");
 
         // todo newPrerequisitesButton islemleri
-        // newPrerequisitesButton="//button[@id="webinarAddPrerequisites"]";
         String newPrerequisitesButton="//button[@id=\"webinarAddPrerequisites\"]";
         ClickUtils.clickByXpath(driver, newPrerequisitesButton);
         ReusableMethods.bekle(4);
         logger.info("Kullanici newPrerequisitesButton alanini doldurdu");
 
         // todo selectPrerequisiteDropDownMenu islemleri
-        // selectPrerequisiteDropDownMenu ="//*[@class='select2 select2-container select2-container--default']";
         String selectPrerequisiteDropDownMenu ="//*[@class='select2 select2-container select2-container--default']";
         ClickUtils.clickByXpath(driver, selectPrerequisiteDropDownMenu);
         ReusableMethods.bekle(2);
         logger.info("Kullanici selectPrerequisiteDropDownMenu alanini doldurdu");
 
         // todo searchBox islemleri
-        // searchBox="//input[@class="select2-search__field"]"
-        // arancak kelime =advenced
         String searchBox = "//input[@class='select2-search__field']";
        // 1. Kelimeyi gönder (Static metodumuzla hem yazıyor hem vurguluyor)
         SendKeysUtils.sendByXpath(driver, searchBox, "adv");
@@ -360,7 +350,7 @@ public class US023CreateBundleSteps {
         ReusableMethods.bekle(2);
         logger.info(" ✅ Kullanici requiredCheckBoxButton alanini JS Executor ile başarıyla doldurdu");
 
-        // nextStepButton
+        // todo  nextStepButton
         ClickUtils.clickByXpath(driver, nextButton);
         ReusableMethods.bekle(3);
 
@@ -373,45 +363,117 @@ public class US023CreateBundleSteps {
     public void kullaniciFAQpageSayfasiBilgileriniDoldurur() {
 
         // bu satır sonra sil
+        driver.get("https://qa.instulearn.com/panel/webinars/4130/step/6");
 
-        // git add .
-        //git commit -m "feat: step5 tamamlandi "
+        // todo
+        String newFAQButton="//button[@id=\"webinarAddFAQ\"]";
+        ClickUtils.clickByXpath(driver, newFAQButton);
+        ReusableMethods.bekle(4);
+        logger.info("Kullanici newFAQButton alanini doldurdu");
 
+        // todo titleBox islemleri
+        String titleBox="//input[@name=\"ajax[new][title]\"]";
+        String faqQuestion="Sınav veya proje var mı? Başarı nasıl ölçülüyor?";
+        SendKeysUtils.sendByXpath(driver, titleBox, faqQuestion);
+        ReusableMethods.bekle(2);
 
+        // todo answerBox islemleri
+        String answerBox="//textarea[@name=\"ajax[new][answer]\"]";
+        String answer="Evet, bu kursta hem sınav hem de proje bulunmaktadır. Başarı ölçme yaklaşımımız, teorik bilgiyi ve uygulamalı beceriyi birlikte değerlendirmeyi hedefler.";
+        SendKeysUtils.sendByXpath(driver, answerBox, answer);
+        ReusableMethods.bekle(2);
+        logger.info("Kullanici answerBox alanini doldurdu");
 
+        // todo saveFAQButton islemleri
+        String saveButton="//button[@class=\"js-save-faq btn btn-sm btn-primary\"]";
 
+        ClickUtils.clickByXpath(driver, saveButton);
+        ReusableMethods.bekle(3);
+        logger.info("Kullanici saveButton alanini doldurdu");
 
+        // todo nextButton islemleri
+        ClickUtils.clickByXpath(driver, nextButton);
+        ReusableMethods.bekle(2);
+        logger.info("Kullanici nextButton alanini doldurdu");
+    }
 
+    @When("Kullanici Quiz&CertificationPage sayfasi bilgilerini doldurur")
+    public void kullaniciQuizCertificationPageSayfasiBilgileriniDoldurur() {
 
+        // bu satir sonra silinecek 7 . step
+        driver.get("https://qa.instulearn.com/panel/webinars/4130/step/7");
 
+        // todo newQuizButton islemleri
+        String newQuizButton="//button[@id=\"webinarAddQuiz\"]";
+        ClickUtils.clickByXpath(driver, newQuizButton);
+        ReusableMethods.bekle(4);
+        logger.info("Kullanici newQuizButton alanini doldurdu");
 
+        // todo quiztitleBox islemleri
+        String quiztitleBox="//input[@name=\"ajax[new][title]\"]";
+        String title="achievement-1";
+        SendKeysUtils.sendByXpath(driver, quiztitleBox, title);
+        ReusableMethods.bekle(2);
+        logger.info("Kullanici quiztitleBox alanini doldurdu");
 
+        // todo Time (Minutes) islemleri
+        String timeBox="//input[@name=\"ajax[new][time]\"]";
+        String duration="60";
+        SendKeysUtils.sendByXpath(driver, timeBox, duration);
+        ReusableMethods.bekle(2);
+        logger.info("Kullanici timeBox alanini doldurdu");
 
+        // todo Number of attempts islemleri
+        String numberOfAttemptsBox="//input[@name=\"ajax[new][attempt]\"]";
+        String attempCounts="2";
+        SendKeysUtils.sendByXpath(driver, numberOfAttemptsBox, attempCounts);
+        ReusableMethods.bekle(2);
+        logger.info("Kullanici numberOfAttemptsBox alanini doldurdu");
 
+        // todo Pass mark islemleri
+        String passMarkBox="//input[@name=\"ajax[new][pass_mark]\"]";
+        String passMarkCount="70";
+        SendKeysUtils.sendByXpath(driver, passMarkBox, passMarkCount);
+        ReusableMethods.bekle(2);
+        logger.info("Kullanici passMarkBox alanini doldurdu");
 
+        // todo Expiry days islemleri
+        // String expiryDaysBox="//input[@name="ajax[new][expiry_days]"]";
+        // String expiryDays="30";
+        String expiryDaysBox="//input[@name=\"ajax[new][expiry_days]\"]";
+        String expiryDays="30";
+        SendKeysUtils.sendByXpath(driver, expiryDaysBox, expiryDays);
+        ReusableMethods.bekle(2);
+        logger.info("Kullanici expiryDaysBox alanini doldurdu");
 
+        // todo Display questions randomly Box  islemleri javaexceture ile
 
+        ClickUtils.clickByXpath(driver, "//*[@class=\"custom-control custom-switch\"]");
+        ReusableMethods.bekle(2);
+        logger.info("Kullanici Display questions randomly Box alanini JS Executor ile başarıyla doldurdu");
 
+        // todo Certificate included CheckBox islemleri
+        ClickUtils.clickByXpath(driver, "(//*[@class=\"custom-control custom-switch\"])[2]");
+        ReusableMethods.bekle(2);
+        logger.info("Kullanici Certificate included CheckBox alanini JS Executor ile başarıyla doldurdu");
 
+        // todo Active quiz CheckBox islemleri
+        ClickUtils.clickByXpath(driver,"(//*[@class=\"custom-control custom-switch\"])[3]");
+        ReusableMethods.bekle(2);
+        logger.info("Kullanici Active quiz CheckBox alanini JS Executor ile başarıyla doldurdu");
 
+        // todo create islemleri
+        ClickUtils.clickByXpath(driver, "//button[@class=\"js-submit-quiz-form btn btn-sm btn-primary\"]");
+        ReusableMethods.bekle(2);
+        logger.info("Kullanici createButton alanini doldurdu");
+        ReusableMethods.bekle(6);
 
+        // todo publish islemleri
+        ClickUtils.clickByXpath(driver, "//button[@id=\"sendForReview\"]");
+        ReusableMethods.bekle(2);
+        logger.info("Kullanici publishButton alanini doldurdu");
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+        ReusableMethods.bekle(6);
 
     }
 }
