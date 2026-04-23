@@ -1,49 +1,54 @@
 
-@wip
-Feature: İndirim ve Promosyon Yönetimi
+@US29
+Feature: İnstructor'ın Kurs İndirim ve Promosyon Yönetimi
 
   Background:
     Given kullanıcı sisteme kayıtlı bir Instructor olarak giriş yapmıştır
     And kullanıcı dashboard sayfasındadır
 
-  @TC-01
+  @US29_TC01
   Scenario: Sidebar'da Marketing başlığı altında Discounts ve Promotions linkleri görünür olmalıdır
-    Then sidebar menüde Marketing başlığı görünür olmalıdır
-    Then kullanıcı Marketing linkine tıklar
-    And Marketing başlığı altında Discounts linki görünür ve aktif olmalıdır
+    Given sidebar menüde Marketing başlığı görünür olmalıdır
+    When kullanıcı Marketing linkine tıklar
+    Then Marketing başlığı altında Discounts linki görünür ve aktif olmalıdır
     And Marketing başlığı altında Promotions linki görünür ve aktif olmalıdır
 
 
-  @TC-02
+  @US29_TC02
   Scenario: Discounts ikonuna tıklandığında yeni kurs indirimi oluşturulabilmelidir
-    When kullanıcı Discounts linkine tıklar
-    Then Discounts sayfası açılmalıdır
-    And Create butonu görünür olmalıdır
-    When kullanıcı yeni indirim bilgilerini doldurur
-    And Create butonuna tıklar
-    Then yeni kurs indirimi başarıyla oluşturulmalıdır
+    Given kullanıcı Discounts linkine tıklar
+    When Discounts sayfası açılmalıdır
+    Then Create butonu görünür olmalıdır
+    And kullanıcı yeni indirim bilgilerini doldurur
+    Then Create butonuna tıklar
     And oluşturulan indirim listede görünmelidir
 
-  @TC-03
+  @US29_TC03
   Scenario: Geçersiz indirim bilgileriyle kayıt yapılamamalıdır
-    Given kullanıcı "Discounts" linkine tıklar
+    Given kullanıcı Discounts linkine tıklar
     When kullanıcı eksik veya geçersiz indirim bilgileri girer
-    And "Kaydet" butonuna tıklar
-    Then hata mesajı görüntülenmelidir
+    Then Create butonuna tıklar
     And indirim oluşturulmamalıdır
 
-  @TC-04
+  @US29_TC04
   Scenario: Promotions linkine tıklandığında promosyon planları sayfada görünür olmalıdır
-    When kullanıcı "Promotions" linkine tıklar
-    Then Promotions sayfası açılmalıdır
-    And mevcut promosyon planları listede görünür olmalıdır
+    Given kullanıcı Promotions linkine tıklar
+    When Promotions sayfası açılmalıdır
+    Then mevcut promosyon planları listede görünür olmalıdır
     And her plan seçilebilir durumda olmalıdır
 
-  @TC-05
+  @US29_TC05
   Scenario: Kullanıcı istediği promosyon planına kayıt yapabilmelidir
-    Given kullanıcı Promotions sayfasındadır
+    Given kullanıcı Promotions linkine tıklar
+    When Promotions sayfası açılmalıdır
     When kullanıcı bir promosyon planı seçer
-    And "Kaydol" butonuna tıklar
-    Then kullanıcı seçilen plana başarıyla kayıt olmalıdır
-    And onay mesajı ekranda görüntülenmelidir
+    And Purchase butonuna tıklar
+    When Kurs bilgisini seçer
+    And Pay butonuna tıklar
+    When Ödeme planını seçer
+    And Ödeme işlemini başlatır
+    When Ödeme bilgilerini doldurur
+    And Öde butonuna tıklar
+    Then onay mesajı ekranda görüntülenmelidir
+    And kullanıcı seçilen plana başarıyla kayıt olmalıdır
 

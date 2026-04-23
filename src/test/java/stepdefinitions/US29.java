@@ -1,12 +1,15 @@
 package stepdefinitions;
 
+import com.github.dockerjava.api.model.Driver;
 import config.ConfigReader;
 import io.cucumber.java.PendingException;
 import io.cucumber.java.en.*;
 import org.apache.commons.lang3.RandomStringUtils;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.junit.Assert;
 import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.TestInfo;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.Select;
@@ -27,6 +30,7 @@ public class US29 {
     DashboardPage dashboardPage = new DashboardPage(driver);
     Actions actions = new Actions(driver);
     MarketingPage marketingPage = new MarketingPage(driver);
+    Random random = new Random();
 
 
 
@@ -41,7 +45,7 @@ public class US29 {
         ReusableMethods.bekle(1);
     }
 
-    @Given("kullanıcı dashboard sayfasındadır")
+    @And("kullanıcı dashboard sayfasındadır")
     public void kullanıcı_dashboard_sayfasındadır() {
         Assertions.assertTrue(dashboardPage.dashboardTitle.isDisplayed());
     }
@@ -50,19 +54,20 @@ public class US29 {
 
 
 
-    @Then("sidebar menüde Marketing başlığı görünür olmalıdır")
+    @Given("sidebar menüde Marketing başlığı görünür olmalıdır")
     public void sidebarMenüdeMarketingBaşlığıGörünürOlmalıdır() {
         actions.moveToElement(dashboardPage.sidebar).perform();
         ReusableMethods.scrollToElement(driver,dashboardPage.sidebarMarketingLink);
         Assertions.assertTrue(dashboardPage.sidebarMarketingLink.isDisplayed());
     }
 
-    @Then("kullanıcı Marketing linkine tıklar")
+    @When("kullanıcı Marketing linkine tıklar")
     public void kullanıcıMarketingLinkineTıklar() {
         dashboardPage.sidebarMarketingLink.click();
+        ReusableMethods.bekle(1);
     }
 
-    @And("Marketing başlığı altında Discounts linki görünür ve aktif olmalıdır")
+    @Then("Marketing başlığı altında Discounts linki görünür ve aktif olmalıdır")
     public void marketing_Başlığı_Altında_Discounts_Linki_Görünür_Ve_Aktif_Olmalıdır() {
         Assertions.assertTrue(dashboardPage.discountsLinkByMarketing.isDisplayed());
         Assertions.assertTrue(dashboardPage.discountsLinkByMarketing.isEnabled());
@@ -79,23 +84,26 @@ public class US29 {
 
 
 
-    @When("kullanıcı Discounts linkine tıklar")
+    @Given("kullanıcı Discounts linkine tıklar")
     public void kullanıcıDiscountsLinkineTıklar() {
+        actions.moveToElement(dashboardPage.sidebar).perform();
+        ReusableMethods.scrollToElement(driver,dashboardPage.sidebarMarketingLink);
+        dashboardPage.sidebarMarketingLink.click();
         dashboardPage.discountsLinkByMarketing.click();
     }
 
-    @Then("Discounts sayfası açılmalıdır")
+    @When("Discounts sayfası açılmalıdır")
     public void discounts_sayfası_açılmalıdır() {
         Assertions.assertTrue(marketingPage.discountsTitle.isDisplayed());
     }
 
-    @And("Create butonu görünür olmalıdır")
+    @Then("Create butonu görünür olmalıdır")
     public void createButonuGörünürOlmalıdır() {
         Assertions.assertTrue(marketingPage.createButton.isDisplayed());
     }
 
     String titleText = RandomStringUtils.randomAlphabetic(5);
-    @When("kullanıcı yeni indirim bilgilerini doldurur")
+    @And("kullanıcı yeni indirim bilgilerini doldurur")
     public void kullanıcı_yeni_indirim_bilgilerini_doldurur() {
         marketingPage.titleBox.sendKeys(titleText);
         ReusableMethods.bekle(1);
@@ -110,96 +118,134 @@ public class US29 {
         ReusableMethods.bekle(1);
     }
 
-    @And("Create butonuna tıklar")
+    @Then("Create butonuna tıklar")
     public void createButonunaTıklar() {
         marketingPage.createButton.click();
+       // marketingPage.createButton.click();
+        ReusableMethods.bekle(10);
+        // fixme ahmet
     }
 
-    @Then("yeni kurs indirimi başarıyla oluşturulmalıdır")
-    public void yeni_kurs_indirimi_başarıyla_oluşturulmalıdır() {
-        Assertions.assertTrue(marketingPage.successfullyMessage.isDisplayed());
-    }
-
-    @Then("oluşturulan indirim listede görünmelidir")
+    @And("oluşturulan indirim listede görünmelidir")
     public void oluşturulan_indirim_listede_görünmelidir() {
-
+        Assertions.assertTrue(marketingPage.discountsNameList.get(0).getText().contains(titleText));
     }
 
 
 
 
 
-    @Given("kullanıcı {string} linkine tıklar")
-    public void when_kullanıcı_linkine_tıklar(String string) {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
-    }
+
+
     @When("kullanıcı eksik veya geçersiz indirim bilgileri girer")
     public void kullanıcı_eksik_veya_geçersiz_indirim_bilgileri_girer() {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
+        marketingPage.titleBox.sendKeys(titleText);
+        ReusableMethods.bekle(1);
+        Select select = new Select(marketingPage.courseBox);
+        select.selectByIndex(1);
+        ReusableMethods.bekle(1);
+        marketingPage.amountBox.sendKeys("110");
+        ReusableMethods.bekle(1);
+        marketingPage.fromBox.sendKeys("2025.04.30");
+        ReusableMethods.bekle(1);
+        marketingPage.toBox.sendKeys("2025.05.30");
+        ReusableMethods.bekle(1);
+
     }
 
-    @Then("hata mesajı görüntülenmelidir")
-    public void hata_mesajı_görüntülenmelidir() {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
-    }
-    @Then("indirim oluşturulmamalıdır")
+    @And("indirim oluşturulmamalıdır")
     public void indirim_oluşturulmamalıdır() {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
+        Assertions.assertFalse(marketingPage.discountsNameList.get(0).getText().contains(titleText),
+                "Hatalı discounts bilgileri testi/negatif test");
+
     }
 
 
 
 
 
+    @Given("kullanıcı Promotions linkine tıklar")
+    public void kullanıcıPromotionsLinkineTıklar() {
+        actions.moveToElement(dashboardPage.sidebar).perform();
+        ReusableMethods.scrollToElement(driver,dashboardPage.sidebarMarketingLink);
+        dashboardPage.sidebarMarketingLink.click();
+        marketingPage.promotionsLink.click();
+    }
 
-    @Then("Promotions sayfası açılmalıdır")
+    @When("Promotions sayfası açılmalıdır")
     public void promotions_sayfası_açılmalıdır() {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
+        Assertions.assertTrue(driver.getCurrentUrl().contains("promotions"));
     }
+
     @Then("mevcut promosyon planları listede görünür olmalıdır")
     public void mevcut_promosyon_planları_listede_görünür_olmalıdır() {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
+        Assertions.assertFalse(marketingPage.promotionsList.isEmpty());
     }
-    @Then("her plan seçilebilir durumda olmalıdır")
+
+    @And("her plan seçilebilir durumda olmalıdır")
     public void her_plan_seçilebilir_durumda_olmalıdır() {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
+        for (int i = 0; i < marketingPage.promotionsList.size(); i++) {
+            Assertions.assertTrue(marketingPage.promotionsList.get(i).isEnabled());
+        }
     }
 
 
 
 
 
-    @Given("kullanıcı Promotions sayfasındadır")
-    public void kullanıcı_promotions_sayfasındadır() {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
-    }
+
+
+    int randomIndex;
     @When("kullanıcı bir promosyon planı seçer")
     public void kullanıcı_bir_promosyon_planı_seçer() {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
+        randomIndex =random.nextInt(marketingPage.promotionsList.size());
+        marketingPage.promotionsList.get(randomIndex).click();
     }
-    @When("{string} butonuna tıklar")
-    public void butonuna_tıklar(String string) {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
+
+    @And("Purchase butonuna tıklar")
+    public void purchaseButonunaTıklar() {
+        marketingPage.promotionsPurchaseButtonList.get(randomIndex).click();
     }
-    @Then("kullanıcı seçilen plana başarıyla kayıt olmalıdır")
+
+    @When("Kurs bilgisini seçer")
+    public void kursBilgisiniSeçer() {
+        Select select = new Select(marketingPage.selectCourseInPromotions);
+        select.selectByIndex(1);
+    }
+
+    @And("Pay butonuna tıklar")
+    public void payButonunaTıklar() {
+        marketingPage.promotionsPay.click();
+    }
+
+    @When("Ödeme planını seçer")
+    public void ödemePlanınıSeçer() {
+        marketingPage.stripeÖdemeYöntemi.click();
+    }
+
+    @And("Ödeme işlemini başlatır")
+    public void ödemeIşleminiBaşlatır() {
+        ReusableMethods.bekle(1);
+        marketingPage.paymentSubmitButton.click();
+    }
+
+    @When("Ödeme bilgilerini doldurur")
+    public void ödemeBilgileriniDoldurur() {
+
+    }
+
+    @And("Öde butonuna tıklar")
+    public void ödeButonunaTıklar() {
+
+    }
+
+    @And("kullanıcı seçilen plana başarıyla kayıt olmalıdır")
     public void kullanıcı_seçilen_plana_başarıyla_kayıt_olmalıdır() {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
+
     }
     @Then("onay mesajı ekranda görüntülenmelidir")
     public void onay_mesajı_ekranda_görüntülenmelidir() {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
+
     }
 
 

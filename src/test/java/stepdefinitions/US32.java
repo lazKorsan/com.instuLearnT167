@@ -127,12 +127,4 @@ public class US32 {
     public void reserve_a_meeting_linki_altında_ilgili_içerik_görüntülenir() {
         Assertions.assertTrue(instructorProfilePage.reserveMeetingLink.isDisplayed());
     }
-
-
-
-
-
-
-
-
 }
