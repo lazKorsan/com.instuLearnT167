@@ -337,8 +337,6 @@ public class US023CreateBundleSteps {
 
         // 2. Elementi önce Selenium ile buluyoruz
         WebElement checkboxElement = driver.findElement(By.xpath(requiredCheckBoxButton));
-        // 3. Vurgulama (Highlight): Senin ReusableMethods sınıfındaki metodu kullanıyoruz
-        // Bu sayede yeni arkadaşlar hangi kutunun tıklandığını sarı renkle görecek
         ReusableMethods.highLightToElement(checkboxElement);
 
         // 4. JavaScriptExecutor ile "Arka Kapıdan" tıklama
