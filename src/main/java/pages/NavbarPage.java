@@ -22,4 +22,12 @@ public class NavbarPage extends BasePage {
 
     @FindBy(xpath = "(//button[@id='navbarShopingCart'])[1]")
     public WebElement navbarShoppingCart;
+
+    @FindBy(xpath = "//div[@class='custom-dropdown-toggle d-flex align-items-center navbar-user cursor-pointer']")
+    public WebElement navbarProfileButton;
+
+    @FindBy(xpath = "//a[@href='/panel']")
+    public WebElement profileButtonPopUpDashboardLink;
+
+
 }

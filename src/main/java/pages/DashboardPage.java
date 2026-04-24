@@ -1,14 +1,13 @@
 package pages;
 
-import org.junit.jupiter.api.Test;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.PageFactory;
 
 import java.util.List;
 
-public class DashboardPage extends BasePage{
+public class DashboardPage extends BasePage {
 
     public DashboardPage(WebDriver driver) {
         super(driver);
@@ -93,20 +92,14 @@ public class DashboardPage extends BasePage{
     @FindBy(xpath = "//*[@*='quizzes_questions']")
     public List<WebElement> QuestionsList;
 
-        @FindBy(xpath = "//span[text()=\"Marketing\"]")
-        public  WebElement sidebarMarketingLink;
+    @FindBy(xpath = "//span[text()=\"Marketing\"]")
+    public WebElement sidebarMarketingLink;
 
-        @FindBy(xpath = "//a[text()=\"Discounts\"]")
-        public WebElement discountsLinkByMarketing;
+    @FindBy(xpath = "//a[text()=\"Discounts\"]")
+    public WebElement discountsLinkByMarketing;
 
-        @FindBy(xpath = "//a[text()=\"Promotions\"]")
-        public WebElement promotionsLinkByMarketing;
-
-
-
-
-
-
+    @FindBy(xpath = "//a[text()=\"Promotions\"]")
+    public WebElement promotionsLinkByMarketing;
 
 
     @FindBy(xpath = "//button[@id='add_descriptive_question']")
@@ -133,25 +126,38 @@ public class DashboardPage extends BasePage{
     @FindBy(xpath = "//table//tbody//tr/td[2]")
     public List<WebElement> Questions;
 
+    @FindBy(xpath = "(//div[@class='simplebar-content'])[10]")
+    public List<WebElement> sidebarLinks;
 
+    @FindBy(xpath = "(//a[@href='/panel/notifications'])[2]")
+    public WebElement viewAllEventsLink;
 
+    @FindBy(xpath = "(//div[@class='row'])[1]//a")
+    public List<WebElement> dashboardBodyLinks;
 
+    @FindBy(xpath = "((//div[@class='row'])[1]//div[@class='text-center'])[1]")
+    public WebElement dashboardBodyAccountBalance;
 
+    @FindBy(xpath = "//div[@class='bg-white noticeboard rounded-sm panel-shadow py-10 py-md-20 px-15 px-md-30']//div[@class='noticeboard-item py-15']")
+    public List<WebElement> noticeBoard;
 
+    public WebElement getNoticeBoardElementTitle(WebDriver driver,int index){
+        return noticeBoard.get(index).findElement( By.xpath(".//h4[@class='js-noticeboard-title font-weight-500 text-secondary']"));
+    }
 
+    public WebElement getNoticeBoardElementCreator(WebDriver driver,int index){
+        return noticeBoard.get(index).findElement( By.xpath("(.//div[@class='font-12 text-gray mt-5']//span)[1]"));
+    }
 
+    public WebElement getNoticeBoardElementCreatedTime(WebDriver driver,int index){
+        return noticeBoard.get(index).findElement( By.xpath("(.//div[@class='font-12 text-gray mt-5']//span)[2]"));
+    }
 
+    public WebElement getNoticeBoardElementMoreInfoButton(WebDriver driver,int index){
+        return noticeBoard.get(index).findElement( By.xpath("(.//button[.='More info'])[1]"));
+    }
 
-
-
-
-
-
-
-
-
-
-
-
+    @FindBy(xpath = "//canvas[@id='myChart']")
+    public WebElement monthlyLearningSchedule;
 
 }
