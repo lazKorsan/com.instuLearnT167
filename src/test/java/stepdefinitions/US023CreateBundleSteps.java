@@ -118,6 +118,7 @@ public class US023CreateBundleSteps {
         logger.info("Kullanici seo_description alanina Math,VideoCourse,Certificate yazdi");
         ReusableMethods.bekle(2);
 
+        // todo ===============FOTO1===START============================================
         // todo  SWİTCH WİNDOW İSLEMLERİNİN OLDUGU BOLUM
         // todo thunbnail yukleme islemleri  1nc. foto yukleme adimlari
         ClickUtils.clickByXpath(driver,"(//button[@class=\"input-group-text panel-file-manager\"])[1]");
@@ -142,7 +143,9 @@ public class US023CreateBundleSteps {
         SwitchToWindow.switchToWindowByIndex(driver,0);
         logger.info("Kullanici switchToWindow ozelligi ile ilk pencereye gecti");
         ReusableMethods.bekle(2);
+        // todo ===============FOTO1===END============================================
 
+        // todo ===============FOTO2===START============================================
         // todo 2.foto yukleme islemleri
         // todo çift tiklama alternatif olarak ReusableMethods içinden cagirilabilir
         ClickUtils.clickByXpath(driver,"(//button[@class=\"input-group-text panel-file-manager\"])[2]");
@@ -153,47 +156,15 @@ public class US023CreateBundleSteps {
         logger.info("Kullanici switchToWindow ozelligi ile ikinci pencereye gecti");
 
         ClickUtils.clickByXpath(driver,"(//*[@class='item_name text-truncate'])[2]");
-
-        WebElement mathPng= driver.findElement(By.xpath("content"));
-        ReusableMethods.highLightToElement(mathPng);
-        JavascriptExecutor js = (JavascriptExecutor) driver;
-        js.executeScript("arguments[0].click();", mathPng);
         logger.info("Kullanici matematik thumbnail secti");
         ReusableMethods.bekle(2);
 
-
-
-        // (//*[@class="item_name text-truncate"])[3]
-       // ClickUtils.clickByXpath(driver,"//*[@id=\"content\"]/a[3]");
-        //  //*[@data-id="2"]
-        // todo foto secme islemleri
-       // ClickUtils.clickByXpath(driver,"((//div[@id='content']//a)//time)[3]");
-        logger.info("Kullanici matematik thumbnail secti");
-        ReusableMethods.bekle(2);
-
-
-        // todo ========================================================
-        // 1. Önce içeriğin olduğu ana kutuya bir kez tıklayarak odağı (focus) oraya çekiyoruz
-        // WebElement contentArea = driver.findElement(By.id("content"));
-        //        contentArea.click();
-        //        utils.ReusableMethods.bekle(1);
-        //
-        //// 2. Actions sınıfı ile klavye hareketlerini başlatıyoruz
-        //        Actions actions = new Actions(driver);
-        //
-        //// 3. Üçüncü elemente ulaşmak için 3 kez TAB tuşuna basıyoruz
-        //// Not: Sayfanın yapısına göre bu sayı değişebilir, genelde her 'a' etiketi bir TAB ister.
-        //        actions.sendKeys(Keys.TAB)
-        //                .pause(Duration.ofMillis(500))
-        //                .sendKeys(Keys.TAB)
-        //                .pause(Duration.ofMillis(500))
-        //                .sendKeys(Keys.ENTER) // Seçimi onaylamak için Enter
-        //                .perform();
-        //
-        //        logger.info("✅ Klavye navigasyonu (TAB+TAB+TAB+ENTER) ile 3. element seçildi.");
-        //        utils.ReusableMethods.bekle(2);
-
-        // todo ========================================================
+        // WebElement mathPng= driver.findElement(By.xpath("content"));
+        //        ReusableMethods.highLightToElement(mathPng);
+        //        JavascriptExecutor js = (JavascriptExecutor) driver;
+        //        js.executeScript("arguments[0].click();", mathPng);
+        //        logger.info("Kullanici matematik thumbnail secti");
+        //        ReusableMethods.bekle(2);
 
         // todo comfirm islemleri
         ClickUtils.clickByXpath(driver, "//*[@class=\"fas fa-check\"]");
@@ -204,6 +175,7 @@ public class US023CreateBundleSteps {
         logger.info("Kullanici switchToWindow ozelligi ile ilk pencereye gecti");
         ReusableMethods.bekle(2);
         // todo switchWindow islemleri bitti . Driverin o indexine donmesi gerekir tekrardan
+        // todo ===============FOTO2===END============================================
 
 
 
