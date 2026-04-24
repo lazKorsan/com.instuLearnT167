@@ -17,24 +17,23 @@ public class LoginPage extends BasePage {
 	@FindBy(id = "username")
 	private WebElement usernameInput;
 
+	@FindBy(id = "email")
+	private WebElement emailInput;
+
 	@FindBy(id = "password")
 	private WebElement passwordInput;
 
-	@FindBy(id = "loginButton")
+	@FindBy(xpath = "//button[.='Login']")
 	private WebElement loginButton;
 
 	@FindBy(xpath = "//h1[normalize-space()='Login'] | //h2[normalize-space()='Login']")
 	public WebElement loginTitle;
 
-	@FindBy(xpath = "//input[@id='email' or @name='email' or @type='email']")
-	public WebElement emailInput;
-
-
 
 
 	// Login işlemi
-	public void login(String username, String password) {
-		type(usernameInput, username);
+	public void login(String email, String password) {
+		type(emailInput, email);
 		type(passwordInput, password);
 		click(loginButton);
 	}

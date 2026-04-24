@@ -16,7 +16,8 @@ Feature: Kullanici base_url acar
   @loginWithMethod
   Scenario: Kullanici method cagrisi ile login olur
     * Kullanici login page sayfasina gider
-    * Kullanici mail adresi "ahmet.student@InstuLearn.com" ve tanimli password ile  "InstuLearn.2026!" giris yapar
+    * Kullanici mail adresi "zafer3.student@instuLearn.com" ve tanimli password ile  "InstuLearn.2026!" giris yapar
+    * Kullanici 10 saniye bekler
 
 
   @scanarioOutline

@@ -418,4 +418,24 @@ public class SendKeysUtils {
             return "";
         }
     }
+
+    /**
+     * Statik Metot: Belirtilen element üzerinde klavyeden Aşağı Ok (Arrow Down) tuşuna basar.
+     * Genellikle dinamik arama listelerinde ilk sıradaki öğeyi seçmek için kullanılır.
+     * * @param driver WebDriver örneği
+     * @param xpath İşlem yapılacak elementin XPath adresi
+     */
+    public static void pressArrowDown(WebDriver driver, String xpath) {
+        try {
+            // Elementi bul
+            WebElement element = driver.findElement(By.xpath(xpath));
+
+            // Klavye eylemini gerçekleştir
+            element.sendKeys(Keys.ARROW_DOWN);
+
+            System.out.println("⬇️ [SendKeys] ARROW_DOWN tuşuna basıldı: " + xpath);
+        } catch (Exception e) {
+            System.err.println("❌ [SendKeys] Ok tuşuna basılırken hata oluştu: " + e.getMessage());
+        }
+    }
 }
