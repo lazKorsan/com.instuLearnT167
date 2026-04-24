@@ -147,7 +147,8 @@ public class US023CreateBundleSteps {
         SwitchToWindow.switchToWindowByIndex(driver,1);
         logger.info("Kullanici switchToWindow ozelligi ile ikinci pencereye gecti");
 
-        ClickUtils.clickByXpath(driver,"(//*[@class='item_name text-truncate'])[1]");
+       // ClickUtils.clickByXpath(driver,"(//*[@class='item_name text-truncate'])[2]");
+        ClickUtils.clickByXpath(driver,"//*[@id=\"content\"]/a[3]");
         logger.info("Kullanici matematik thumbnail secti");
         ReusableMethods.bekle(2);
 
@@ -178,7 +179,7 @@ public class US023CreateBundleSteps {
     public void kullaniciExtraInformationSayfasiBilgileriniDoldurur() {
 
         // todo ÖNEMLİ DYNAMİK TESTE GEÇERKEN BURAYI YORUMA AL
-        driver.get("https://qa.instulearn.com/panel/webinars/4130/step/2");
+       // driver.get("https://qa.instulearn.com/panel/webinars/4130/step/2");
         ReusableMethods.bekle(4);
 
         // todo capacityBox islemleri
@@ -240,7 +241,7 @@ public class US023CreateBundleSteps {
     public void kullaniciPricingPageSayfasiBilgileriniDoldurur() {
 
         // todo ÖNEMLİ DYNAMİK TESTE GEÇERKEN BURAYI YORUMA AL
-        driver.get("https://qa.instulearn.com/panel/webinars/4130/step/3");
+        //driver.get("https://qa.instulearn.com/panel/webinars/4130/step/3");
 
         // todo subscribeSwitchCheckBox islemleri
         WebElement subscribeSwitchCheckBox = driver.findElement(By.id("subscribeSwitch"));
@@ -274,7 +275,7 @@ public class US023CreateBundleSteps {
     public void kullaniciContentPageSayfasiBilgileriniDoldurur() {
 
         // todo ÖNEMLİ DYNAMİK TESTE GEÇERKEN BURAYI YORUMA AL
-        driver.get("https://qa.instulearn.com/panel/webinars/4130/step/4");
+        //driver.get("https://qa.instulearn.com/panel/webinars/4130/step/4");
 
         // todo newSectionButton islemleri
         String newSectionButton="//button[@class=\"js-add-chapter btn btn-primary btn-sm mt-15\"]";
@@ -306,7 +307,7 @@ public class US023CreateBundleSteps {
     public void kullaniciPrerequisitesPageSayfasiBilgileriniDoldurur() {
 
         // todo ÖNEMLİ DYNAMİK TESTE GEÇERKEN BURAYI YORUMA AL
-        driver.get("https://qa.instulearn.com/panel/webinars/4130/step/5");
+        //driver.get("https://qa.instulearn.com/panel/webinars/4130/step/5");
 
         // todo newPrerequisitesButton islemleri
         String newPrerequisitesButton="//button[@id=\"webinarAddPrerequisites\"]";
@@ -360,7 +361,7 @@ public class US023CreateBundleSteps {
     public void kullaniciFAQpageSayfasiBilgileriniDoldurur() {
 
         // todo ÖNEMLİ DYNAMİK TESTE GEÇERKEN BURAYI YORUMA AL
-        driver.get("https://qa.instulearn.com/panel/webinars/4130/step/6");
+        //driver.get("https://qa.instulearn.com/panel/webinars/4130/step/6");
 
         // todo newFAQButton islemleri
         String newFAQButton="//button[@id=\"webinarAddFAQ\"]";
@@ -397,7 +398,7 @@ public class US023CreateBundleSteps {
     public void kullaniciQuizCertificationPageSayfasiBilgileriniDoldurur() {
 
         // todo ÖNEMLİ DYNAMİK TESTE GEÇERKEN BURAYI YORUMA AL
-        driver.get("https://qa.instulearn.com/panel/webinars/4130/step/7");
+        //driver.get("https://qa.instulearn.com/panel/webinars/4130/step/7");
 
         // todo newQuizButton islemleri
         String newQuizButton="//button[@id=\"webinarAddQuiz\"]";

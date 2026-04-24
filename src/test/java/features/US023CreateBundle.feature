@@ -1,5 +1,27 @@
 
+
+@createCourse
 Feature: CreateBundele
+
+  @createCourseOneScenario
+  Scenario: Instructor yeni bir course olusturur
+    * Instructor "ahmet.instructor2@InstuLearn.com" adresi ve "InsruLearn.2026!" ile sisteme giris yapar
+    * Kullanici dashBoard menuden newButtonuna tiklar
+    * Kullanici newWebinar sayfasinda oldugunu dogrular
+    * Kullanici basicInformation sayfasi bilgilerini doldurur
+    # step2
+    * Kullanici extraInformation sayfasi bilgilerini doldurur
+    # step3
+    * Kullanici pricingPage sayfasi bilgilerini doldurur
+    # step4
+    * Kullanici contentPage sayfasi bilgilerini doldurur
+    # step5
+    * Kullanici prerequisitesPage sayfasi bilgilerini doldurur
+    # step6
+    * Kullanici FAQpage sayfasi bilgilerini doldurur
+    # step7
+    * Kullanici Quiz&CertificationPage sayfasi bilgilerini doldurur
+
 
   Scenario Outline: Kullanici teacher olarak kayit işlemlerini yapar
     * Instructor "<mail>" mail adresi ve "<password>" sifresi kayit olur
