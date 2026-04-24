@@ -28,7 +28,6 @@ Feature: US_034 - As a registered user, you can access instructor information an
     And the instructor's price information is checked to ensure it is displayed
     And check that the reserve a meeting button is visible
 
-  @wip
   Scenario: Schedule a meeting with the instructor
     Given user is on the instructors page
     When the user clicks the reserve a meeting button
