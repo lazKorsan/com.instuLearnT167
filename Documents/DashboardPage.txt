@@ -16,14 +16,13 @@ public class DashboardPage extends BasePage{	public class DashboardPage extends 
 
     public DashboardPage(WebDriver driver) {	    public DashboardPage(WebDriver driver) {
         super(driver);	        super(driver);
-@@ -93,20 +92,14 @@ public DashboardPage(WebDriver driver) {
-    @FindBy(xpath = "//*[@*='quizzes_questions']")	    @FindBy(xpath = "//*[@*='quizzes_questions']")
-    public List<WebElement> QuestionsList;	    public List<WebElement> QuestionsList;
+p      ublic DashboardPage(WebDriver driver) {
+    @FindBy(xpath = "//*[@*='quizzes_questions']")
+    public List<WebElement> QuestionsList;
 
 
-        @FindBy(xpath = "//span[text()=\"Marketing\"]")	    @FindBy(xpath = "//span[text()=\"Marketing\"]")
-        public  WebElement sidebarMarketingLink;	    public WebElement sidebarMarketingLink;
-
+        @FindBy(xpath = "//span[text()=\"Marketing\"]")
+        public  WebElement sidebarMarketingLink;
         @FindBy(xpath = "//a[text()=\"Discounts\"]")
         public WebElement discountsLinkByMarketing;
 

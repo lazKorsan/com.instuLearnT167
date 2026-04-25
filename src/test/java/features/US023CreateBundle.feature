@@ -33,7 +33,7 @@ Feature: CreateBundele
     * Kullanici 10 saniye bekler
     Examples:
       | mail                             | password         |
-      | ahmet.instructor3@InstuLearn.com | InsruLearn.2026! |
+      | ahmet.instructor4@InstuLearn.com | InsruLearn.2026! |
 
 
   @preConditionRegisteration2
