@@ -1,0 +1,7 @@
+
+
+
+blautşls(driver,"yapıalcak iş, jsdfvnke, jdvebıvnju,kjdbvkebkfvjn ),
+
+
+public void loginMethod(driver,Stringmail ,Stiring passwoord,)
