@@ -71,6 +71,7 @@ public class US023CreateBundleSteps {
     @When("Kullanici dashBoard menuden newButtonuna tiklar")
     public void kullaniciDashBoardMenudenNewButtonunaTiklar() {
 
+        // todo BANNER BANNER 2
         ReusableMethods.bekle(2);
         BannerUtils.displayProgressBanner(
                 driver,
@@ -106,6 +107,7 @@ public class US023CreateBundleSteps {
         logger.info("✅ Kullanici newWebinars sayfasina gitti ");
         ReusableMethods.bekle(2);
 
+        // todo BANNER BANNER 3
         ReusableMethods.bekle(2);
         BannerUtils.displayProgressBanner(
                 driver,
@@ -128,6 +130,7 @@ public class US023CreateBundleSteps {
 
         ReusableMethods.bekle(4); // fixme bekleme suresi aayarlanacak
 
+        // todo BANNER BANNER 4
         ReusableMethods.bekle(2);
         BannerUtils.displayProgressBanner(
                 driver,
@@ -141,6 +144,7 @@ public class US023CreateBundleSteps {
     @When("Kullanici basicInformation sayfasi bilgilerini doldurur")
     public void kullaniciBasicInformationSayfasiBilgileriniDoldurur() {
 
+        // todo BANNER BANNER 5
         ReusableMethods.bekle(2);
         BannerUtils.displayProgressBanner(
                 driver,
@@ -241,6 +245,7 @@ public class US023CreateBundleSteps {
         ClickUtils.clickByXpath(driver, nextButton);
         ReusableMethods.bekle(3);
 
+        // todo BANNER BANNER 6
         ReusableMethods.bekle(2);
         BannerUtils.displayProgressBanner(
                 driver,
@@ -255,6 +260,7 @@ public class US023CreateBundleSteps {
     @When("Kullanici extraInformation sayfasi bilgilerini doldurur")
     public void kullaniciExtraInformationSayfasiBilgileriniDoldurur() {
 
+        // todo BANNER BANNER 7
         ReusableMethods.bekle(2);
         BannerUtils.displayProgressBanner(
                 driver,
@@ -319,6 +325,7 @@ public class US023CreateBundleSteps {
          ClickUtils.clickByXpath(driver, nextButton);
          ReusableMethods.bekle(3);
 
+         // todo BANNER BANNER 8
         ReusableMethods.bekle(2);
         BannerUtils.displayProgressBanner(
                 driver,
@@ -337,6 +344,7 @@ public class US023CreateBundleSteps {
     @When("Kullanici pricingPage sayfasi bilgilerini doldurur")
     public void kullaniciPricingPageSayfasiBilgileriniDoldurur() {
 
+        // todo BANNER BANNER 9
         ReusableMethods.bekle(2);
         BannerUtils.displayProgressBanner(
                 driver,
@@ -373,6 +381,7 @@ public class US023CreateBundleSteps {
         ClickUtils.clickByXpath(driver, nextButton);
         ReusableMethods.bekle(3);
 
+        // todo BANNER BANNER 10
         ReusableMethods.bekle(2);
         BannerUtils.displayProgressBanner(
                 driver,
@@ -389,6 +398,7 @@ public class US023CreateBundleSteps {
     @When("Kullanici contentPage sayfasi bilgilerini doldurur")
     public void kullaniciContentPageSayfasiBilgileriniDoldurur() {
 
+        // todo BANNER BANNER 11
         ReusableMethods.bekle(2);
         BannerUtils.displayProgressBanner(
                 driver,
@@ -425,6 +435,7 @@ public class US023CreateBundleSteps {
 
         // https://qa.instulearn.com/panel/webinars/4130/step/5
 
+        // todo BANNER BANNER 12
         ReusableMethods.bekle(2);
         BannerUtils.displayProgressBanner(
                 driver,
@@ -440,6 +451,7 @@ public class US023CreateBundleSteps {
     @When("Kullanici prerequisitesPage sayfasi bilgilerini doldurur")
     public void kullaniciPrerequisitesPageSayfasiBilgileriniDoldurur() {
 
+        // todo BANNER BANNER 13
         ReusableMethods.bekle(2);
         BannerUtils.displayProgressBanner(
                 driver,
@@ -497,6 +509,7 @@ public class US023CreateBundleSteps {
 
         // https://qa.instulearn.com/panel/webinars/4130/step/6
 
+        // todo BANNER BANNER 14
         ReusableMethods.bekle(2);
         BannerUtils.displayProgressBanner(
                 driver,
@@ -512,6 +525,7 @@ public class US023CreateBundleSteps {
     @When("Kullanici FAQpage sayfasi bilgilerini doldurur")
     public void kullaniciFAQpageSayfasiBilgileriniDoldurur() {
 
+        // todo BANNER BANNER 15
         ReusableMethods.bekle(2);
         BannerUtils.displayProgressBanner(
                 driver,
@@ -554,6 +568,7 @@ public class US023CreateBundleSteps {
         ReusableMethods.bekle(2);
         logger.info("Kullanici nextButton alanini doldurdu");
 
+        // todo BANNER BANNER 16
         ReusableMethods.bekle(2);
         BannerUtils.displayProgressBanner(
                 driver,
@@ -567,6 +582,7 @@ public class US023CreateBundleSteps {
     @When("Kullanici Quiz&CertificationPage sayfasi bilgilerini doldurur")
     public void kullaniciQuizCertificationPageSayfasiBilgileriniDoldurur() {
 
+        // todo BANNER BANNER 17
         ReusableMethods.bekle(2);
         BannerUtils.displayProgressBanner(
                 driver,
@@ -650,6 +666,7 @@ public class US023CreateBundleSteps {
 
         ReusableMethods.bekle(6);
 
+        // todo BANNER BANNER 18
         ReusableMethods.bekle(2);
         BannerUtils.displayProgressBanner(
                 driver,
@@ -659,6 +676,7 @@ public class US023CreateBundleSteps {
 
         );ReusableMethods.bekle(6);
 
+        // todo BANNER BANNER 19
         ReusableMethods.bekle(2);
         BannerUtils.displayProgressBanner(
                 driver,
