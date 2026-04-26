@@ -17,7 +17,31 @@ Feature: Kullanici base_url acar
   Scenario: Kullanici method cagrisi ile login olur
     * Kullanici login page sayfasina gider
     * Kullanici mail adresi "zafer3.student@instuLearn.com" ve tanimli password ile  "InstuLearn.2026!" giris yapar
+    * Kullanici login oldugunu dogrular
     * Kullanici 10 saniye bekler
+
+
+  @NegativeLoginMail
+  Scenario: Kullanici hatali mail ile giris denemesi yapar
+    * Kullanici login page sayfasina gider
+    * Kullanici mail adresi "zafer13.student@instuLearn.com" ve tanimli password ile  "InstuLearn.2026!" giris yapar
+    * Kullanici hatali mail ile giris yapilamadigini dogrular
+
+    * Kullanici 10 saniye bekler
+
+
+  @NegativeLoginPassword
+  Scenario: Kullanici hatali mail ile giris denemesi yapar
+    * Kullanici login page sayfasina gider
+    * Kullanici mail adresi "zafer3.student@instuLearn.com" ve tanimli password ile  "InstuLearn.2025!" giris yapar
+    * Kullanici hatali password ile giris yapilamadigini dogrular
+
+    * Kullanici 10 saniye bekler
+
+
+
+
+
 
 
   @scanarioOutline
