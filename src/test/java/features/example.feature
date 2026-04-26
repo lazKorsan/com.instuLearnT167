@@ -6,6 +6,12 @@ Feature: Kullanici base_url acar
     * Kullanici ana sayfaya gider
 
 
+
+@default
+  Scenario: Kullanici login islemlerini yapar
+    * Kullanici login page sayfasina gider
+
+
   @loginProccess
   Scenario: Kullanici login islemlerini yapar
     * Kullanici login page sayfasina gider
@@ -13,30 +19,33 @@ Feature: Kullanici base_url acar
     * Kullanici password kutusuna gecerli password girer
     * Kullanici submitButton tiklar
 
-  @loginWithMethod
+  @PozitiveLoginTest111
   Scenario: Kullanici method cagrisi ile login olur
     * Kullanici login page sayfasina gider
+    * Pozitive Login Test Basliyor
     * Kullanici mail adresi "zafer3.student@instuLearn.com" ve tanimli password ile  "InstuLearn.2026!" giris yapar
     * Kullanici login oldugunu dogrular
-    * Kullanici 10 saniye bekler
 
 
-  @NegativeLoginMail
+
+  @NegativeLoginMail111
   Scenario: Kullanici hatali mail ile giris denemesi yapar
     * Kullanici login page sayfasina gider
+    * Negative Login Test Hatali Mail
     * Kullanici mail adresi "zafer13.student@instuLearn.com" ve tanimli password ile  "InstuLearn.2026!" giris yapar
     * Kullanici hatali mail ile giris yapilamadigini dogrular
 
-    * Kullanici 10 saniye bekler
 
 
-  @NegativeLoginPassword
+
+  @NegativeLoginPassword111
   Scenario: Kullanici hatali mail ile giris denemesi yapar
     * Kullanici login page sayfasina gider
+    * Negative Login Test Hatali Password
     * Kullanici mail adresi "zafer3.student@instuLearn.com" ve tanimli password ile  "InstuLearn.2025!" giris yapar
     * Kullanici hatali password ile giris yapilamadigini dogrular
 
-    * Kullanici 10 saniye bekler
+
 
 
 

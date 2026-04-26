@@ -12,6 +12,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import pages.ExamplePage;
+import utils.BannerUtils;
+import utils.ReusableMethods;
 
 import java.time.Duration;
 import java.util.Map;
@@ -82,6 +84,19 @@ public class exampleSteps {
         logger.info("✅ Therapist ana sayfasına başarıyla yönlendirildi.");
 
 
+        // BANNER BANNER 1
+        ReusableMethods.bekle(2);
+        BannerUtils.displayProgressBanner(
+                driver,
+                "TEST BASARİLİ",
+                "Pozitive Login Test",
+                "Dogru Bilgilerle Giris Yapıldıgı dogrulandi"
+
+        );ReusableMethods.bekle(6);
+
+
+
+
     }
 
     @Given("Kullanici hatali mail ile giris yapilamadigini dogrular")
@@ -107,6 +122,19 @@ public class exampleSteps {
         Assertions.assertTrue(errorElement.isDisplayed(), "❌ HATA: Hata mesajı kutusu görünmüyor!");
 
         logger.info("✅ Negative Test Başarılı: Sistem hatalı maili reddetti ve doğru mesajı gösterdi.");
+
+        // BANNER BANNER 1
+        ReusableMethods.bekle(2);
+        BannerUtils.displayProgressBanner(
+                driver,
+                "TEST BASARİLİ",
+                "NegativeLoginTest",
+                "Hatali Mail Adresi ile Giris Yapılamadıgı dogrulandi"
+
+        );ReusableMethods.bekle(6);
+
+
+
     }
 
     @Given("Kullanici hatali password ile giris yapilamadigini dogrular")
@@ -131,6 +159,17 @@ public class exampleSteps {
         Assertions.assertTrue(errorElement.isDisplayed(), "❌ HATA: Hata mesajı kutusu görünmüyor!");
 
         logger.info("✅ Negative Test Başarılı: Sistem hatalı password ile giriş yapıldı ve reddetti ve doğru mesajı gösterdi.");
+
+
+        // BANNER BANNER 1
+        ReusableMethods.bekle(2);
+        BannerUtils.displayProgressBanner(
+                driver,
+                "TEST BASARILI",
+                "NegativeLoginTest",
+                "Hatali Password ile Giris Yapılamadıgı dogrulandi"
+
+        );ReusableMethods.bekle(6);
 
 
 
@@ -170,4 +209,50 @@ public class exampleSteps {
     }
 
 
+    @When("Pozitive Login Test Basliyor")
+    public void pozitiveLoginTestBasliyor() {
+
+        // BANNER BANNER 1
+        ReusableMethods.bekle(2);
+        BannerUtils.displayProgressBanner(
+                driver,
+                "Pozitive Login Test Baliyor",
+                "PozitiveLoginTest",
+                "Dogru bilgilerle Giris yapildigi dogrulanir"
+
+        );ReusableMethods.bekle(6);
+
+
+    }
+
+    @When("Negative Login Test Hatali Mail")
+    public void negativeLoginTestHataliMail() {
+
+        // BANNER BANNER 1
+        ReusableMethods.bekle(2);
+        BannerUtils.displayProgressBanner(
+                driver,
+                "Hatali Mail Adresi ile Giris Testi Basliyor",
+                "NegativeLoginTest",
+                "The selected email is invalid."
+
+        );ReusableMethods.bekle(6);
+    }
+
+    @When("Negative Login Test Hatali Password")
+    public void negativeLoginTestHataliPassword() {
+
+        // BANNER BANNER 1
+        ReusableMethods.bekle(2);
+        BannerUtils.displayProgressBanner(
+                driver,
+                "Hatali Password ile Giris Testi Basliyor",
+                "NegativeLoginTest",
+                "The password or username is incorrect."
+
+        );ReusableMethods.bekle(6);
+
+
+
+    }
 }
