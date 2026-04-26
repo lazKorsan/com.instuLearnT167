@@ -3,7 +3,7 @@
 @createCourse
 Feature: CreateBundele
 
-  @createCourseOneScenario
+  @createCourseOneScenario111
   Scenario: Instructor yeni bir course olusturur
     # login islemleri
     * Instructor "ahmet.instructor3@InstuLearn.com" adresi ve "InsruLearn.2026!" ile sisteme giris yapar

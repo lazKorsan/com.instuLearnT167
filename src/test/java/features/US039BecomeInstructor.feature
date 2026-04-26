@@ -39,7 +39,7 @@
 
       * Kullanici 10 saniye bekler
 
-    @ChangeRoleDynamic
+    @ChangeRoleDynamic111
     Scenario: Dynamic Method
     Kullanici once ogrenci kaydi yapar . Arkasindan role degistirir.
       * Kullanici registerPage sayfasina gider
@@ -57,5 +57,6 @@
       * Kullanici arama sonucu cikan yazinin "zefire0" oldugunu dogrular
 
 
-    Scenario: Toplantı reserve meetings saatleri girmek için
-      * Kullanici "Monday" gunu icin "AM" saatinde "online" tipinde toplanti ekler
+
+
+
