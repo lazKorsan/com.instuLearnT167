@@ -43,7 +43,7 @@
     Scenario: Dynamic Method
     Kullanici once ogrenci kaydi yapar . Arkasindan role degistirir.
       * Kullanici registerPage sayfasina gider
-      * Kullanici "met" ve "InstuLearn.2026!" bilgileri ile student kayit yapar
+      * Kullanici "zefire0" ve "InstuLearn.2026!" bilgileri ile student kayit yapar
       * Kullanici becomeInstructorButtona tiklar
       * Kullanici webDesign secenegini secer
       * Kullanici sertificate bolumunu doldurur
@@ -53,8 +53,8 @@
       * Kullanici identityScan bolumunu secer
       * Kullanici descriptionBox bolumunu doldurur
       * Kullanici sendRequestButton a tiklar
-      * Kullanici acilan sayfada arama kutusuna "met" kelimesini aratir
-      * Kullanici arama sonucu cikan yazinin "met" oldugunu dogrular
+      * Kullanici acilan sayfada arama kutusuna "zefire0" kelimesini aratir
+      * Kullanici arama sonucu cikan yazinin "zefire0" oldugunu dogrular
 
 
     Scenario: Toplantı reserve meetings saatleri girmek için
