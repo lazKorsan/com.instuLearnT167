@@ -17,12 +17,12 @@ import org.junit.runner.RunWith;
 				"json:target/cucumber-reports/cucumber.json",
 				"io.qameta.allure.cucumber7jvm.AllureCucumber7Jvm"
 		},
-		monochrome = true, // orjinal konum 20nci satir
+		monochrome = false, // orjinal konum 20nci satir
 
 
 
 
-		tags = "@US045TC02", // orjinal konum 25. satir scanarioOutline
+		tags = "@US_36", // orjinal konum 25. satir scanarioOutline
 
 
 

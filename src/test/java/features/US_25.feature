@@ -74,7 +74,7 @@ Feature: Quiz sidebar navigasyonu
 
 
 
-  @US_25
+
   Scenario: TC_05 Add Descriptive butonu gorunur ve aktifdir
 
     * kullanici siteye giris yapar
@@ -88,6 +88,35 @@ Feature: Quiz sidebar navigasyonu
     * kullanici Save duymesine tiklar
     * kullanici List linkine gecis yapar
     * Soru kaydi  ugurla yaradildi
+
+
+
+  @US_25
+  Scenario: TC_06 List linkine tiklandiginda quiz list sayfasi acilmalidir
+
+    * kullanici siteye giris yapdi
+    * kullanici List linkine tiklar
+    * Comments statistics istatistikler gorunmelidir
+    * kullanici filtreleme yapar
+    * filtrelenmis sonuc gorunmelidir
+    * kullanici bir quiz uzerinde edit tiklar
+    * kullanici bilgilerin  guncelledigini konturol eder
+
+
+
+  @US_25
+  Scenario: TC_07 Quiz silinebilmelidir
+
+    * kullanici List sayfasina gider
+    * kullanici bir quiz uzerinde delete tiklar
+    * kullanici silmeyi onaylar
+    * quiz silinmelidir
+
+
+
+
+
+
 
 
 

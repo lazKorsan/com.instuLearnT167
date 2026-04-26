@@ -10,6 +10,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Action;
 import org.openqa.selenium.interactions.Actions;
 import pages.DashboardPage;
 import pages.ExamplePage;
@@ -30,7 +31,7 @@ public class US_25 {
     DashboardPage dashboardPage = new DashboardPage(driver);
     Actions actions = new Actions(driver);
     JavascriptExecutor js = (JavascriptExecutor) driver;
-    SendKeysUtils sendKeysUtils = new SendKeysUtils();
+
 
 
 
@@ -405,7 +406,6 @@ public class US_25 {
 
     }
 
-
     @Given("kullanici question title soru kaydi daxil edir")
     public void kullanici_question_title_soru_kaydi_daxil_edir() {
 
@@ -539,5 +539,208 @@ public class US_25 {
 
 
 
+//------------TC_06 List linkine tiklandiginda quiz list sayfasi acilmalidir-------------/
+
+
+
+    @Given("kullanici siteye giris yapdi")
+    public void kullanici_siteye_giris_yapdi() {
+
+        logger.debug("🐞 Kullanıcı ana sayfaya gider");
+        driver.get(ConfigReader.getProperty("url"));
+        logger.info("🌏 Kullanıcı ana sayfaya gitti");
+
+        logger.debug("🐞 Kullanıcı login sayfasına gider");
+        driver.get(ConfigReader.getProperty("login_url"));
+        logger.info("🌏 Kullanıcı login sayfasına gitti");
+
+        String email = ConfigReader.getProperty("inTeacherGecerliMail");
+        logger.debug("🐞 Email kutusuna: {} adresi giriliyor", email);
+        examplePage.mailBox.sendKeys(email);
+        logger.info("🔓 Email alanına: {} değeri başarıyla girildi", email);
+
+        String password = ConfigReader.getProperty("inTeacherGecerliPassword");
+        logger.debug("🐞 Password kutusuna: {} değeri giriliyor", password);
+        examplePage.passwordBox.sendKeys(password);
+        logger.info("🔓 Password alanına: {} değeri başarıyla girildi", password);
+
+        logger.debug("🐞 Kullanıcı submit butonuna tıklıyor");
+        examplePage.submitButton.click();
+        logger.info("✅ Kullanıcı submit butonuna tıkladı");
+
+        logger.debug("🐞 Kullanıcı Quizzes butonunu  tıklıyor");
+        dashboardPage.QuizzesButtonu.click();
+        logger.info("✅ Kullanıcı Quizzes butonuna tıkladı");
+        ReusableMethods.bekle(2);
+        ReusableMethods.scrollToElementWithWait(driver,dashboardPage.ListButtonu, 5);
+        ReusableMethods.bekle(5);
+        logger.info("✅ Kullanıcı Quizzes butonuna tıkladı");
+        dashboardPage.ListButtonu.click();
+        ReusableMethods.bekle(5);
+
+
+
+    }
+
+    @Given("Comments statistics istatistikler gorunmelidir")
+    public void istatistikler_gorunmelidir() {
+        ReusableMethods.bekle(2);
+        Assertions.assertTrue(dashboardPage.statisticsQuizzes.isDisplayed());
+        Assertions.assertTrue(dashboardPage.statisticsQuestions.isDisplayed());
+        Assertions.assertTrue(dashboardPage.statisticsStudent.isDisplayed());
+
+    }
+
+    @Given("kullanici filtreleme yapar")
+    public void kullanici_filtreleme_yapar() {
+        ReusableMethods.bekle(2);
+        actions.scrollByAmount(0,300).perform();
+        dashboardPage.FormTex.click();
+        js.executeScript("arguments[0].value='2026-04-23';", dashboardPage.FormTex);
+        ReusableMethods.bekle(2);
+        dashboardPage.FromApplyButton.click();
+        ReusableMethods.bekle(3);
+        dashboardPage.ToText.click();
+        js.executeScript("arguments[0].value='2026-04-25';", dashboardPage.ToText);
+        ReusableMethods.bekle(3);
+        dashboardPage.ToApplybutton.click();
+        js.executeScript("arguments[0].click();", dashboardPage.ShowResults);
+        actions.scrollByAmount(0,500).perform();
+
+
+
+    }
+
+    @Given("filtrelenmis sonuc gorunmelidir")
+    public void filtrelenmis_sonuc_gorunmelidir() {
+
+        ReusableMethods.bekle(2);
+        int actualResults = dashboardPage.FilterResault.size();
+        Assertions.assertTrue(actualResults>0);
+
+
+    }
+
+    @Given("kullanici bir quiz uzerinde edit tiklar")
+    public void kullanici_bir_quiz_uzerinde_edit_tiklar() {
+
+        ReusableMethods.scrollToElementWithWait(driver,dashboardPage.ThreePoint, 5);
+        dashboardPage.ThreePoint.click();
+        ReusableMethods.bekle(1);
+        dashboardPage.EditPoint.click();
+        dashboardPage.EditQuitTitle.clear();
+        dashboardPage.EditQuitTitle.sendKeys("Java candir Selenium heyacan");
+        dashboardPage.EditPassMark.clear();
+        dashboardPage.EditPassMark.sendKeys("50");
+        actions.scrollToElement(dashboardPage.EditSave).perform();
+        dashboardPage.EditSave.click();
+        ReusableMethods.scrollToElementWithWait(driver,dashboardPage.EditSave, 5);
+        ReusableMethods.bekle(3);
+        dashboardPage.EditListButton.click();
+        ReusableMethods.bekle(3);
+        ReusableMethods.scrollToBottom(driver);
+
+
+
+    }
+
+    @Given("kullanici bilgilerin  guncelledigini konturol eder")
+    public void kullanici_bilgileri_gunceller() {
+
+        String expected = "Java candir Selenium heyacan";
+        boolean actualResult = false;
+
+        for (WebElement element : dashboardPage.listPagelements) {
+            if (element.getText().contains(expected)) {
+                actualResult = true;
+                break;
+            }
+        }
+
+        Assertions.assertTrue(actualResult, "Text listde tapilmadi!");
+
+
+    }
+
+
+
+    //------------TC_07 Quiz silinebilmelidir-------------/
+
+
+
+    @Given("kullanici List sayfasina gider")
+    public void kullanici_list_sayfasina_gider() {
+
+
+        logger.debug("🐞 Kullanıcı ana sayfaya gider");
+        driver.get(ConfigReader.getProperty("url"));
+        logger.info("🌏 Kullanıcı ana sayfaya gitti");
+
+        logger.debug("🐞 Kullanıcı login sayfasına gider");
+        driver.get(ConfigReader.getProperty("login_url"));
+        logger.info("🌏 Kullanıcı login sayfasına gitti");
+
+        String email = ConfigReader.getProperty("inTeacherGecerliMail");
+        logger.debug("🐞 Email kutusuna: {} adresi giriliyor", email);
+        examplePage.mailBox.sendKeys(email);
+        logger.info("🔓 Email alanına: {} değeri başarıyla girildi", email);
+
+        String password = ConfigReader.getProperty("inTeacherGecerliPassword");
+        logger.debug("🐞 Password kutusuna: {} değeri giriliyor", password);
+        examplePage.passwordBox.sendKeys(password);
+        logger.info("🔓 Password alanına: {} değeri başarıyla girildi", password);
+
+        logger.debug("🐞 Kullanıcı submit butonuna tıklıyor");
+        examplePage.submitButton.click();
+        logger.info("✅ Kullanıcı submit butonuna tıkladı");
+
+        logger.debug("🐞 Kullanıcı Quizzes butonunu  tıklıyor");
+        dashboardPage.QuizzesButtonu.click();
+        logger.info("✅ Kullanıcı Quizzes butonuna tıkladı");
+        ReusableMethods.bekle(2);
+        ReusableMethods.scrollToElementWithWait(driver,dashboardPage.ListButtonu, 5);
+        ReusableMethods.bekle(5);
+        logger.info("✅ Kullanıcı Quizzes butonuna tıkladı");
+        dashboardPage.ListButtonu.click();
+        actions.scrollByAmount(0,500).perform();
+        ReusableMethods.bekle(3);
+
+
+    }
+
+    @Given("kullanici bir quiz uzerinde delete tiklar")
+    public void kullanici_bir_quiz_uzerinde_delete_tiklar() {
+
+
+        dashboardPage.ThreePoint.click();
+        dashboardPage.Deletebutton.click();
+
+    }
+
+    @Given("kullanici silmeyi onaylar")
+    public void kullanici_silmeyi_onaylar() {
+
+        ReusableMethods.scrollToElementWithWait(driver,dashboardPage.DeleteButton2, 5);
+
+        dashboardPage.DeleteButton2.click();
+        ReusableMethods.scrollToElementWithWait(driver,dashboardPage.DeleteButton2, 5);
+    }
+
+    @Given("quiz silinmelidir")
+    public void quiz_silinmelidir() {
+
+        String expected = "Java candir Selenium heyacan";
+        boolean isDeleted = true;
+
+        for (WebElement element : dashboardPage.listPagelements) {
+            if (element.getText().trim().contains(expected)) {
+                isDeleted = false; // hələ də varsa → silinməyib
+                break;
+            }
+        }
+
+        Assertions.assertTrue(isDeleted,
+                "Element silinmeyib, hələ də table-da var!");
+    }
 
 }
