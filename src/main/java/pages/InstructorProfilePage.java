@@ -21,6 +21,24 @@ public class InstructorProfilePage extends BasePage {
     @FindBy (id = "followToggle")
     public WebElement followIcon;
 
+    @FindBy (xpath = "//a[text()=\"About\"]")
+    public WebElement aboutLink;
+
+    @FindBy (xpath = "(//a[text()=\"Courses\"])[2]")
+    public WebElement coursesLink;
+
+    @FindBy (xpath = "//a[text()=\"Articles\"]")
+    public WebElement articlesLink;
+
+    @FindBy (xpath = "//a[text()=\"Badges\"]")
+    public WebElement badgesLink;
+
+    @FindBy (xpath = "//a[text()=\"Reserve a meeting\"]")
+    public WebElement reserveMeetingLink;
+
+
+
+
 
 
 

@@ -1,9 +1,9 @@
 
-@loginProccess
+@US32
 Feature: Kayıtlı bir kullanıcı olarak profil bilgilerimi görüntüleyebilecegim bir alan olmasını istiyorum
 
-  @TC-01
-  Scenario: Login olmuş instructor Dashboard sidebar'da My Profile linkine erişir
+  @US32_TC01
+  Scenario: Login olmuş instructor Dashboard sidebar'da My Profile linkine erişebilmeli
 
     Given kullanıcı login olur
     When dashboard sayfasının açıldığı doğrulanır
@@ -11,7 +11,7 @@ Feature: Kayıtlı bir kullanıcı olarak profil bilgilerimi görüntüleyebilec
     And "My Profile" linki tıklanabilir durumda olmalıdır
 
 
-  @TC-02
+  @US32_TC02
   Scenario: Login olmuş instructor anasayfa profile ikonundan My Profile linkine erişir
 
     Given kullanıcı login olur
@@ -21,7 +21,7 @@ Feature: Kayıtlı bir kullanıcı olarak profil bilgilerimi görüntüleyebilec
     And "My Profile" linki aktif olmalıdır
 
 
-  @TC-03
+  @US32_TC03
   Scenario: instructor My profile linkinden profil bilgilerini görüntüleyebilmeli
 
     Given kullanıcı login olur
@@ -30,7 +30,7 @@ Feature: Kayıtlı bir kullanıcı olarak profil bilgilerimi görüntüleyebilec
     Then profil sayfasının açıldığı doğrulanır
     And ilgili profili takip edebilmelidir
 
-  @TC-04
+  @US32_TC04
   Scenario: instructor profilinden About,Courses,Articles,Badges,Reserve a meeting  bilgilerini görüntüleyebilmeli
 
     Given kullanıcı login olur

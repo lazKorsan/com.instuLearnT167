@@ -255,7 +255,7 @@ public class US035_StepDefinitions {
         us035Page.clickScienceToolsCategory();
     }
 
-    // ========== TC05 - HOVER STEPS ==========
+    // ========== TC05 - HOVER + ADD TO CART STEPS ==========
 
     @When("Kullanici Updated Product Title urun resmine hover yapar")
     public void kullanici_updated_product_title_urun_resmine_hover_yapar() {
@@ -267,23 +267,82 @@ public class US035_StepDefinitions {
         us035Page.hoverStarsCard();
     }
 
-    @And("Kullanici Add to Cart butonuna hover yapar")
-    public void kullanici_add_to_cart_butonuna_hover_yapar() {
-        us035Page.hoverAddToCartButton();
+    @And("Kullanici Add to Cart ikonuna hover yapar")
+    public void kullanici_add_to_cart_ikonuna_hover_yapar() {
+        us035Page.hoverAddToCartIcon();
     }
 
-    @And("Kullanici Add to Wishlist butonuna hover yapar")
-    public void kullanici_add_to_wishlist_butonuna_hover_yapar() {
-        us035Page.hoverAddToWishlistButton();
+    @When("Kullanici Add to Cart ikonuna tiklar")
+    public void kullanici_add_to_cart_ikonuna_tiklar() {
+        us035Page.clickAddToCartIcon();
     }
 
-    @And("Kullanici sayfayi asagi kaydirir")
-    public void kullanici_sayfayi_asagi_kaydirir() {
-        us035Page.scrollDownForDescription();
+    @Then("Added to cart toast mesaji beklenen metni icermeli")
+    public void added_to_cart_toast_mesaji_beklenen_metni_icermeli() {
+        String actualText = us035Page.getToastMessageText();
+
+        String expectedFullText =
+                "Added to cart!\n" +
+                        "You can continue shopping or go to cart to finalize your order.";
+
+        String actualCleaned = actualText.replace("×", "").trim();
+        logger.info("Kapatma butonu (×) temizlendi.");
+
+        String actualNormalized = actualCleaned.replaceAll("\\s+", " ").trim();
+        String expectedNormalized = expectedFullText.replaceAll("\\s+", " ").trim();
+
+        logger.info("Beklenen metin (normalized): '" + expectedNormalized + "'");
+        logger.info("Gercek metin   (normalized): '" + actualNormalized + "'");
+
+        Assert.assertEquals("Toast mesaji beklenen metinle eslesmedi!",
+                expectedNormalized, actualNormalized);
+
+        logger.info("Toast mesaji dogrulandi! Urun basariyla sepete eklendi.");
     }
 
-    @And("Kullanici Description tab'a hover yapar")
-    public void kullanici_description_tab_a_hover_yapar() {
-        us035Page.hoverDescriptionTab();
+    // ========== TC06 - CHECKOUT & PAYMENT STEPS ==========
+
+    @When("Kullanici navbar'daki sepet ikonuna tiklar")
+    public void kullanici_navbar_daki_sepet_ikonuna_tiklar() {
+        us035Page.clickShoppingCartLink();
+    }
+
+    @And("Kullanici Go to cart butonuna tiklar")
+    public void kullanici_go_to_cart_butonuna_tiklar() {
+        us035Page.clickGoToCartButton();
+    }
+
+    @And("Kullanici Checkout butonuna scroll edip tiklar")
+    public void kullanici_checkout_butonuna_scroll_edip_tiklar() {
+        us035Page.scrollToAndClickCheckout();
+    }
+
+    @And("Kullanici Pay with Stripe'i secer ve Start Payment butonuna tiklar")
+    public void kullanici_pay_with_stripe_i_secer_ve_start_payment_butonuna_tiklar() {
+        us035Page.selectStripeAndStartPayment();
+    }
+
+    @And("Kullanici Stripe odeme formunu doldurur ve Pay butonuna tiklar")
+    public void kullanici_stripe_odeme_formunu_doldurur_ve_pay_butonuna_tiklar() {
+        // Stripe'in resmi TEST karti - gercek para cekilmez
+        String testCardNumber = "4242 4242 4242 4242";
+        String testExpiry = "01/30";
+        String testCvc = "321";
+        String testCardholder = "Nihat Ozturk";
+
+        us035Page.fillStripePaymentFormAndPay(testCardNumber, testExpiry,
+                testCvc, testCardholder);
+    }
+
+    @Then("Odeme basariyla tamamlanmis olmali ve basari mesaji gorunmeli")
+    public void odeme_basariyla_tamamlanmis_olmali_ve_basari_mesaji_gorunmeli() {
+        boolean success = us035Page.verifyPaymentSuccessMessage();
+
+        Assert.assertTrue(
+                "Odeme basari mesaji ('Your payment successfully done...') gorunmedi! " +
+                        "Odeme basarisiz olmus olabilir veya mesaj locator'i farkli olabilir.",
+                success);
+
+        logger.info("TC06 BASARIYLA TAMAMLANDI! Odeme gerceklesti, basari mesaji dogrulandi.");
     }
 }
