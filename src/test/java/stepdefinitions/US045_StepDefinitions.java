@@ -16,7 +16,7 @@ public class US045_StepDefinitions {
     private static final Logger logger = LogManager.getLogger(US045_StepDefinitions.class);
     private FinancialPage financialPage = new FinancialPage(DriverManager.getDriver());
 
-    // ========== LOGIN STEPS (US045) ==========
+    // ========== LOGIN STEPS ==========
 
     @Given("Kullanici Financial icin anasayfaya gider")
     public void kullanici_financial_icin_anasayfaya_gider() {
@@ -54,7 +54,6 @@ public class US045_StepDefinitions {
         financialPage.clickFinancialCategory();
     }
 
-    // ---------- FINANCIAL SUMMARY ----------
     @When("Kullanici Financial Summary linkine tiklar")
     public void kullanici_financial_summary_linkine_tiklar() {
         financialPage.clickFinancialSummaryLink();
@@ -73,7 +72,6 @@ public class US045_StepDefinitions {
         logger.info("Financial Summary sayfasi acilmasi dogrulandi.");
     }
 
-    // ---------- PAYOUT ----------
     @When("Kullanici Payout linkine tiklar")
     public void kullanici_payout_linkine_tiklar() {
         financialPage.clickPayoutLink();
@@ -92,7 +90,6 @@ public class US045_StepDefinitions {
         logger.info("Payout sayfasi acilmasi dogrulandi.");
     }
 
-    // ---------- CHARGE ACCOUNT ----------
     @When("Kullanici Charge Account linkine tiklar")
     public void kullanici_charge_account_linkine_tiklar() {
         financialPage.clickChargeAccountLink();
@@ -111,7 +108,6 @@ public class US045_StepDefinitions {
         logger.info("Charge Account sayfasi acilmasi dogrulandi.");
     }
 
-    // ---------- SUBSCRIBE ----------
     @When("Kullanici Subscribe linkine tiklar")
     public void kullanici_subscribe_linkine_tiklar() {
         financialPage.clickSubscribeLink();
@@ -130,9 +126,48 @@ public class US045_StepDefinitions {
         logger.info("Subscribe sayfasi acilmasi dogrulandi.");
     }
 
-    // ---------- SCROLL DOWN ----------
     @And("Kullanici sayfada scroll down yapar ve bir saniye bekler")
     public void kullanici_sayfada_scroll_down_yapar_ve_bir_saniye_bekler() {
         financialPage.scrollDownPageAndWait();
+    }
+
+    // ========== TC02 - CHARGE ACCOUNT PAYMENT STEPS ==========
+
+    @When("Kullanici Stripe odeme yontemini secer")
+    public void kullanici_stripe_odeme_yontemini_secer() {
+        financialPage.selectStripePaymentOption();
+    }
+
+    @And("Kullanici Amount alanina {string} dolar girer")
+    public void kullanici_amount_alanina_dolar_girer(String amount) {
+        financialPage.enterAmount(amount);
+    }
+
+    @And("Kullanici Charge Account Pay butonuna tiklar")
+    public void kullanici_charge_account_pay_butonuna_tiklar() {
+        financialPage.clickPayButton();
+    }
+
+    @And("Kullanici Stripe odeme formunu doldurur ve odemeyi tamamlar")
+    public void kullanici_stripe_odeme_formunu_doldurur_ve_odemeyi_tamamlar() {
+        // Stripe TEST karti - gercek para cekilmez
+        String testCardNumber = "4242 4242 4242 4242";
+        String testExpiry = "01/30";
+        String testCvc = "321";
+        String testCardholder = "Nihat Ozturk";
+
+        financialPage.fillStripeFormSimple(
+                testCardNumber, testExpiry, testCvc, testCardholder);
+    }
+
+    @Then("Charge Account odemesi basariyla tamamlanmis olmali")
+    public void charge_account_odemesi_basariyla_tamamlanmis_olmali() {
+        boolean success = financialPage.verifyPaymentSuccessMessage();
+
+        Assert.assertTrue(
+                "Charge Account odeme basari mesaji ('Your payment successfully done...') gorunmedi!",
+                success);
+
+        logger.info("TC02 BASARIYLA TAMAMLANDI! Charge Account odemesi gerceklesti.");
     }
 }
