@@ -7,6 +7,7 @@ import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.*;
 import org.openqa.selenium.support.ui.Select;
 import pages.BecomeInstructorPage;
+import utils.BannerUtils;
 import utils.ClickUtils;
 import utils.ReusableMethods;
 import utils.SendKeysUtils;
@@ -26,6 +27,16 @@ public class US039BecomeInstructorSteps {
         logger.debug("🐞 Kullanıcı register sayfasına gider");
         driver.get(config.ConfigReader.getProperty("register_url"));
         logger.info("🌏 Kullanıcı register sayfasına gitti");
+
+        // BANNER BANNER 1
+        ReusableMethods.bekle(2);
+        BannerUtils.displayProgressBanner(
+                driver,
+                "Kullanici Ogrenci Hesabi  olusturur",
+                "US039BecomeInstructor",
+                "JavaExcetuer Alistirmasi "
+
+        );ReusableMethods.bekle(6);
 
         String expectedUrl = "https://qa.instulearn.com/register";
         String actualUrl = driver.getCurrentUrl();
@@ -95,6 +106,16 @@ public class US039BecomeInstructorSteps {
     @When("Kullanici becomeInstructorButtona tiklar")
     public void kullaniciBecomeInstructorButtonaTiklar() {
 
+        // BANNER BANNER 1
+        ReusableMethods.bekle(2);
+        BannerUtils.displayProgressBanner(
+                driver,
+                "Kullanici Become Instructor Butonuna Tiklar",
+                "US039BecomeInstructor",
+                "JavaExcetuer Alistirmasi "
+
+        );ReusableMethods.bekle(6);
+
         // todo becomeInstructorButtona  tiklama islemleri
         ClickUtils.clickByXpath(driver, "//*[@href=\"/become-instructor\"]");
         logger.info("Kullanici becomeInstructorButtona tiklandi");
@@ -116,6 +137,16 @@ public class US039BecomeInstructorSteps {
 
     @When("Kullanici webDesign secenegini secer")
     public void kullaniciWebDesignSeceneginiSecer() {
+
+        // BANNER BANNER 1
+        ReusableMethods.bekle(2);
+        BannerUtils.displayProgressBanner(
+                driver,
+                "Kullanici BecomeInstructor Formunu Doldurur",
+                "US023CrateCourse",
+                "JavaExcetuer Alistirmasi "
+
+        );ReusableMethods.bekle(6);
         // todo instructor Meslek alani secimi islemleri
         // Locateler checkbox alanı içinde
 
@@ -237,6 +268,16 @@ public class US039BecomeInstructorSteps {
 
     @When("Kullanici arama sonucu cikan yazinin {string} oldugunu dogrular")
     public void kullaniciAramaSonucuCikanYazininOldugunuDogrular(String expectedResult) {
+
+        // BANNER BANNER 1
+        ReusableMethods.bekle(2);
+        BannerUtils.displayProgressBanner(
+                driver,
+                "Kullanici Role Degisikligini Dogruladi",
+                "US023CrateCourse",
+                "TEST BAŞARILI"
+
+        );ReusableMethods.bekle(6);
 
         // todo arama dogrulama islemleri
         WebElement actualResultElement = driver.findElement(By.xpath("//*[@class=\"font-16 font-weight-bold text-dark-blue mt-10\"]"));
