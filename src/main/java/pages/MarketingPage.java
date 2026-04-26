@@ -63,6 +63,18 @@ public class MarketingPage extends BasePage{
     @FindBy(id = "paymentSubmit")
     public WebElement paymentSubmitButton;
 
+    @FindBy(xpath = "/html/body/div[3]/div[4]/button[2]")
+    public WebElement fromBoxApply;
+
+    @FindBy(xpath = "/html/body/div[4]/div[4]/button[2]")
+    public WebElement toBoxApply;
+
+    @FindBy(xpath = "//*[@id=\"app\"]/div[3]/div[2]/h2")
+    public WebElement succesMessage;
+
+    @FindBy(xpath = "//*[@id=\"payment-form\"]/div/div/div/div[3]/div/div[2]/div/button/div[3]")
+    public WebElement creditCardPayButton;
+
 
 
 

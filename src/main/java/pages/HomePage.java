@@ -26,7 +26,7 @@ public class HomePage extends BasePage {
     @FindBy(xpath = "//ul[@class=\"my-8\"]")
     public WebElement instructorProfilIconDropdownMenu;
 
-    @FindBy(xpath = "//*[@id=\"app\"]/div[1]/div/div[2]/div[2]")
+    @FindBy(xpath = "//*[@id=\"app\"]/div[1]/div/div[2]/div[2]/div[1]")
     public WebElement instructorProfileIconInHeader;
 
     @FindBy(xpath = "//span[text()=\"Profile\"]")

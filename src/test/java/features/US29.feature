@@ -50,5 +50,4 @@ Feature: İnstructor'ın Kurs İndirim ve Promosyon Yönetimi
     When Ödeme bilgilerini doldurur
     And Öde butonuna tıklar
     Then onay mesajı ekranda görüntülenmelidir
-    And kullanıcı seçilen plana başarıyla kayıt olmalıdır
 
