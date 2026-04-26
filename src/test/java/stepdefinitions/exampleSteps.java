@@ -5,8 +5,15 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.When;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.junit.jupiter.api.Assertions;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import pages.ExamplePage;
+
+import java.time.Duration;
 import java.util.Map;
 
 public class exampleSteps {
@@ -59,6 +66,80 @@ public class exampleSteps {
         logger.info("✅ Kullanıcı loginMethod çağrısı ile login oldu");
     }
 
+    @When("Kullanici login oldugunu dogrular")
+    public void kullaniciLoginOldugunuDogrular() {
+
+        // 1. Explicit Wait tanımlıyoruz (10 saniye boyunca URL değişene kadar pusuya yatar)
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+
+        // 2. URL'nin beklenen kelimeyi içermesini bekle (Kod burada sayfa yüklenene kadar durur)
+        wait.until(ExpectedConditions.urlContains("panel"));
+
+        // 3. Şimdi doğrulamayı yap (Artık URL kesin değişti, test patlamaz)
+        Assertions.assertTrue(driver.getCurrentUrl().contains("panel"),
+                "❌ HATA: URL 'panel' içermiyor! Mevcut URL: " + driver.getCurrentUrl());
+
+        logger.info("✅ Therapist ana sayfasına başarıyla yönlendirildi.");
+
+
+    }
+
+    @Given("Kullanici hatali mail ile giris yapilamadigini dogrular")
+    public void kullanici_hatali_mail_ile_giris_yapilamadigini_dogrular() {
+
+        // 1. Elementin XPath'ini tanımlayalım
+        String errorXpath = "//*[@class='invalid-feedback']";
+
+        // 2. Elementin görünür olmasını bekleyelim (Senin ClickUtils içindeki waitForVisibility mantığıyla)
+        // Direkt driver üzerinden değil, bekleme ile almak senkronizasyon hatasını önler.
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        WebElement errorElement = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(errorXpath)));
+
+        // 3. Element üzerindeki metni alalım
+        String actualErrorMessage = errorElement.getText();
+        String expectedErrorMessage = "The selected email is invalid.";
+
+        // 4. ASSERTION: Mesaj doğru mu? (Negative testin kalbi burasıdır)
+        Assertions.assertEquals(expectedErrorMessage, actualErrorMessage,
+                "❌ HATA: Beklenen hata mesajı görüntülenemedi veya metin yanlış!");
+
+        // 5. Ekstra Kontrol: Element gerçekten görünür mü?
+        Assertions.assertTrue(errorElement.isDisplayed(), "❌ HATA: Hata mesajı kutusu görünmüyor!");
+
+        logger.info("✅ Negative Test Başarılı: Sistem hatalı maili reddetti ve doğru mesajı gösterdi.");
+    }
+
+    @Given("Kullanici hatali password ile giris yapilamadigini dogrular")
+    public void kullanici_hatali_password_ile_giris_yapilamadigini_dogrular() {
+
+        // 1. Elementin XPath'ini tanımlayalım
+        String errorXpath = "//*[@class='invalid-feedback']";
+
+
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        WebElement errorElement = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(errorXpath)));
+
+        // 3. Element üzerindeki metni alalım
+        String actualErrorMessage = errorElement.getText();
+        String expectedErrorMessage = "The password or username is incorrect.";
+
+        // 4. ASSERTION: Mesaj doğru mu? (Negative testin kalbi burasıdır)
+        Assertions.assertEquals(expectedErrorMessage, actualErrorMessage,
+                "❌ HATA: Beklenen hata mesajı görüntülenemedi veya metin yanlış!");
+
+        // 5. Ekstra Kontrol: Element gerçekten görünür mü?
+        Assertions.assertTrue(errorElement.isDisplayed(), "❌ HATA: Hata mesajı kutusu görünmüyor!");
+
+        logger.info("✅ Negative Test Başarılı: Sistem hatalı password ile giriş yapıldı ve reddetti ve doğru mesajı gösterdi.");
+
+
+
+
+
+
+
+    }
+
     @When("Kullanici mesaj kutusuna su notu birakir:")
     public void kullaniciMesajKutusunaSuNotuBirakir(String message) {
         logger.debug("🐞 Kullanıcı mesaj kutusuna mesaj giriyor");
@@ -87,4 +168,6 @@ public class exampleSteps {
 
 
     }
+
+
 }
