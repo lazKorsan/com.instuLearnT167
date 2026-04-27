@@ -1,21 +1,15 @@
 package stepdefinitions;
 
-import com.github.dockerjava.api.model.Driver;
 import config.ConfigReader;
-import io.cucumber.java.PendingException;
 import io.cucumber.java.en.*;
 import org.apache.commons.lang3.RandomStringUtils;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import org.junit.Assert;
 import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.TestInfo;
-import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.Select;
 import pages.*;
-import utils.ClickUtils;
 import utils.ReusableMethods;
 
 import java.util.Random;
