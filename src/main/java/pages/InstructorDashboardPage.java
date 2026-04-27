@@ -15,7 +15,7 @@ public class InstructorDashboardPage extends BasePage {
         org.openqa.selenium.support.PageFactory.initElements(driver, this);
     }
 
-    @FindBy (xpath = "//*[@id=\"panel_app\"]/div[2]/div[3]/section[1]/div[1]/h1")
+    @FindBy (xpath = "//h1[text()=\"Dashboard\"]")
     public WebElement dashboardPageTitle;
 
     @FindBy (xpath = "//*[@id=\"panel-sidebar-scroll\"]/div[1]/div[2]")
@@ -23,6 +23,33 @@ public class InstructorDashboardPage extends BasePage {
 
     @FindBy(xpath = "//*[@id=\"panel-sidebar-scroll\"]/div[1]/div[2]/div/div/div/li[14]/a/span[2]")
     public WebElement sidebarMyProfileLink;
+
+    @FindBy(xpath = "//*[@id=\"panel-sidebar-scroll\"]/div[1]/div[2]/div/div/div/li[9]/a/span[2]")
+    public WebElement sidebarMarketingLink;
+
+    @FindBy(xpath = "//*[@id=\"marketingCollapse\"]/ul/li[1]/a")
+    public WebElement discountsLinkByMarketing;
+
+    @FindBy(xpath = "//*[@id=\"marketingCollapse\"]/ul/li[2]/a")
+    public WebElement promotionsLinkByMarketing;
+
+    @FindBy(xpath = "//span[text()=\"Meetings\"]")
+    public WebElement sidebarMeetingsLink;
+
+    @FindBy(xpath = "//a[text()=\"My reservations\"]")
+    public WebElement myReservationsByMeetings;
+
+    @FindBy(xpath = "//a[text()=\"Requests\"]")
+    public WebElement requestByMeetings;
+
+    @FindBy(xpath = "//a[text()=\"Settings\"]")
+    public WebElement settingsByMeetings;
+
+    @FindBy(xpath = "//a[text()=\"Requests\"]")
+    public WebElement requestLinkByMeetings;
+
+
+
 
 
 }

@@ -37,14 +37,18 @@ Feature: US_024 - Toplantı Yönetim Sayfası
   Scenario Outline: TC_024_04 - Filtrelenen toplantılar üzerinde CRUD işlemleri yapılabilmesi
     Given kullanıcı Toplantılar başlığı altında bulunan Rezervasyonlarım ikonuna tıklar
     When toplantılar listesi görüntülenir
-    When toplantı listesi filtrelenir
-    Then Sonuçları göster butonu tıklanır
-    Then filtrelenen toplantılar listede görüntülenebilir olmalıdır
-    When kullanıcı bir toplantı üzerinde "<islem>" işlemini yapar
+    When toplantı listesinde "<filtre>" işlemi yapılır ve sonuçları göster butonu tıklanır
+    Then filtrelenen toplantılar "<filtrelenmiş_liste>" olarak görüntülenebilir olmalıdır
+    Examples:
+      | filtre     | filtrelenmiş_liste                                 |
+      | day        | day sütununa göre liste güncellenmiş olmalıdır     |
+      | id         | id sütununa göre liste güncellenmiş olmalıdır      |
+
+    When kullanıcı bir toplantı üzerinde "<işlem>" işlemini yapar
     And "<beklenen_sonuc>" olmalıdır
 
     Examples:
-      | islem     | beklenen_sonuc                                    |
+      | işlem     | beklenen_sonuc                                    |
       | görüntüle | toplantı detay bilgileri ekranda görünür olmalıdır |
       | düzenle   | toplantı bilgileri güncellenebilir olmalıdır       |
       | sil       | toplantı listeden kaldırılmış olmalıdır            |
