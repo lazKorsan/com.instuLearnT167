@@ -201,65 +201,85 @@ public class US24 {
             }
         }
 
+
+
+
+
+        //@US24_TC04
         @When("kullanıcı Rezervasyonlarım sayfasına gider")
         public void kullanıcı_rezervasyonlarım_sayfasına_gider() {
-
+            actions.moveToElement(instructorDashboardPage.dashboardPageSidebar).perform();
+            ReusableMethods.scrollToElement(driver,instructorDashboardPage.sidebarMeetingsLink);
+            instructorDashboardPage.myReservationsByMeetings.click();
         }
 
         @Then("Yalnızca açık toplantıları göster onay kutusu görünür ve seçilebilir olmalıdır")
         public void yalnızca_açık_toplantıları_göster_onay_kutusu_görünür_ve_seçilebilir_olmalıdır() {
+            Assertions.assertTrue(meetingsPage.showOnlyOpenMeetingSwitch.isDisplayed());
+            Assertions.assertTrue(meetingsPage.showOnlyOpenMeetingSwitch.isEnabled());
         }
 
         @When("kullanıcı Yalnızca açık toplantıları göster onay kutusunu seçer")
         public void kullanıcı_yalnızca_açık_toplantıları_göster_onay_kutusunu_seçer() {
+            meetingsPage.showOnlyOpenMeetingSwitch.click();
         }
 
         @Then("yalnızca açık durumundaki toplantılar listelenmeli")
         public void yalnızca_açık_durumundaki_toplantılar_listelenmeli() {
+
         }
 
         @When("kullanıcı Yalnızca açık toplantıları göster onay kutusunun seçimini kaldırır")
         public void kullanıcı_yalnızca_açık_toplantıları_göster_onay_kutusunun_seçimini_kaldırır() {
+            meetingsPage.showOnlyOpenMeetingSwitch.click();
         }
 
         @Then("tüm toplantılar tekrar listelenmeli")
         public void tüm_toplantılar_tekrar_listelenmeli() {
+
         }
 
-        @Then("filtre simgeleri görünür ve seçilebilir olmalıdır")
-        public void filtre_simgeleri_görünür_ve_seçilebilir_olmalıdır() {
-        }
 
-        @When("kullanıcı istediği filtreleri seçer")
-        public void kullanıcı_istediği_filtreleri_seçer() {
-        }
 
-        @Then("toplantı listesi seçilen kritere göre güncellenmeli")
-        public void toplantı_listesi_seçilen_kritere_göre_güncellenmeli() {
-        }
 
+        // @US24_TC05
         @When("kullanıcı Taleplerim linkine tıklar")
         public void kullanıcı_taleplerim_linkine_tıklar() {
+            actions.moveToElement(instructorDashboardPage.dashboardPageSidebar).perform();
+            ReusableMethods.scrollToElement(driver,instructorDashboardPage.sidebarMeetingsLink);
+            instructorDashboardPage.requestByMeetings.click();
+
         }
 
         @Then("Taleplerim sayfası açılmalıdır")
         public void taleplerim_sayfası_açılmalıdır() {
+            Assertions.assertTrue(driver.getTitle().contains("requests"));
         }
 
+
+
+        // @US24_TC06
         @Given("kullanıcı Taleplerim sayfasındadır")
         public void kullanıcı_taleplerim_sayfasındadır() {
+            actions.moveToElement(instructorDashboardPage.dashboardPageSidebar).perform();
+            ReusableMethods.scrollToElement(driver,instructorDashboardPage.sidebarMeetingsLink);
+            instructorDashboardPage.requestByMeetings.click();
         }
 
         @Given("toplantı talep listesi görüntülenmektedir")
         public void toplantı_talep_listesi_görüntülenmektedir() {
+            Assertions.assertTrue(meetingsPage.meetingRequestsTable.isDisplayed());
         }
 
+        int randomint=random.nextInt(meetingsPage.requestsTableListCRUD.size());
         @When("kullanıcı bir toplantı seçer")
         public void kullanıcı_bir_toplantı_seçer() {
+            meetingsPage.requestsTableListCRUD.get(randomint).click();
         }
 
         @When("Add to Calendar butonuna tıklar")
         public void add_to_calendar_butonuna_tıklar() {
+
         }
 
         @Then("seçili toplantı kullanıcının takvimine başarıyla eklenmelidir")

@@ -53,11 +53,18 @@ public class MeetingsPage extends BasePage{
     @FindBy(xpath = "//*[@id=\"panel_app\"]/div[2]/div[3]/section[3]/div[2]/div/div/div/table/tbody/tr/td[9]/div/button")
     public WebElement meetingButton;
 
-    @FindBy(xpath = "//*[@id=\"panel_app\"]/div[2]/div[3]/section[3]/form/div/div")
+    @FindBy(xpath = "//*[@id=\"panel_app\"]/div[2]/div[3]/section[3]/div[1]/form/div")
     public WebElement showOnlyOpenMeetingSwitch;
 
     @FindBy(xpath = "//*[@id=\"panel_app\"]//table")
     public WebElement meetingRequestsTable;
+
+    @FindBy(xpath = "//*[@id=\"panel_app\"]//table//td[1]")
+    public List<WebElement> requestsTableList;
+
+    @FindBy(xpath = "//*[@id=\"panel_app\"]//td[9]")
+    public List<WebElement> requestsTableListCRUD;
+
 
 
 
