@@ -13,6 +13,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import pages.ExamplePage;
 import utils.BannerUtils;
+import utils.ClickUtils;
 import utils.ReusableMethods;
 
 import java.time.Duration;
@@ -57,7 +58,8 @@ public class exampleSteps {
     @Given("Kullanici submitButton tiklar")
     public void kullanici_submit_button_tiklar() {
         logger.debug("🐞 Kullanıcı submit butonuna tıklıyor");
-        examplePage.submitButton.click();
+        ClickUtils.clickByXpath(driver, "//button[@class='btn btn-primary btn-block mt-20']");
+        //examplePage.submitButton.click();
         logger.info("✅ Kullanıcı submit butonuna tıkladı");
     }
     @Given("Kullanici mail adresi {string} ve tanimli password ile  {string} giris yapar")

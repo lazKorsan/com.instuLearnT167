@@ -2,10 +2,18 @@ package stepdefinitions;
 
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.When;
+import org.junit.jupiter.api.Assertions;
+import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.TimeoutException;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import pages.ExamplePage;
 import pages.RegisterPage;
 import utils.*;
+
+import java.time.Duration;
 
 public class RegisterSteps {
 
@@ -38,8 +46,9 @@ public class RegisterSteps {
 
         logger.info(" Teacher kullanicisi " + "instructorButton seçti");
 
-        JSUtilities.scrollToElement(driver, registerPage.instructorButton);
-        registerPage.instructorButton.click();
+        ClickUtils.clickByXpath(driver, "(//*[@class='font-12 cursor-pointer px-15 py-10'])[2]");
+        //JSUtilities.scrollToElement(driver, registerPage.instructorButton);
+        //        registerPage.instructorButton.click();
         ReusableMethods.bekle(2);
 
         logger.info(" Teacher kullanicisi " + "instructorButton seçti");
@@ -48,7 +57,8 @@ public class RegisterSteps {
 
     @Given("Teacher mailBox kutusuna {string} degerini girer")
     public void teacher_mail_box_kutusuna_degerini_girer(String mail) {
-        examplePage.mailBox.sendKeys(mail);
+        //examplePage.mailBox.sendKeys(mail);
+        SendKeysUtils.sendByXpath(driver, "(//*[@id='email'])[1]", mail);
         ReusableMethods.bekle(2);
 
         logger.info("Teacher mail adresini doldurdu ");
@@ -57,7 +67,8 @@ public class RegisterSteps {
 
     @Given("Teacher fullnameBox kutusuna {string} degerini girer")
     public void teacher_fullname_box_kutusuna_degerini_girer(String fullName) {
-        registerPage.fullName.sendKeys(fullName);
+        //registerPage.fullName.sendKeys(fullName);
+        SendKeysUtils.sendByXpath(driver, "(//*[@id='fullname'])[1]", fullName);
         ReusableMethods.bekle(2);
 
         logger.info("Teacher fullname adresini doldurdu ");
@@ -67,7 +78,8 @@ public class RegisterSteps {
 
     @Given("Teacher passwordBox kotusuna {string} degerini gire")
     public void teacher_password_box_kotusuna_degerini_gire(String password) {
-        examplePage.passwordBox.sendKeys(password);
+        //examplePage.passwordBox.sendKeys(password);
+        SendKeysUtils.sendByXpath(driver, "(//*[@id='password'])[1]", password);
         ReusableMethods.bekle(2);
 
         logger.info("Teacher password adresini doldurdu ");
@@ -77,7 +89,8 @@ public class RegisterSteps {
 
     @Given("Teacher reTypePassword kutusuna {string} degerini girer")
     public void teacher_re_type_password_kutusuna_degerini_girer(String rePassword) {
-        registerPage.confirmPassword.sendKeys(rePassword);
+        //registerPage.confirmPassword.sendKeys(rePassword);
+        SendKeysUtils.sendByXpath(driver, "(//*[@id='confirm_password'])[1]", rePassword);
         ReusableMethods.bekle(2);
 
         logger.info("Teacher rePassword adresini doldurdu ");
@@ -101,20 +114,24 @@ public class RegisterSteps {
     public void teacherVeBilgileriIleGecerliKayıtOlusturur(String name, String password) {
 
         String dynamicEmail = name + System.currentTimeMillis() + "@InstuLearn.com";
-        examplePage.mailBox.sendKeys(dynamicEmail);
+       // examplePage.mailBox.sendKeys(dynamicEmail);
+        SendKeysUtils.sendByXpath(driver, "(//*[@id='email'])[1]", dynamicEmail);
         ReusableMethods.bekle(2);
         logger.info("Testte olusturulan :" + dynamicEmail);
 
-        registerPage.fullName.sendKeys(name);
+       // registerPage.fullName.sendKeys(name);
+        SendKeysUtils.sendByXpath(driver, "//input[@name=\"full_name\"]", name);
         ReusableMethods.bekle(2);
         logger.info("Testte kullanilan :" + name);
 
-        examplePage.passwordBox.sendKeys(password);
+       // examplePage.passwordBox.sendKeys(password);
+        SendKeysUtils.sendByXpath(driver, "(//*[@id='password'])[1]", password);
         ReusableMethods.bekle(2);
         logger.info("Testte kullanilan :" + password);
 
 
-        registerPage.confirmPassword.sendKeys(password);
+        //registerPage.confirmPassword.sendKeys(password);
+        SendKeysUtils.sendByXpath(driver, "(//*[@id='confirm_password'])[1]", password);
         ReusableMethods.bekle(2);
         logger.info("Testte kullanilan :" + password);
 
@@ -162,6 +179,51 @@ public class RegisterSteps {
     }
 
 
+    @When("Teacher Register Testi Basliyor")
+    public void teacherRegisterTestiBasliyor() {
+
+        // BANNER BANNER 1
+        ReusableMethods.bekle(2);
+        BannerUtils.displayProgressBanner(
+                driver,
+                "Ogretmenin Register Testi Basliyor",
+                "TeacherRegisterTest",
+                "Gecerli Syntax Bilgileri ile Register Testi Basliyor"
+
+        );ReusableMethods.bekle(6);
 
 
+
+    }
+
+    @When("Kullanici kayit oldugunu dogrular")
+    public void kullaniciKayitOldugunuDogrular() {
+
+
+
+        ClickUtils.waitForPageLoad(driver);
+
+
+        DescriptionUtils.inspect(driver, "//a[contains(text(),'Create a new course')]");
+        ReusableMethods.bekle(1);
+
+
+        WebElement createButton = driver.findElement(By.xpath("//a[contains(text(),'Create a new course')]"));
+        Assertions.assertTrue(createButton.isDisplayed(), "❌ HATA: Buton sayfada görülmüyor!");
+        logger.info("✅ Buton görünürlüğü doğrulandı.");
+
+
+        ReusableMethods.bekle(1);
+        BannerUtils.displayProgressBanner(
+                driver,
+                "TEST BAŞARILI",
+                "Teacher Register Module",
+                "Kullanıcı başarıyla kaydedildi ve 'Course Create' butonu doğrulandı."
+        );
+        ReusableMethods.bekle(5); // Banner'ın okunması için süre
+
+
+
+
+    }
 }
