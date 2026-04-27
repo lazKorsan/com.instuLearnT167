@@ -436,7 +436,6 @@ public class ClickUtils {
             log("⚠️ Default content switch başarısız");
         }
     }
-
     /**
      * Belirtilen metne (text) sahip olan elemente tıklar.
      * Bu method mevcut clickByXpath sistemini kullandığı için 8 aşamalı tıklama ve highlight özelliklerine sahiptir.
@@ -460,4 +459,5 @@ public class ClickUtils {
         log("🏷️ Parçalı metin ile element aranıyor: " + partialText);
         clickByXpath(driver, xpath);
     }
+
 }
