@@ -676,6 +676,8 @@ public class US023CreateBundleSteps {
 
         );ReusableMethods.bekle(6);
 
+        DescriptionUtils.inspect(driver, "(//*[@class=\"webinar-card-body w-100 d-flex flex-column\"])[1]");
+
         // todo BANNER BANNER 19
         ReusableMethods.bekle(2);
         BannerUtils.displayProgressBanner(
