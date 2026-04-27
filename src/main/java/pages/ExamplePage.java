@@ -18,7 +18,7 @@ public class ExamplePage extends BasePage{
         org.openqa.selenium.support.PageFactory.initElements(driver, this);
     }
 
-     @FindBy(xpath = "//input[@id=\"email\"]")
+     @FindBy(xpath = "//input[@id='email']")
      public WebElement mailBox;
 
      @FindBy(xpath = "//input[@id=\"password\"]")
