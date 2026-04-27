@@ -14,6 +14,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import pages.ExamplePage;
 import utils.BannerUtils;
 import utils.ClickUtils;
+import utils.DescriptionUtils;
 import utils.ReusableMethods;
 
 import java.time.Duration;
@@ -107,6 +108,8 @@ public class exampleSteps {
         // 1. Elementin XPath'ini tanımlayalım
         String errorXpath = "//*[@class='invalid-feedback']";
 
+        DescriptionUtils.inspect(driver, errorXpath);
+
         // 2. Elementin görünür olmasını bekleyelim (Senin ClickUtils içindeki waitForVisibility mantığıyla)
         // Direkt driver üzerinden değil, bekleme ile almak senkronizasyon hatasını önler.
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
@@ -144,6 +147,8 @@ public class exampleSteps {
 
         // 1. Elementin XPath'ini tanımlayalım
         String errorXpath = "//*[@class='invalid-feedback']";
+
+        DescriptionUtils.inspect(driver, errorXpath);
 
 
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));

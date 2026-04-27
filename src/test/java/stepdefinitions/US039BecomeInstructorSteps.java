@@ -7,11 +7,7 @@ import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.*;
 import org.openqa.selenium.support.ui.Select;
 import pages.BecomeInstructorPage;
-import utils.BannerUtils;
-import utils.ClickUtils;
-import utils.ReusableMethods;
-import utils.SendKeysUtils;
-
+import utils.*;
 
 
 public class US039BecomeInstructorSteps {
@@ -117,6 +113,8 @@ public class US039BecomeInstructorSteps {
         );ReusableMethods.bekle(6);
 
         // todo becomeInstructorButtona  tiklama islemleri
+        DescriptionUtils.inspect(driver,"//*[@href=\"/become-instructor\"]");
+        ReusableMethods.bekle(2);
         ClickUtils.clickByXpath(driver, "//*[@href=\"/become-instructor\"]");
         logger.info("Kullanici becomeInstructorButtona tiklandi");
         ReusableMethods.bekle(2);
@@ -260,6 +258,7 @@ public class US039BecomeInstructorSteps {
     @When("Kullanici acilan sayfada arama kutusuna {string} kelimesini aratir")
     public void kullaniciAcilanSayfadaAramaKutusunaKelimesiniAratir(String name) {
 
+        DescriptionUtils.inspect(driver, "//*[@href=\"/panel/webinars/new\"]");
         // todo arama islemleri
         SendKeysUtils.sendByXpath(driver, "//input[@class=\"form-control mr-5 rounded\"]", name);
         driver.findElement(By.xpath("//input[@class=\"form-control mr-5 rounded\"]")).sendKeys(Keys.ENTER);
