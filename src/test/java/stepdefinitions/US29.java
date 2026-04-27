@@ -1,21 +1,15 @@
 package stepdefinitions;
 
-import com.github.dockerjava.api.model.Driver;
 import config.ConfigReader;
-import io.cucumber.java.PendingException;
 import io.cucumber.java.en.*;
 import org.apache.commons.lang3.RandomStringUtils;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import org.junit.Assert;
 import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.TestInfo;
-import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.Select;
 import pages.*;
-import utils.ClickUtils;
 import utils.ReusableMethods;
 
 import java.util.Random;
@@ -47,7 +41,6 @@ public class US29 {
     @And("kullanıcı dashboard sayfasındadır")
     public void kullanıcı_dashboard_sayfasındadır() {
         Assertions.assertTrue(instructorDashboardPage.dashboardPageTitle.isDisplayed());
-        System.out.println("sonra eklenecek");
     }
 
 
@@ -57,26 +50,26 @@ public class US29 {
     @Given("sidebar menüde Marketing başlığı görünür olmalıdır")
     public void sidebarMenüdeMarketingBaşlığıGörünürOlmalıdır() {
         actions.moveToElement(instructorDashboardPage.dashboardPageSidebar).perform();
-        ReusableMethods.scrollToElement(driver,dashboardPage.sidebarMarketingLink);
-        Assertions.assertTrue(dashboardPage.sidebarMarketingLink.isDisplayed());
+        ReusableMethods.scrollToElement(driver,instructorDashboardPage.sidebarMarketingLink);
+        Assertions.assertTrue(instructorDashboardPage.sidebarMarketingLink.isDisplayed());
     }
 
     @When("kullanıcı Marketing linkine tıklar")
     public void kullanıcıMarketingLinkineTıklar() {
-        dashboardPage.sidebarMarketingLink.click();
+        instructorDashboardPage.sidebarMarketingLink.click();
         ReusableMethods.bekle(1);
     }
 
     @Then("Marketing başlığı altında Discounts linki görünür ve aktif olmalıdır")
     public void marketing_Başlığı_Altında_Discounts_Linki_Görünür_Ve_Aktif_Olmalıdır() {
-        Assertions.assertTrue(dashboardPage.discountsLinkByMarketing.isDisplayed());
-        Assertions.assertTrue(dashboardPage.discountsLinkByMarketing.isEnabled());
+        Assertions.assertTrue(instructorDashboardPage.discountsLinkByMarketing.isDisplayed());
+        Assertions.assertTrue(instructorDashboardPage.discountsLinkByMarketing.isEnabled());
     }
 
     @And("Marketing başlığı altında Promotions linki görünür ve aktif olmalıdır")
     public void marketingBaşlığıAltındaPromotionsLinkiGörünürVeAktifOlmalıdır() {
-        Assertions.assertTrue(dashboardPage.promotionsLinkByMarketing.isDisplayed());
-        Assertions.assertTrue(dashboardPage.promotionsLinkByMarketing.isEnabled());
+        Assertions.assertTrue(instructorDashboardPage.promotionsLinkByMarketing.isDisplayed());
+        Assertions.assertTrue(instructorDashboardPage.promotionsLinkByMarketing.isEnabled());
     }
 
 
@@ -87,9 +80,9 @@ public class US29 {
     @Given("kullanıcı Discounts linkine tıklar")
     public void kullanıcıDiscountsLinkineTıklar() {
         actions.moveToElement(instructorDashboardPage.dashboardPageSidebar).perform();
-        ReusableMethods.scrollToElement(driver,dashboardPage.sidebarMarketingLink);
-        dashboardPage.sidebarMarketingLink.click();
-        dashboardPage.discountsLinkByMarketing.click();
+        ReusableMethods.scrollToElement(driver,instructorDashboardPage.sidebarMarketingLink);
+        instructorDashboardPage.sidebarMarketingLink.click();
+        instructorDashboardPage.discountsLinkByMarketing.click();
     }
 
     @When("Discounts sayfası açılmalıdır")
@@ -169,8 +162,8 @@ public class US29 {
     @Given("kullanıcı Promotions linkine tıklar")
     public void kullanıcıPromotionsLinkineTıklar() {
         actions.moveToElement(instructorDashboardPage.dashboardPageSidebar).perform();
-        ReusableMethods.scrollToElement(driver,dashboardPage.sidebarMarketingLink);
-        dashboardPage.sidebarMarketingLink.click();
+        ReusableMethods.scrollToElement(driver,instructorDashboardPage.sidebarMarketingLink);
+        instructorDashboardPage.sidebarMarketingLink.click();
         marketingPage.promotionsLink.click();
     }
 
