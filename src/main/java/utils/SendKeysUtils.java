@@ -438,4 +438,24 @@ public class SendKeysUtils {
             System.err.println("❌ [SendKeys] Ok tuşuna basılırken hata oluştu: " + e.getMessage());
         }
     }
+
+    /**
+     * Kutu ismine (Label veya Placeholder) göre input alanını bulur ve yazı gönderir.
+     * Bu method mevcut sendByXpath sistemini kullandığı için 8 aşamalı yazma ve doğrulama özelliklerine sahiptir.
+     * @param driver WebDriver örneği
+     * @param boxName Kutunun görünen etiketi veya içindeki placeholder metni
+     * @param text Gönderilecek metin
+     */
+    public static void sendKeysByText(WebDriver driver, String boxName, String text) {
+        // En esnek XPath: Label text'i ile eşleşen veya placeholder'ı bu isim olan input'u bulur
+        // normalize-space(.) ile görünmez boşluk hatalarını eler.
+        String xpath = "(//label[normalize-space(.)='" + boxName + "']//following::input)[1] | " +
+                "//input[@placeholder='" + boxName + "'] | " +
+                "(//*[normalize-space(.)='" + boxName + "']/following-sibling::input)[1]";
+
+        log("⌨️ '" + boxName + "' isimli kutuya metin gönderiliyor: " + text);
+
+        // Mevcut sendByXpath metodunu çağırarak tüm güvenlik katmanlarını (Highlight, Fallback, Verify) devreye sokuyoruz
+        sendByXpath(driver, xpath, text);
+    }
 }

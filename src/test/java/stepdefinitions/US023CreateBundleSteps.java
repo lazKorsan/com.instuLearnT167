@@ -8,10 +8,7 @@ import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Actions;
 import pages.CreateBundlePage;
 import pages.ExamplePage;
-import utils.ClickUtils;
-import utils.ReusableMethods;
-import utils.SendKeysUtils;
-import utils.SwitchToWindow;
+import utils.*;
 
 import java.time.Duration;
 
@@ -34,6 +31,16 @@ public class US023CreateBundleSteps {
         driver.get("https://qa.instulearn.com/login");
         logger.info("🌏 Kullanıcı login sayfasına gitti");
 
+        // BANNER BANNER 1
+        ReusableMethods.bekle(2);
+        BannerUtils.displayProgressBanner(
+                driver,
+                "Kullanici ogretmen girisi yapar",
+                "US023CrateCourse",
+                "Başarılı Instructor Girisi Yapar"
+
+        );ReusableMethods.bekle(6);
+
         // todo Kullanıcı mail adresini giriyor
         logger.debug("🐞 Kullanici mail adresini giriyor");
         SendKeysUtils.sendByXpath(driver, "//input[@id='email']", mail);
@@ -49,11 +56,30 @@ public class US023CreateBundleSteps {
         ClickUtils.clickByXpath(driver, "//button[@class='btn btn-primary btn-block mt-20']");
         logger.info("✅ Kullanıcı submit butonuna tıkladı");
 
+        ReusableMethods.bekle(2);
+        BannerUtils.displayProgressBanner(
+                driver,
+                "Kullanici Basarili Bir Şekilde Instructor girisi yapti",
+                "US023CrateCourse",
+                "Instructor Login Islemleri"
+
+        );ReusableMethods.bekle(6);
+
     }
 
 
     @When("Kullanici dashBoard menuden newButtonuna tiklar")
     public void kullaniciDashBoardMenudenNewButtonunaTiklar() {
+
+        // todo BANNER BANNER 2
+        ReusableMethods.bekle(2);
+        BannerUtils.displayProgressBanner(
+                driver,
+                "Instructor Course Olusturma İşlemlerine Başlar",
+                "US023CrateCourse",
+                "Kullanici dashBoard menuden newButtonuna tiklar"
+
+        );ReusableMethods.bekle(6);
 
         // todo dashBoardMenu ye hoover islemleri
         Actions actions = new Actions(driver);
@@ -81,6 +107,16 @@ public class US023CreateBundleSteps {
         logger.info("✅ Kullanici newWebinars sayfasina gitti ");
         ReusableMethods.bekle(2);
 
+        // todo BANNER BANNER 3
+        ReusableMethods.bekle(2);
+        BannerUtils.displayProgressBanner(
+                driver,
+                "Kullanici newWebinar sayfasinda oldugunu dogrular",
+                "US023CrateCourse",
+                "if-else Methodu"
+
+        );ReusableMethods.bekle(6);
+
         // todo url dogrulama adimlari
         String expectedUrl="https://qa.instulearn.com/register";
         String actualUrl=driver.getCurrentUrl();
@@ -92,11 +128,31 @@ public class US023CreateBundleSteps {
             logger.error("Beklenen url: " + expectedUrl + "ile" + actualUrl + "farklı degerde");
         }
 
-        ReusableMethods.bekle(8); // fixme bekleme suresi aayarlanacak
+        ReusableMethods.bekle(4); // fixme bekleme suresi aayarlanacak
+
+        // todo BANNER BANNER 4
+        ReusableMethods.bekle(2);
+        BannerUtils.displayProgressBanner(
+                driver,
+                "Kullanici newWebinar sayfasinda oldugunu dogruladi",
+                "US023CrateCourse",
+                "if-else Methodu"
+
+        );ReusableMethods.bekle(6);
     }
 
     @When("Kullanici basicInformation sayfasi bilgilerini doldurur")
     public void kullaniciBasicInformationSayfasiBilgileriniDoldurur() {
+
+        // todo BANNER BANNER 5
+        ReusableMethods.bekle(2);
+        BannerUtils.displayProgressBanner(
+                driver,
+                "Kullanici basicInformation sayfasi bilgilerini doldurur",
+                "US023CrateCourse",
+                ""
+
+        );ReusableMethods.bekle(6);
 
         // todo courseTypeButton islemleri
         ClickUtils.clickByXpath(driver, "//*[@id=\"webinarForm\"]/div[2]/div/div[1]/select");
@@ -189,10 +245,30 @@ public class US023CreateBundleSteps {
         ClickUtils.clickByXpath(driver, nextButton);
         ReusableMethods.bekle(3);
 
+        // todo BANNER BANNER 6
+        ReusableMethods.bekle(2);
+        BannerUtils.displayProgressBanner(
+                driver,
+                "Kullanici basicInformation sayfasi bilgilerini doldurdu",
+                "US023CrateCourse",
+                ""
+
+        );ReusableMethods.bekle(6);
+
     }
 
     @When("Kullanici extraInformation sayfasi bilgilerini doldurur")
     public void kullaniciExtraInformationSayfasiBilgileriniDoldurur() {
+
+        // todo BANNER BANNER 7
+        ReusableMethods.bekle(2);
+        BannerUtils.displayProgressBanner(
+                driver,
+                "Kullanici extraInformation sayfasi bilgilerini doldurur",
+                "US023CrateCourse",
+                "SwitchToWindow Ozelliklerinin Kullanilmasi"
+
+        );ReusableMethods.bekle(6);
 
         // todo ÖNEMLİ DYNAMİK TESTE GEÇERKEN BURAYI YORUMA AL
        // driver.get("https://qa.instulearn.com/panel/webinars/4130/step/2");
@@ -249,12 +325,34 @@ public class US023CreateBundleSteps {
          ClickUtils.clickByXpath(driver, nextButton);
          ReusableMethods.bekle(3);
 
+         // todo BANNER BANNER 8
+        ReusableMethods.bekle(2);
+        BannerUtils.displayProgressBanner(
+                driver,
+                "Kullanici extraInformation sayfasi bilgilerini doldurdu",
+                "US023CrateCourse",
+                "SwitchToWindow Ozelliklerinin Kullanilmasi"
+
+        );ReusableMethods.bekle(6);
+
+
+
          // https://qa.instulearn.com/panel/webinars/4130/step/3
 
     }
 
     @When("Kullanici pricingPage sayfasi bilgilerini doldurur")
     public void kullaniciPricingPageSayfasiBilgileriniDoldurur() {
+
+        // todo BANNER BANNER 9
+        ReusableMethods.bekle(2);
+        BannerUtils.displayProgressBanner(
+                driver,
+                "Kullanici pricingPage sayfasi bilgilerini doldurur",
+                "US023CrateCourse",
+                "JavaExcecuter Ozelliklerinin Kullanilmasi"
+
+        );ReusableMethods.bekle(6);
 
         // todo ÖNEMLİ DYNAMİK TESTE GEÇERKEN BURAYI YORUMA AL
         //driver.get("https://qa.instulearn.com/panel/webinars/4130/step/3");
@@ -283,12 +381,32 @@ public class US023CreateBundleSteps {
         ClickUtils.clickByXpath(driver, nextButton);
         ReusableMethods.bekle(3);
 
+        // todo BANNER BANNER 10
+        ReusableMethods.bekle(2);
+        BannerUtils.displayProgressBanner(
+                driver,
+                "Kullanici pricingPage sayfasi bilgilerini doldurdu",
+                "US023CrateCourse",
+                "JavaExcecuter Ozelliklerinin Kullanilmasi"
+
+        );ReusableMethods.bekle(6);
+
         // https://qa.instulearn.com/panel/webinars/4130/step/4
 
     }
 
     @When("Kullanici contentPage sayfasi bilgilerini doldurur")
     public void kullaniciContentPageSayfasiBilgileriniDoldurur() {
+
+        // todo BANNER BANNER 11
+        ReusableMethods.bekle(2);
+        BannerUtils.displayProgressBanner(
+                driver,
+                "Kullanici contentPage sayfasi bilgilerini doldurur",
+                "US023CrateCourse",
+                "Değişken değiştirerek Button Uzeirnden Text Gonderilemsi"
+
+        );ReusableMethods.bekle(6);
 
         // todo ÖNEMLİ DYNAMİK TESTE GEÇERKEN BURAYI YORUMA AL
         //driver.get("https://qa.instulearn.com/panel/webinars/4130/step/4");
@@ -317,10 +435,31 @@ public class US023CreateBundleSteps {
 
         // https://qa.instulearn.com/panel/webinars/4130/step/5
 
+        // todo BANNER BANNER 12
+        ReusableMethods.bekle(2);
+        BannerUtils.displayProgressBanner(
+                driver,
+                "Kullanici contentPage sayfasi bilgilerini doldurdu",
+                "US023CrateCourse",
+                "Değişken değiştirerek Button Uzeirnden Text Gonderilemsi"
+
+        );ReusableMethods.bekle(6);
+
+
     }
 
     @When("Kullanici prerequisitesPage sayfasi bilgilerini doldurur")
     public void kullaniciPrerequisitesPageSayfasiBilgileriniDoldurur() {
+
+        // todo BANNER BANNER 13
+        ReusableMethods.bekle(2);
+        BannerUtils.displayProgressBanner(
+                driver,
+                "Kullanici prerequisitesPage sayfasi bilgilerini doldurur",
+                "US023CrateCourse",
+                "Klavye ArrowDown Ozelliğinin Kullanılmasi"
+
+        );ReusableMethods.bekle(6);
 
         // todo ÖNEMLİ DYNAMİK TESTE GEÇERKEN BURAYI YORUMA AL
         //driver.get("https://qa.instulearn.com/panel/webinars/4130/step/5");
@@ -370,11 +509,31 @@ public class US023CreateBundleSteps {
 
         // https://qa.instulearn.com/panel/webinars/4130/step/6
 
+        // todo BANNER BANNER 14
+        ReusableMethods.bekle(2);
+        BannerUtils.displayProgressBanner(
+                driver,
+                "Kullanici prerequisitesPage sayfasi bilgilerini doldurdu",
+                "US023CrateCourse",
+                "Klavye ArrowDown Ozelliğinin Kullanılmasi"
+
+        );ReusableMethods.bekle(6);
+
 
     }
 
     @When("Kullanici FAQpage sayfasi bilgilerini doldurur")
     public void kullaniciFAQpageSayfasiBilgileriniDoldurur() {
+
+        // todo BANNER BANNER 15
+        ReusableMethods.bekle(2);
+        BannerUtils.displayProgressBanner(
+                driver,
+                "Kullanici FAQpage sayfasi bilgilerini doldurur",
+                "US023CrateCourse",
+                "Değişen sayfa yapısını yakalamak"
+
+        );ReusableMethods.bekle(6);
 
         // todo ÖNEMLİ DYNAMİK TESTE GEÇERKEN BURAYI YORUMA AL
         //driver.get("https://qa.instulearn.com/panel/webinars/4130/step/6");
@@ -408,10 +567,30 @@ public class US023CreateBundleSteps {
         ClickUtils.clickByXpath(driver, nextButton);
         ReusableMethods.bekle(2);
         logger.info("Kullanici nextButton alanini doldurdu");
+
+        // todo BANNER BANNER 16
+        ReusableMethods.bekle(2);
+        BannerUtils.displayProgressBanner(
+                driver,
+                "Kullanici FAQpage sayfasi bilgilerini doldurdu",
+                "US023CrateCourse",
+                "Değişen sayfa yapısını yakalamak"
+
+        );ReusableMethods.bekle(6);
     }
 
     @When("Kullanici Quiz&CertificationPage sayfasi bilgilerini doldurur")
     public void kullaniciQuizCertificationPageSayfasiBilgileriniDoldurur() {
+
+        // todo BANNER BANNER 17
+        ReusableMethods.bekle(2);
+        BannerUtils.displayProgressBanner(
+                driver,
+                "Kullanici Quiz&CertificationPage sayfasi bilgilerini doldurur",
+                "US023CrateCourse",
+                "JavaExcecuter Ozelliklerinin Kullanilmasi"
+
+        );ReusableMethods.bekle(6);
 
         // todo ÖNEMLİ DYNAMİK TESTE GEÇERKEN BURAYI YORUMA AL
         //driver.get("https://qa.instulearn.com/panel/webinars/4130/step/7");
@@ -486,6 +665,28 @@ public class US023CreateBundleSteps {
         logger.info("Kullanici publishButton alanini doldurdu");
 
         ReusableMethods.bekle(6);
+
+        // todo BANNER BANNER 18
+        ReusableMethods.bekle(2);
+        BannerUtils.displayProgressBanner(
+                driver,
+                "Kullanici Quiz&CertificationPage sayfasi bilgilerini doldurdu",
+                "US023CrateCourse",
+                "JavaExcecuter Ozelliklerinin Kullanilmasi"
+
+        );ReusableMethods.bekle(6);
+
+        // todo BANNER BANNER 19
+        ReusableMethods.bekle(2);
+        BannerUtils.displayProgressBanner(
+                driver,
+                "Kullanici myCourses sayfasinda Course Olustugunu Dogrular ",
+                "US023CrateCourse",
+                "if-else Statment"
+
+        );ReusableMethods.bekle(6);
+
+
 
     }
 }

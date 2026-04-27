@@ -93,19 +93,6 @@ public class DashboardPage extends BasePage{
     @FindBy(xpath = "//*[@*='quizzes_questions']")
     public List<WebElement> QuestionsList;
 
-        @FindBy(xpath = "//span[text()=\"Marketing\"]")
-        public  WebElement sidebarMarketingLink;
-
-        @FindBy(xpath = "//a[text()=\"Discounts\"]")
-        public WebElement discountsLinkByMarketing;
-
-        @FindBy(xpath = "//a[text()=\"Promotions\"]")
-        public WebElement promotionsLinkByMarketing;
-
-
-
-
-
 
 
 
@@ -133,11 +120,69 @@ public class DashboardPage extends BasePage{
     @FindBy(xpath = "//table//tbody//tr/td[2]")
     public List<WebElement> Questions;
 
+    @FindBy(xpath = "//*[*='Quizzes']")
+    public WebElement statisticsQuizzes;
+
+    @FindBy(xpath = "(//*[*='Questions'])[1]")
+    public WebElement statisticsQuestions;
+
+    @FindBy(xpath = "(//*[*='Students'])[1]")
+    public WebElement statisticsStudent;
+
+    @FindBy(xpath = "(//input[@type='text'])[1]")
+    public WebElement FilterQuizzesForum;
+
+    @FindBy(xpath = "//*[@*='from']")
+    public WebElement FormTex;
+
+    @FindBy(xpath = "//*[@*='to']")
+    public WebElement ToText;
+
+    @FindBy(xpath = "(//*[@type='button'])[9]")
+    public WebElement FromApplyButton;
+
+    @FindBy(xpath = "(//button[@class='applyBtn btn btn-sm btn-primary'])[2]")
+    public WebElement ToApplybutton;
+
+    @FindBy(xpath = "(//input[@type='text'])[3]")
+    public WebElement FilterQuizzesTotalMark;
+
+    @FindBy(xpath = "//*[.='Show Results']")
+    public WebElement ShowResults;
+
+    @FindBy(xpath = "//table//tbody//tr/td")
+    public List<WebElement> FilterResault;
+
+    @FindBy(xpath = "(//*[@*='feather feather-more-vertical'])[1]")
+    public WebElement ThreePoint;
+
+    @FindBy(xpath = "(//*[.='Edit'])[1]")
+    public WebElement EditPoint;
+
+    @FindBy(xpath = "(//input[contains(@class,'js-ajax-title')])[1]")
+    public WebElement EditQuitTitle;
+
+    @FindBy(xpath = "(//*[@type='number'])[3]")
+    public WebElement EditPassMark;
+
+    @FindBy(xpath = "(//*[.='Save'])[1]")
+    public WebElement EditSave;
+
+    @FindBy(xpath = "(//*[.='List'])[1]")
+    public WebElement EditListButton;
+
+    @FindBy(xpath = "//tbody/tr")
+    public List<WebElement> listPagelements;
+
+    @FindBy(xpath = "(//*[.='Delete'])[1]")
+    public WebElement Deletebutton;
 
 
+    @FindBy(xpath = "//*[@*='swlDelete']")
+    public WebElement DeleteButton2;
 
-
-
+    @FindBy(xpath = "//table//tbody//tr/td")
+    public List<WebElement> SimpleTableList;
 
 
 

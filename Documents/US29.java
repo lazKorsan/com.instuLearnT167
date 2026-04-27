@@ -10,13 +10,12 @@ import org.apache.logging.log4j.Logger;
 import org.junit.Assert;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.TestInfo;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.Select;
-import pages.DashboardPage;
-import pages.ExamplePage;
-import pages.HomePage;
-import pages.MarketingPage;
+import pages.*;
+import utils.ClickUtils;
 import utils.ReusableMethods;
 
 import java.util.Random;
@@ -28,9 +27,11 @@ public class US29 {
     ExamplePage examplePage = new ExamplePage(driver);
     HomePage homePage = new HomePage(driver);
     DashboardPage dashboardPage = new DashboardPage(driver);
+    InstructorDashboardPage instructorDashboardPage = new InstructorDashboardPage(driver);
     Actions actions = new Actions(driver);
     MarketingPage marketingPage = new MarketingPage(driver);
     Random random = new Random();
+    US035 us035=new US035(driver);
 
 
 
@@ -40,14 +41,13 @@ public class US29 {
         driver.get(ConfigReader.getProperty("url"));
         ReusableMethods.bekle(1);
         homePage.homePageLoginLink.click();
-        ReusableMethods.bekle(1);
         examplePage.loginMethod("burak.yilmaz.teacher@instulearn.com","Learn.123!");
-        ReusableMethods.bekle(1);
     }
 
     @And("kullanıcı dashboard sayfasındadır")
     public void kullanıcı_dashboard_sayfasındadır() {
-        Assertions.assertTrue(dashboardPage.dashboardTitle.isDisplayed());
+        Assertions.assertTrue(instructorDashboardPage.dashboardPageTitle.isDisplayed());
+        System.out.println("sonra eklenecek");
     }
 
 
@@ -56,7 +56,7 @@ public class US29 {
 
     @Given("sidebar menüde Marketing başlığı görünür olmalıdır")
     public void sidebarMenüdeMarketingBaşlığıGörünürOlmalıdır() {
-        actions.moveToElement(dashboardPage.sidebar).perform();
+        actions.moveToElement(instructorDashboardPage.dashboardPageSidebar).perform();
         ReusableMethods.scrollToElement(driver,dashboardPage.sidebarMarketingLink);
         Assertions.assertTrue(dashboardPage.sidebarMarketingLink.isDisplayed());
     }
@@ -86,7 +86,7 @@ public class US29 {
 
     @Given("kullanıcı Discounts linkine tıklar")
     public void kullanıcıDiscountsLinkineTıklar() {
-        actions.moveToElement(dashboardPage.sidebar).perform();
+        actions.moveToElement(instructorDashboardPage.dashboardPageSidebar).perform();
         ReusableMethods.scrollToElement(driver,dashboardPage.sidebarMarketingLink);
         dashboardPage.sidebarMarketingLink.click();
         dashboardPage.discountsLinkByMarketing.click();
@@ -112,22 +112,24 @@ public class US29 {
         ReusableMethods.bekle(1);
         marketingPage.amountBox.sendKeys("10");
         ReusableMethods.bekle(1);
+        marketingPage.fromBox.click();
         marketingPage.fromBox.sendKeys("2026.04.30");
+        marketingPage.fromBoxApply.click();
         ReusableMethods.bekle(1);
+        marketingPage.toBox.click();
         marketingPage.toBox.sendKeys("2026.05.30");
+        marketingPage.toBoxApply.click();
         ReusableMethods.bekle(1);
     }
 
     @Then("Create butonuna tıklar")
     public void createButonunaTıklar() {
         marketingPage.createButton.click();
-       // marketingPage.createButton.click();
-        ReusableMethods.bekle(10);
-        // fixme ahmet
     }
 
     @And("oluşturulan indirim listede görünmelidir")
     public void oluşturulan_indirim_listede_görünmelidir() {
+        ReusableMethods.bekle(3);
         Assertions.assertTrue(marketingPage.discountsNameList.get(0).getText().contains(titleText));
     }
 
@@ -166,7 +168,7 @@ public class US29 {
 
     @Given("kullanıcı Promotions linkine tıklar")
     public void kullanıcıPromotionsLinkineTıklar() {
-        actions.moveToElement(dashboardPage.sidebar).perform();
+        actions.moveToElement(instructorDashboardPage.dashboardPageSidebar).perform();
         ReusableMethods.scrollToElement(driver,dashboardPage.sidebarMarketingLink);
         dashboardPage.sidebarMarketingLink.click();
         marketingPage.promotionsLink.click();
@@ -204,6 +206,7 @@ public class US29 {
 
     @And("Purchase butonuna tıklar")
     public void purchaseButonunaTıklar() {
+        randomIndex =random.nextInt(marketingPage.promotionsPurchaseButtonList.size());
         marketingPage.promotionsPurchaseButtonList.get(randomIndex).click();
     }
 
@@ -227,25 +230,31 @@ public class US29 {
     public void ödemeIşleminiBaşlatır() {
         ReusableMethods.bekle(1);
         marketingPage.paymentSubmitButton.click();
+        ReusableMethods.waitForVisibility(driver,us035.stripePayButton,10);
     }
 
     @When("Ödeme bilgilerini doldurur")
     public void ödemeBilgileriniDoldurur() {
-
+        us035.stripeEmailBox.sendKeys("burak.yilmaz.teacher@instulearn.com");
+        us035.cardNumberBox.sendKeys("4242424242424242");
+        us035.cardExpiryBox.sendKeys("0130");
+        us035.cardCvcBox.sendKeys("321");
+        us035.billingNameBox.sendKeys("NİHAT ÖZTÜRK");
     }
 
     @And("Öde butonuna tıklar")
     public void ödeButonunaTıklar() {
+        ReusableMethods.scrollToElement(driver,marketingPage.creditCardPayButton);
+        ReusableMethods.bekle(1);
+        marketingPage.creditCardPayButton.click();
+        ReusableMethods.bekle(1);
 
     }
 
-    @And("kullanıcı seçilen plana başarıyla kayıt olmalıdır")
-    public void kullanıcı_seçilen_plana_başarıyla_kayıt_olmalıdır() {
-
-    }
     @Then("onay mesajı ekranda görüntülenmelidir")
     public void onay_mesajı_ekranda_görüntülenmelidir() {
-
+        ReusableMethods.waitForVisibility(driver,marketingPage.succesMessage,15);
+        Assertions.assertTrue(marketingPage.succesMessage.isDisplayed());
     }
 
 

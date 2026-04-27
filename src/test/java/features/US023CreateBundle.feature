@@ -3,7 +3,7 @@
 @createCourse
 Feature: CreateBundele
 
-  @createCourseOneScenario
+  @createCourseOneScenario111
   Scenario: Instructor yeni bir course olusturur
     # login islemleri
     * Instructor "ahmet.instructor3@InstuLearn.com" adresi ve "InsruLearn.2026!" ile sisteme giris yapar
@@ -33,7 +33,7 @@ Feature: CreateBundele
     * Kullanici 10 saniye bekler
     Examples:
       | mail                             | password         |
-      | ahmet.instructor3@InstuLearn.com | InsruLearn.2026! |
+      | ahmet.instructor4@InstuLearn.com | InsruLearn.2026! |
 
 
   @preConditionRegisteration2
