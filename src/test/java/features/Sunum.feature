@@ -1,5 +1,5 @@
 
-
+@Sunum
 Feature: Team167 DemoSunum senaryolari
 
   @PozitiveLoginTest
@@ -9,17 +9,12 @@ Feature: Team167 DemoSunum senaryolari
     * Kullanici mail adresi "zafer3.student@instuLearn.com" ve tanimli password ile  "InstuLearn.2026!" giris yapar
     * Kullanici login oldugunu dogrular
 
-
-
   @NegativeLoginMail
   Scenario: Kullanici hatali mail adresi ile giris yapilamadigini dogrular
     * Kullanici login page sayfasina gider
     * Negative Login Test Hatali Mail
     * Kullanici mail adresi "zafer13.student@instuLearn.com" ve tanimli password ile  "InstuLearn.2026!" giris yapar
     * Kullanici hatali mail ile giris yapilamadigini dogrular
-
-
-
 
   @NegativeLoginPassword
   Scenario:  Kullanici hatali Password bilgisi ile  giris yapilamadigini dogrular
@@ -28,6 +23,15 @@ Feature: Team167 DemoSunum senaryolari
     * Kullanici mail adresi "zafer3.student@instuLearn.com" ve tanimli password ile  "InstuLearn.2025!" giris yapar
     * Kullanici hatali password ile giris yapilamadigini dogrular
 
+  @DynamicRegisterTeacher
+  Scenario: Kullanici timeStamp atarak dynamic register olusturur
+    * Teacher registerPage sayfasina gider
+    * Teacher Register Testi Basliyor
+    * Teacher instructor Buttonunu secer
+    * Teacher "ahmet" ve "InstuLearn.2026!" bilgileri ile gecerli kayıt olusturur
+    * Kullanici checkBox kutusunu isaretler
+    * Kullanici submitButton tiklar
+    * Kullanici kayit oldugunu dogrular
 
   @ChangeRoleDynamic
   Scenario: Dynamic Method

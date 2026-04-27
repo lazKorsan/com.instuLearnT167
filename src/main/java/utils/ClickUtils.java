@@ -436,4 +436,28 @@ public class ClickUtils {
             log("⚠️ Default content switch başarısız");
         }
     }
+
+    /**
+     * Belirtilen metne (text) sahip olan elemente tıklar.
+     * Bu method mevcut clickByXpath sistemini kullandığı için 8 aşamalı tıklama ve highlight özelliklerine sahiptir.
+     * @param driver WebDriver örneği
+     * @param buttonName Tıklanacak butonun veya elementin üzerindeki tam metin
+     */
+    public static void clickByText(WebDriver driver, String buttonName) {
+        // Tam metin eşleşmesi için normalize-space kullanılır (boşluk hatalarını önler)
+        String xpath = "//*[normalize-space(text())='" + buttonName + "']";
+        log("🏷️ Metin ile element aranıyor: " + buttonName);
+        clickByXpath(driver, xpath);
+    }
+
+    /**
+     * Belirtilen metni (text) İÇEREN elemente tıklar (Partial Match).
+     * @param driver WebDriver örneği
+     * @param partialText Elementin içinde geçen kelime veya kelime grubu
+     */
+    public static void clickByPartialText(WebDriver driver, String partialText) {
+        String xpath = "//*[contains(text(),'" + partialText + "')]";
+        log("🏷️ Parçalı metin ile element aranıyor: " + partialText);
+        clickByXpath(driver, xpath);
+    }
 }

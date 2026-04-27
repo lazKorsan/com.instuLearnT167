@@ -29,7 +29,7 @@ Feature: Kullanici teacher kaydi olusturur
 
 
 
-    @DynamicRegisterTeacher
+    @DynamicRegisterTeacher111
     Scenario: Kullanici timeStamp atarak dynamic register olusturur
       * Teacher registerPage sayfasina gider
       * Teacher instructor Buttonunu secer
