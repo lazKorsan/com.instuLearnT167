@@ -7,10 +7,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-
-public class HomePage extends BasePage {
-
-    public HomePage(WebDriver driver) {
+public class HomePage_Courses extends BasePage{
+    public HomePage_Courses(WebDriver driver) {
         super(driver);
 
         org.openqa.selenium.support.PageFactory.initElements(driver, this);
@@ -41,10 +39,21 @@ public class HomePage extends BasePage {
     public WebElement profileLinkInInstructorProfileIconDropdownMenu;
 
 
+    // Ana sayfa üst barındaki Login linki
+    @FindBy(xpath = "//a[contains(@href,'/login')][normalize-space()='Login']")
+    public WebElement loginLink;
+
+    // Site logosu
+    @FindBy(xpath = "//img[@alt='site logo']")
+    public WebElement siteLogo;
+
+    // ANASAYFA Courses Linki
+    @FindBy(xpath = "//*[@id='navbarContent']/ul/li[3]/a")
+    public WebElement coursesLink;
+
+    //Navbardaki ShopingCart (Sepet) ikonu
+    @FindBy(xpath = "(//*[@id=\"navbarShopingCart\"])[1]")
+    public WebElement cartIcon;
 }
-
-
-
-
 
 

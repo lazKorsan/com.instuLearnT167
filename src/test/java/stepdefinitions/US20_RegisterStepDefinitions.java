@@ -10,6 +10,7 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import pages.HomePage;
+import pages.HomePage_Courses;
 import pages.LoginPage;
 import pages.RegisterPage;
 import utils.ReusableMethods;
@@ -17,13 +18,15 @@ import utils.ReusableMethods;
 public class US20_RegisterStepDefinitions {
 
     // Field isimleri method isimleriyle ÇAKIŞMASIN diye başına _ konuldu
-    // Sadece homePage() / registerPage() / loginPage() METOTLARI üzerinden erişiyoruz
-    private HomePage _homePage;
+    // Sadece HomePage_Courses() / registerPage() / loginPage() METOTLARI üzerinden erişiyoruz
+
     private RegisterPage _registerPage;
     private LoginPage _loginPage;
+    private HomePage_Courses HomePage_Courses;
 
     // Scenario Outline'da hangi alanın boş bırakılacağını taşımak için
     private static String bosBirakilacakAlan = "";
+
 
     // Driver'ı her adımda güncel olarak alan yardımcı metot
     private WebDriver driver() {
@@ -31,10 +34,7 @@ public class US20_RegisterStepDefinitions {
     }
 
     // Page nesnelerini ilk ihtiyaç anında oluşturan lazy initializer'lar
-    private HomePage homePage() {
-        if (_homePage == null) _homePage = new HomePage(driver());
-        return _homePage;
-    }
+
 
     private RegisterPage registerPage() {
         if (_registerPage == null) _registerPage = new RegisterPage(driver());
@@ -44,6 +44,11 @@ public class US20_RegisterStepDefinitions {
     private LoginPage loginPage() {
         if (_loginPage == null) _loginPage = new LoginPage(driver());
         return _loginPage;
+    }
+
+    private HomePage_Courses HomePage_Courses() {
+        if (HomePage_Courses == null) HomePage_Courses = new HomePage_Courses(driver());
+        return HomePage_Courses;
     }
 
     // ========================================================================
@@ -66,7 +71,7 @@ public class US20_RegisterStepDefinitions {
     // ========================================================================
     @When("Kullanici ana sayfanin ust barini kontrol eder")
     public void kullanici_ana_sayfa_ust_bar_kontrol() {
-        ReusableMethods.waitForVisibility(driver(), homePage().registerLink, 10);
+        ReusableMethods.waitForVisibility(driver(),HomePage_Courses().registerLink, 10);
     }
 
     @Then("{string} linkinin gorunur oldugu dogrulanir")
@@ -85,13 +90,15 @@ public class US20_RegisterStepDefinitions {
     private WebElement getLinkByName(String linkAdi) {
         String url = driver().getCurrentUrl();
         if (linkAdi.equalsIgnoreCase("Register")) {
-            return homePage().registerLink;
+            return HomePage_Courses().registerLink;
         }
         if (linkAdi.equalsIgnoreCase("Login")) {
-            return url.contains("/register") ? registerPage().loginLink : homePage().loginLink;
+            return url.contains("/register") ? registerPage().loginLink : HomePage_Courses().loginLink;
         }
         throw new IllegalArgumentException("Bilinmeyen link: " + linkAdi);
     }
+
+
 
     // ========================================================================
     // TC02 & TC03 - Register sayfasına yönlendirme + sol resim + sağ form
@@ -99,9 +106,9 @@ public class US20_RegisterStepDefinitions {
     @When("Kullanici ust bardaki {string} linkine tiklar")
     public void kullanici_ust_bar_linke_tiklar(String linkAdi) {
         if (linkAdi.equalsIgnoreCase("Register")) {
-            ReusableMethods.waitForClickablility(driver(), homePage().registerLink, 10).click();
+            ReusableMethods.waitForClickablility(driver(), HomePage_Courses().registerLink, 10).click();
         } else if (linkAdi.equalsIgnoreCase("Login")) {
-            ReusableMethods.waitForClickablility(driver(), homePage().loginLink, 10).click();
+            ReusableMethods.waitForClickablility(driver(), HomePage_Courses().loginLink, 10).click();
         }
         ReusableMethods.bekle(2);
     }

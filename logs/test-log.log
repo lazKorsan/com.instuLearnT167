@@ -1,0 +1,698 @@
+2026-04-25 00:55:30 [main] INFO  runners.TestRunner - Cucumber Test Runner başlatılıyor...
+2026-04-25 00:57:14 [main] INFO  runners.TestRunner - Cucumber Test Runner başlatılıyor...
+2026-04-25 00:57:15 [main] INFO  utils.LoggerHelper - Test Başlıyor: TC01 Anasayfada 'Courses' linki görünür ve aktif olmalı
+2026-04-25 00:57:19 [main] INFO  utils.LoggerHelper - Driver başlatıldı
+2026-04-25 00:57:49 [main] ERROR utils.LoggerHelper - Test başarısız oldu: TC01 Anasayfada 'Courses' linki görünür ve aktif olmalı
+2026-04-25 00:57:49 [main] INFO  utils.LoggerHelper - Driver kapatıldı.
+2026-04-26 20:36:03 [main] INFO  utils.LoggerHelper - Test Başlıyor: TC01 Anasayfada 'Courses' linki görünür ve aktif olmalı
+2026-04-26 20:36:10 [main] INFO  utils.LoggerHelper - Driver başlatıldı
+2026-04-26 20:36:12 [main] INFO  stepdefinitions.exampleSteps - 🌏 Kullanıcı login sayfasına gitti
+2026-04-26 20:36:43 [main] ERROR utils.LoggerHelper - Test başarısız oldu: TC01 Anasayfada 'Courses' linki görünür ve aktif olmalı
+2026-04-26 20:36:43 [main] INFO  utils.LoggerHelper - Driver kapatıldı.
+2026-04-26 20:39:12 [main] INFO  utils.LoggerHelper - Test Başlıyor: TC01 Anasayfada 'Courses' linki görünür ve aktif olmalı
+2026-04-26 20:39:14 [main] INFO  utils.LoggerHelper - Driver başlatıldı
+2026-04-26 20:39:44 [main] ERROR utils.LoggerHelper - Test başarısız oldu: TC01 Anasayfada 'Courses' linki görünür ve aktif olmalı
+2026-04-26 20:39:44 [main] INFO  utils.LoggerHelper - Driver kapatıldı.
+2026-04-26 20:44:23 [main] INFO  utils.LoggerHelper - Test Başlıyor: TC01 Anasayfada 'Courses' linki görünür ve aktif olmalı
+2026-04-26 20:44:25 [main] INFO  utils.LoggerHelper - Driver başlatıldı
+2026-04-26 20:44:55 [main] ERROR utils.LoggerHelper - Test başarısız oldu: TC01 Anasayfada 'Courses' linki görünür ve aktif olmalı
+2026-04-26 20:44:55 [main] INFO  utils.LoggerHelper - Driver kapatıldı.
+2026-04-26 21:38:18 [main] INFO  utils.LoggerHelper - Test Başlıyor: TC01 Anasayfada 'Courses' linki görünür ve aktif olmalı
+2026-04-26 21:38:20 [main] INFO  utils.LoggerHelper - Driver başlatıldı
+2026-04-26 21:38:20 [main] INFO  utils.LoggerHelper - Test başarıyla tamamlandı: TC01 Anasayfada 'Courses' linki görünür ve aktif olmalı
+2026-04-26 21:38:20 [main] INFO  utils.LoggerHelper - Driver kapatıldı.
+2026-04-26 21:41:34 [main] INFO  runners.TestRunner - Cucumber Test Runner başlatılıyor...
+2026-04-26 21:41:34 [main] INFO  utils.LoggerHelper - Test Başlıyor: TC01 Anasayfada 'Courses' linki görünür ve aktif olmalı
+2026-04-26 21:41:37 [main] INFO  utils.LoggerHelper - Driver başlatıldı
+2026-04-26 21:41:37 [main] INFO  stepdefinitions.US033_LoginSteps - 🌏 Login sayfasina guvenli gidiliyor: https://qa.instulearn.com/login
+2026-04-26 21:41:43 [main] INFO  stepdefinitions.US033_LoginSteps - 🔐 Guvenli login basliyor - mail: huseyin.ozger.teacher@instulearn.com
+2026-04-26 21:41:47 [main] INFO  stepdefinitions.US033_LoginSteps - ✅ Guvenli login tamamlandi
+2026-04-26 21:41:47 [main] ERROR utils.LoggerHelper - Test başarısız oldu: TC01 Anasayfada 'Courses' linki görünür ve aktif olmalı
+2026-04-26 21:41:48 [main] INFO  utils.LoggerHelper - Driver kapatıldı.
+2026-04-26 21:45:05 [main] INFO  utils.LoggerHelper - Test Başlıyor: TC01 - Ana sayfa ust barinda Register linki gorunur ve aktif olmalidir
+2026-04-26 21:45:07 [main] INFO  utils.LoggerHelper - Driver başlatıldı
+2026-04-26 21:45:38 [main] INFO  utils.LoggerHelper - Test başarıyla tamamlandı: TC01 - Ana sayfa ust barinda Register linki gorunur ve aktif olmalidir
+2026-04-26 21:45:38 [main] INFO  utils.LoggerHelper - Driver kapatıldı.
+2026-04-26 21:50:14 [main] INFO  runners.TestRunner - Cucumber Test Runner başlatılıyor...
+2026-04-26 21:50:14 [main] INFO  utils.LoggerHelper - Test Başlıyor: TC01 - Ana sayfada Courses linki gorunur ve aktif olmali, tiklandiginda Courses sayfasi acilmali
+2026-04-26 21:50:16 [main] INFO  utils.LoggerHelper - Driver başlatıldı
+2026-04-26 21:50:16 [main] INFO  stepdefinitions.US033_LoginSteps - 🌏 Login sayfasina guvenli gidiliyor: https://qa.instulearn.com/login
+2026-04-26 21:50:46 [main] WARN  stepdefinitions.US033_LoginSteps - ⏱️ Page load timeout - sayfa yuklemesi durduruldu: timeout: Timed out receiving message from renderer: 27.104
+  (Session info: chrome=147.0.7727.116)
+Build info: version: '4.14.0', revision: 'e5a96349ce'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.10'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [6757731f906fff4642b2de7ac971371c, get {url=https://qa.instulearn.com/login}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 147.0.7727.116, chrome: {chromedriverVersion: 147.0.7727.117 (474cc805edd..., userDataDir: C:\Users\Pc\AppData\Local\T...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:64168}, goog:processID: 2584, networkConnectionEnabled: false, pageLoadStrategy: eager, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:64168/devtoo..., se:cdpVersion: 147.0.7727.116, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 6757731f906fff4642b2de7ac971371c
+2026-04-26 21:50:48 [main] INFO  stepdefinitions.US033_LoginSteps - 🔐 Guvenli login basliyor - mail: huseyin.ozger.teacher@instulearn.com
+2026-04-26 21:50:48 [main] WARN  stepdefinitions.US033_LoginSteps - Submit click hatasi, Enter ile deneniyor: element not interactable: element has zero size
+  (Session info: chrome=147.0.7727.116)
+Build info: version: '4.14.0', revision: 'e5a96349ce'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.10'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [6757731f906fff4642b2de7ac971371c, clickElement {id=f.CBCE134E3B67C31AE8C8DB340ED666ED.d.D72BDD33BF3EBE594A958B26079093E8.e.22}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 147.0.7727.116, chrome: {chromedriverVersion: 147.0.7727.117 (474cc805edd..., userDataDir: C:\Users\Pc\AppData\Local\T...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:64168}, goog:processID: 2584, networkConnectionEnabled: false, pageLoadStrategy: eager, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:64168/devtoo..., se:cdpVersion: 147.0.7727.116, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (6757731f906fff4642b2de7ac971371c)] -> xpath: //button[@class='btn btn-primary btn-block mt-20'] | //button[@type='submit']]
+Session ID: 6757731f906fff4642b2de7ac971371c
+2026-04-26 21:51:22 [main] INFO  stepdefinitions.US033_LoginSteps - ✅ Guvenli login tamamlandi
+2026-04-26 21:51:22 [main] ERROR utils.LoggerHelper - Test başarısız oldu: TC01 - Ana sayfada Courses linki gorunur ve aktif olmali, tiklandiginda Courses sayfasi acilmali
+2026-04-26 21:51:22 [main] INFO  utils.LoggerHelper - Driver kapatıldı.
+2026-04-26 21:51:22 [main] INFO  utils.LoggerHelper - Test Başlıyor: TC02 - Courses sayfasinda Search textbox ve Search buton gorunur ve aktif olmali
+2026-04-26 21:51:23 [main] INFO  utils.LoggerHelper - Driver başlatıldı
+2026-04-26 21:51:23 [main] INFO  stepdefinitions.US033_LoginSteps - 🌏 Login sayfasina guvenli gidiliyor: https://qa.instulearn.com/login
+2026-04-26 21:51:53 [main] WARN  stepdefinitions.US033_LoginSteps - ⏱️ Page load timeout - sayfa yuklemesi durduruldu: timeout: Timed out receiving message from renderer: 27.241
+  (Session info: chrome=147.0.7727.116)
+Build info: version: '4.14.0', revision: 'e5a96349ce'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.10'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [58f4925795965d37a29a08093a3a7e6e, get {url=https://qa.instulearn.com/login}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 147.0.7727.116, chrome: {chromedriverVersion: 147.0.7727.117 (474cc805edd..., userDataDir: C:\Users\Pc\AppData\Local\T...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:64256}, goog:processID: 22560, networkConnectionEnabled: false, pageLoadStrategy: eager, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:64256/devtoo..., se:cdpVersion: 147.0.7727.116, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 58f4925795965d37a29a08093a3a7e6e
+2026-04-26 21:51:55 [main] INFO  stepdefinitions.US033_LoginSteps - 🔐 Guvenli login basliyor - mail: huseyin.ozger.teacher@instulearn.com
+2026-04-26 21:51:55 [main] WARN  stepdefinitions.US033_LoginSteps - Submit click hatasi, Enter ile deneniyor: element not interactable: element has zero size
+  (Session info: chrome=147.0.7727.116)
+Build info: version: '4.14.0', revision: 'e5a96349ce'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.10'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [58f4925795965d37a29a08093a3a7e6e, clickElement {id=f.C83868839E103307D7ACD7AA57018A17.d.9032264FF8575DA58D95588E6B0FBC03.e.31}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 147.0.7727.116, chrome: {chromedriverVersion: 147.0.7727.117 (474cc805edd..., userDataDir: C:\Users\Pc\AppData\Local\T...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:64256}, goog:processID: 22560, networkConnectionEnabled: false, pageLoadStrategy: eager, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:64256/devtoo..., se:cdpVersion: 147.0.7727.116, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (58f4925795965d37a29a08093a3a7e6e)] -> xpath: //button[@class='btn btn-primary btn-block mt-20'] | //button[@type='submit']]
+Session ID: 58f4925795965d37a29a08093a3a7e6e
+2026-04-26 21:52:28 [main] INFO  stepdefinitions.US033_LoginSteps - ✅ Guvenli login tamamlandi
+2026-04-26 21:52:30 [main] INFO  utils.LoggerHelper - Test başarıyla tamamlandı: TC02 - Courses sayfasinda Search textbox ve Search buton gorunur ve aktif olmali
+2026-04-26 21:52:31 [main] INFO  utils.LoggerHelper - Driver kapatıldı.
+2026-04-26 21:52:31 [main] INFO  utils.LoggerHelper - Test Başlıyor: TC03 - Kurs secmeden once filtreleme/siralama islemi yapilabilmelidir
+2026-04-26 21:52:32 [main] INFO  utils.LoggerHelper - Driver başlatıldı
+2026-04-26 21:52:32 [main] INFO  stepdefinitions.US033_LoginSteps - 🌏 Login sayfasina guvenli gidiliyor: https://qa.instulearn.com/login
+2026-04-26 21:53:02 [main] WARN  stepdefinitions.US033_LoginSteps - ⏱️ Page load timeout - sayfa yuklemesi durduruldu: timeout: Timed out receiving message from renderer: 25.054
+  (Session info: chrome=147.0.7727.116)
+Build info: version: '4.14.0', revision: 'e5a96349ce'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.10'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [87e43a51cb77a6d3be12a3f9cb046c46, get {url=https://qa.instulearn.com/login}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 147.0.7727.116, chrome: {chromedriverVersion: 147.0.7727.117 (474cc805edd..., userDataDir: C:\Users\Pc\AppData\Local\T...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:64505}, goog:processID: 7628, networkConnectionEnabled: false, pageLoadStrategy: eager, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:64505/devtoo..., se:cdpVersion: 147.0.7727.116, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 87e43a51cb77a6d3be12a3f9cb046c46
+2026-04-26 21:53:04 [main] INFO  stepdefinitions.US033_LoginSteps - 🔐 Guvenli login basliyor - mail: huseyin.ozger.teacher@instulearn.com
+2026-04-26 21:53:04 [main] WARN  stepdefinitions.US033_LoginSteps - Submit click hatasi, Enter ile deneniyor: element not interactable: element has zero size
+  (Session info: chrome=147.0.7727.116)
+Build info: version: '4.14.0', revision: 'e5a96349ce'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.10'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [87e43a51cb77a6d3be12a3f9cb046c46, clickElement {id=f.F9E62AEDDF34A38E0721C373ACF66B69.d.22BFD0AEB67ECC33058D4868C54F8EAD.e.29}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 147.0.7727.116, chrome: {chromedriverVersion: 147.0.7727.117 (474cc805edd..., userDataDir: C:\Users\Pc\AppData\Local\T...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:64505}, goog:processID: 7628, networkConnectionEnabled: false, pageLoadStrategy: eager, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:64505/devtoo..., se:cdpVersion: 147.0.7727.116, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (87e43a51cb77a6d3be12a3f9cb046c46)] -> xpath: //button[@class='btn btn-primary btn-block mt-20'] | //button[@type='submit']]
+Session ID: 87e43a51cb77a6d3be12a3f9cb046c46
+2026-04-26 21:53:37 [main] INFO  stepdefinitions.US033_LoginSteps - ✅ Guvenli login tamamlandi
+2026-04-26 21:53:39 [main] INFO  utils.LoggerHelper - Test başarıyla tamamlandı: TC03 - Kurs secmeden once filtreleme/siralama islemi yapilabilmelidir
+2026-04-26 21:53:39 [main] INFO  utils.LoggerHelper - Driver kapatıldı.
+2026-04-26 21:53:39 [main] INFO  utils.LoggerHelper - Test Başlıyor: TC04 - Secilen kurslarin ders adi, instructor, tarih ve fiyat bilgileri gorunur olmalidir
+2026-04-26 21:53:40 [main] INFO  utils.LoggerHelper - Driver başlatıldı
+2026-04-26 21:53:40 [main] INFO  stepdefinitions.US033_LoginSteps - 🌏 Login sayfasina guvenli gidiliyor: https://qa.instulearn.com/login
+2026-04-26 21:54:10 [main] WARN  stepdefinitions.US033_LoginSteps - ⏱️ Page load timeout - sayfa yuklemesi durduruldu: timeout: Timed out receiving message from renderer: 27.243
+  (Session info: chrome=147.0.7727.116)
+Build info: version: '4.14.0', revision: 'e5a96349ce'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.10'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [df3b8df3ecd50e407f0e5e56cb9301d1, get {url=https://qa.instulearn.com/login}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 147.0.7727.116, chrome: {chromedriverVersion: 147.0.7727.117 (474cc805edd..., userDataDir: C:\Users\Pc\AppData\Local\T...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:64613}, goog:processID: 18940, networkConnectionEnabled: false, pageLoadStrategy: eager, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:64613/devtoo..., se:cdpVersion: 147.0.7727.116, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: df3b8df3ecd50e407f0e5e56cb9301d1
+2026-04-26 21:54:12 [main] INFO  stepdefinitions.US033_LoginSteps - 🔐 Guvenli login basliyor - mail: huseyin.ozger.teacher@instulearn.com
+2026-04-26 21:54:13 [main] WARN  stepdefinitions.US033_LoginSteps - Submit click hatasi, Enter ile deneniyor: element not interactable: element has zero size
+  (Session info: chrome=147.0.7727.116)
+Build info: version: '4.14.0', revision: 'e5a96349ce'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.10'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [df3b8df3ecd50e407f0e5e56cb9301d1, clickElement {id=f.BF863ACB0EB7D119F2CA7D7AFEB262CE.d.2E1224D14700F7CFA8D43485A2D58128.e.15}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 147.0.7727.116, chrome: {chromedriverVersion: 147.0.7727.117 (474cc805edd..., userDataDir: C:\Users\Pc\AppData\Local\T...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:64613}, goog:processID: 18940, networkConnectionEnabled: false, pageLoadStrategy: eager, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:64613/devtoo..., se:cdpVersion: 147.0.7727.116, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (df3b8df3ecd50e407f0e5e56cb9301d1)] -> xpath: //button[@class='btn btn-primary btn-block mt-20'] | //button[@type='submit']]
+Session ID: df3b8df3ecd50e407f0e5e56cb9301d1
+2026-04-26 23:42:32 [main] INFO  utils.LoggerHelper - Test Başlıyor: TC01 Anasayfada 'Courses' linki görünür ve aktif olmalı
+2026-04-26 23:42:34 [main] INFO  utils.LoggerHelper - Driver başlatıldı
+2026-04-26 23:42:34 [main] INFO  stepdefinitions.US033_LoginSteps - 🌏 Login sayfasina guvenli gidiliyor: https://qa.instulearn.com/login
+2026-04-26 23:43:04 [main] WARN  stepdefinitions.US033_LoginSteps - ⏱️ Page load timeout - sayfa yuklemesi durduruldu: timeout: Timed out receiving message from renderer: 26.378
+  (Session info: chrome=147.0.7727.116)
+Build info: version: '4.14.0', revision: 'e5a96349ce'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.10'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [aa3e75b7d0d9a0740cae2f167b7223b4, get {url=https://qa.instulearn.com/login}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 147.0.7727.116, chrome: {chromedriverVersion: 147.0.7727.117 (474cc805edd..., userDataDir: C:\Users\Pc\AppData\Local\T...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:52000}, goog:processID: 7500, networkConnectionEnabled: false, pageLoadStrategy: eager, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:52000/devtoo..., se:cdpVersion: 147.0.7727.116, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: aa3e75b7d0d9a0740cae2f167b7223b4
+2026-04-26 23:43:07 [main] INFO  stepdefinitions.US033_LoginSteps - 🔐 Guvenli login basliyor - mail: huseyin.ozger.teacher@instulearn.com
+2026-04-26 23:43:07 [main] WARN  stepdefinitions.US033_LoginSteps - Submit click hatasi, Enter ile deneniyor: element not interactable: element has zero size
+  (Session info: chrome=147.0.7727.116)
+Build info: version: '4.14.0', revision: 'e5a96349ce'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.10'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [aa3e75b7d0d9a0740cae2f167b7223b4, clickElement {id=f.7D4E8F49F09730B04B61ABE067D2103D.d.87F2DFC74AB95DFA18495592E193DB8C.e.25}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 147.0.7727.116, chrome: {chromedriverVersion: 147.0.7727.117 (474cc805edd..., userDataDir: C:\Users\Pc\AppData\Local\T...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:52000}, goog:processID: 7500, networkConnectionEnabled: false, pageLoadStrategy: eager, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:52000/devtoo..., se:cdpVersion: 147.0.7727.116, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (aa3e75b7d0d9a0740cae2f167b7223b4)] -> xpath: //button[@class='btn btn-primary btn-block mt-20'] | //button[@type='submit']]
+Session ID: aa3e75b7d0d9a0740cae2f167b7223b4
+2026-04-26 23:43:43 [main] INFO  utils.LoggerHelper - Test Başlıyor: TC01 Anasayfada 'Courses' linki görünür ve aktif olmalı
+2026-04-26 23:43:45 [main] INFO  utils.LoggerHelper - Driver başlatıldı
+2026-04-26 23:43:45 [main] INFO  stepdefinitions.US033_LoginSteps - 🌏 Login sayfasina guvenli gidiliyor: https://qa.instulearn.com/login
+2026-04-26 23:44:18 [main] INFO  utils.LoggerHelper - Test Başlıyor: TC01 Anasayfada 'Courses' linki görünür ve aktif olmalı
+2026-04-26 23:44:20 [main] INFO  utils.LoggerHelper - Driver başlatıldı
+2026-04-26 23:44:20 [main] INFO  stepdefinitions.US033_LoginSteps - 🌏 Login sayfasina guvenli gidiliyor: https://qa.instulearn.com/login
+2026-04-26 23:44:27 [main] INFO  stepdefinitions.US033_LoginSteps - 🔐 Guvenli login basliyor - mail: huseyin.ozger.teacher@instulearn.com
+2026-04-26 23:44:30 [main] INFO  stepdefinitions.US033_LoginSteps - ✅ Guvenli login tamamlandi
+2026-04-26 23:44:30 [main] INFO  utils.LoggerHelper - Test başarıyla tamamlandı: TC01 Anasayfada 'Courses' linki görünür ve aktif olmalı
+2026-04-26 23:44:31 [main] INFO  utils.LoggerHelper - Driver kapatıldı.
+2026-04-27 00:03:13 [main] INFO  runners.TestRunner - Cucumber Test Runner başlatılıyor...
+2026-04-27 00:11:19 [main] INFO  runners.TestRunner - Cucumber Test Runner başlatılıyor...
+2026-04-27 00:17:07 [main] INFO  runners.TestRunner - Cucumber Test Runner başlatılıyor...
+2026-04-27 00:20:34 [main] INFO  runners.TestRunner - Cucumber Test Runner başlatılıyor...
+2026-04-27 00:26:44 [main] INFO  runners.TestRunner - Cucumber Test Runner başlatılıyor...
+2026-04-27 00:28:28 [main] INFO  runners.TestRunner - Cucumber Test Runner başlatılıyor...
+2026-04-27 00:31:15 [main] INFO  runners.TestRunner - Cucumber Test Runner başlatılıyor...
+2026-04-27 00:31:15 [main] INFO  utils.LoggerHelper - Test Başlıyor: TC01 Anasayfada 'Courses' linki görünür ve aktif olmalı
+2026-04-27 00:31:17 [main] INFO  utils.LoggerHelper - Driver başlatıldı
+2026-04-27 00:31:17 [main] INFO  stepdefinitions.US033_LoginSteps - 🌏 Login sayfasina guvenli gidiliyor: https://qa.instulearn.com/login
+2026-04-27 00:31:47 [main] WARN  stepdefinitions.US033_LoginSteps - ⏱️ Page load timeout - sayfa yuklemesi durduruldu: timeout: Timed out receiving message from renderer: 26.897
+  (Session info: chrome=147.0.7727.116)
+Build info: version: '4.14.0', revision: 'e5a96349ce'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.10'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [476b35ceb24731d54a34e80458cebf71, get {url=https://qa.instulearn.com/login}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 147.0.7727.116, chrome: {chromedriverVersion: 147.0.7727.117 (474cc805edd..., userDataDir: C:\Users\Pc\AppData\Local\T...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:55014}, goog:processID: 21148, networkConnectionEnabled: false, pageLoadStrategy: eager, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:55014/devtoo..., se:cdpVersion: 147.0.7727.116, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 476b35ceb24731d54a34e80458cebf71
+2026-04-27 00:31:50 [main] INFO  stepdefinitions.US033_LoginSteps - 🔐 Guvenli login basliyor - mail: huseyin.ozger.teacher@instulearn.com
+2026-04-27 00:31:50 [main] WARN  stepdefinitions.US033_LoginSteps - Submit click hatasi, Enter ile deneniyor: element not interactable: element has zero size
+  (Session info: chrome=147.0.7727.116)
+Build info: version: '4.14.0', revision: 'e5a96349ce'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.10'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [476b35ceb24731d54a34e80458cebf71, clickElement {id=f.044CFF80AAA29F5CDB83B5EB1DD68C1B.d.DA959DA1AEFAC2530A28712371D6632B.e.22}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 147.0.7727.116, chrome: {chromedriverVersion: 147.0.7727.117 (474cc805edd..., userDataDir: C:\Users\Pc\AppData\Local\T...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:55014}, goog:processID: 21148, networkConnectionEnabled: false, pageLoadStrategy: eager, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:55014/devtoo..., se:cdpVersion: 147.0.7727.116, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (476b35ceb24731d54a34e80458cebf71)] -> xpath: //button[@class='btn btn-primary btn-block mt-20'] | //button[@type='submit']]
+Session ID: 476b35ceb24731d54a34e80458cebf71
+2026-04-27 00:32:24 [main] INFO  stepdefinitions.US033_LoginSteps - ✅ Guvenli login tamamlandi
+2026-04-27 00:33:28 [main] ERROR utils.LoggerHelper - Test başarısız oldu: TC01 Anasayfada 'Courses' linki görünür ve aktif olmalı
+2026-04-27 00:33:28 [main] INFO  utils.LoggerHelper - Driver kapatıldı.
+2026-04-27 00:35:16 [main] INFO  utils.LoggerHelper - Test Başlıyor: TC01 Anasayfada 'Courses' linki görünür ve aktif olmalı
+2026-04-27 00:35:18 [main] INFO  utils.LoggerHelper - Driver başlatıldı
+2026-04-27 00:35:18 [main] INFO  stepdefinitions.US033_LoginSteps - 🌏 Login sayfasina guvenli gidiliyor: https://qa.instulearn.com/login
+2026-04-27 00:35:48 [main] WARN  stepdefinitions.US033_LoginSteps - ⏱️ Page load timeout - sayfa yuklemesi durduruldu: timeout: Timed out receiving message from renderer: 26.644
+  (Session info: chrome=147.0.7727.116)
+Build info: version: '4.14.0', revision: 'e5a96349ce'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.10'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [45a99b86599bc73e731dfa5fa98fc6fe, get {url=https://qa.instulearn.com/login}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 147.0.7727.116, chrome: {chromedriverVersion: 147.0.7727.117 (474cc805edd..., userDataDir: C:\Users\Pc\AppData\Local\T...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:55648}, goog:processID: 13168, networkConnectionEnabled: false, pageLoadStrategy: eager, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:55648/devtoo..., se:cdpVersion: 147.0.7727.116, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 45a99b86599bc73e731dfa5fa98fc6fe
+2026-04-27 00:35:51 [main] INFO  stepdefinitions.US033_LoginSteps - 🔐 Guvenli login basliyor - mail: huseyin.ozger.teacher@instulearn.com
+2026-04-27 00:35:51 [main] WARN  stepdefinitions.US033_LoginSteps - Submit click hatasi, Enter ile deneniyor: element not interactable: element has zero size
+  (Session info: chrome=147.0.7727.116)
+Build info: version: '4.14.0', revision: 'e5a96349ce'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.10'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [45a99b86599bc73e731dfa5fa98fc6fe, clickElement {id=f.D0B35FD7A8B6B281DEC541C059BD681C.d.11D5AF3577108D39825CFEA2F511ACA1.e.22}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 147.0.7727.116, chrome: {chromedriverVersion: 147.0.7727.117 (474cc805edd..., userDataDir: C:\Users\Pc\AppData\Local\T...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:55648}, goog:processID: 13168, networkConnectionEnabled: false, pageLoadStrategy: eager, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:55648/devtoo..., se:cdpVersion: 147.0.7727.116, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (45a99b86599bc73e731dfa5fa98fc6fe)] -> xpath: //button[@class='btn btn-primary btn-block mt-20'] | //button[@type='submit']]
+Session ID: 45a99b86599bc73e731dfa5fa98fc6fe
+2026-04-27 00:36:24 [main] INFO  stepdefinitions.US033_LoginSteps - ✅ Guvenli login tamamlandi
+2026-04-27 00:37:29 [main] ERROR utils.LoggerHelper - Test başarısız oldu: TC01 Anasayfada 'Courses' linki görünür ve aktif olmalı
+2026-04-27 00:37:29 [main] INFO  utils.LoggerHelper - Driver kapatıldı.
+2026-04-27 00:38:09 [main] INFO  utils.LoggerHelper - Test Başlıyor: TC01 Anasayfada 'Courses' linki görünür ve aktif olmalı
+2026-04-27 00:38:10 [main] INFO  utils.LoggerHelper - Driver başlatıldı
+2026-04-27 00:38:10 [main] INFO  stepdefinitions.US033_LoginSteps - 🌏 Login sayfasina guvenli gidiliyor: https://qa.instulearn.com/login
+2026-04-27 00:38:47 [main] INFO  runners.TestRunner - Cucumber Test Runner başlatılıyor...
+2026-04-27 00:38:47 [main] INFO  utils.LoggerHelper - Test Başlıyor: TC01 Anasayfada 'Courses' linki görünür ve aktif olmalı
+2026-04-27 00:38:49 [main] INFO  utils.LoggerHelper - Driver başlatıldı
+2026-04-27 00:38:49 [main] INFO  stepdefinitions.US033_LoginSteps - 🌏 Login sayfasina guvenli gidiliyor: https://qa.instulearn.com/login
+2026-04-27 00:38:53 [main] INFO  stepdefinitions.US033_LoginSteps - 🔐 Guvenli login basliyor - mail: huseyin.ozger.teacher@instulearn.com
+2026-04-27 00:38:56 [main] INFO  stepdefinitions.US033_LoginSteps - ✅ Guvenli login tamamlandi
+2026-04-27 00:39:05 [main] INFO  utils.LoggerHelper - Test başarıyla tamamlandı: TC01 Anasayfada 'Courses' linki görünür ve aktif olmalı
+2026-04-27 00:39:05 [main] INFO  utils.LoggerHelper - Driver kapatıldı.
+2026-04-27 00:41:18 [main] INFO  runners.TestRunner - Cucumber Test Runner başlatılıyor...
+2026-04-27 00:41:19 [main] INFO  utils.LoggerHelper - Test Başlıyor: TC01 - Ana sayfada Courses linki gorunur ve aktif olmali, tiklandiginda Courses sayfasi acilmali
+2026-04-27 00:41:21 [main] INFO  utils.LoggerHelper - Driver başlatıldı
+2026-04-27 00:41:21 [main] INFO  stepdefinitions.US033_LoginSteps - 🌏 Login sayfasina guvenli gidiliyor: https://qa.instulearn.com/login
+2026-04-27 00:41:51 [main] WARN  stepdefinitions.US033_LoginSteps - ⏱️ Page load timeout - sayfa yuklemesi durduruldu: timeout: Timed out receiving message from renderer: 27.087
+  (Session info: chrome=147.0.7727.116)
+Build info: version: '4.14.0', revision: 'e5a96349ce'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.10'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [e94ba53dbcf59b66c4982a6b0227db0f, get {url=https://qa.instulearn.com/login}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 147.0.7727.116, chrome: {chromedriverVersion: 147.0.7727.117 (474cc805edd..., userDataDir: C:\Users\Pc\AppData\Local\T...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:56245}, goog:processID: 6344, networkConnectionEnabled: false, pageLoadStrategy: eager, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:56245/devtoo..., se:cdpVersion: 147.0.7727.116, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: e94ba53dbcf59b66c4982a6b0227db0f
+2026-04-27 00:41:53 [main] INFO  stepdefinitions.US033_LoginSteps - 🔐 Guvenli login basliyor - mail: huseyin.ozger.teacher@instulearn.com
+2026-04-27 00:41:53 [main] WARN  stepdefinitions.US033_LoginSteps - Submit click hatasi, Enter ile deneniyor: element not interactable: element has zero size
+  (Session info: chrome=147.0.7727.116)
+Build info: version: '4.14.0', revision: 'e5a96349ce'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.10'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [e94ba53dbcf59b66c4982a6b0227db0f, clickElement {id=f.7F47B518F4921CB366B50FB77311D29D.d.64FCC39E6DC998ED2DFBDC1378A3378D.e.27}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 147.0.7727.116, chrome: {chromedriverVersion: 147.0.7727.117 (474cc805edd..., userDataDir: C:\Users\Pc\AppData\Local\T...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:56245}, goog:processID: 6344, networkConnectionEnabled: false, pageLoadStrategy: eager, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:56245/devtoo..., se:cdpVersion: 147.0.7727.116, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (e94ba53dbcf59b66c4982a6b0227db0f)] -> xpath: //button[@class='btn btn-primary btn-block mt-20'] | //button[@type='submit']]
+Session ID: e94ba53dbcf59b66c4982a6b0227db0f
+2026-04-27 00:42:27 [main] INFO  stepdefinitions.US033_LoginSteps - ✅ Guvenli login tamamlandi
+2026-04-27 00:42:29 [main] ERROR utils.LoggerHelper - Test başarısız oldu: TC01 - Ana sayfada Courses linki gorunur ve aktif olmali, tiklandiginda Courses sayfasi acilmali
+2026-04-27 00:42:29 [main] INFO  utils.LoggerHelper - Driver kapatıldı.
+2026-04-27 00:42:29 [main] INFO  utils.LoggerHelper - Test Başlıyor: TC02 - Courses sayfasinda Search textbox ve Search buton gorunur ve aktif olmali
+2026-04-27 00:42:30 [main] INFO  utils.LoggerHelper - Driver başlatıldı
+2026-04-27 00:42:30 [main] INFO  stepdefinitions.US033_LoginSteps - 🌏 Login sayfasina guvenli gidiliyor: https://qa.instulearn.com/login
+2026-04-27 00:43:00 [main] WARN  stepdefinitions.US033_LoginSteps - ⏱️ Page load timeout - sayfa yuklemesi durduruldu: timeout: Timed out receiving message from renderer: 26.036
+  (Session info: chrome=147.0.7727.116)
+Build info: version: '4.14.0', revision: 'e5a96349ce'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.10'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [32c0b18ea60a816bf03a47cc931d65bd, get {url=https://qa.instulearn.com/login}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 147.0.7727.116, chrome: {chromedriverVersion: 147.0.7727.117 (474cc805edd..., userDataDir: C:\Users\Pc\AppData\Local\T...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:56322}, goog:processID: 21836, networkConnectionEnabled: false, pageLoadStrategy: eager, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:56322/devtoo..., se:cdpVersion: 147.0.7727.116, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 32c0b18ea60a816bf03a47cc931d65bd
+2026-04-27 00:43:02 [main] INFO  stepdefinitions.US033_LoginSteps - 🔐 Guvenli login basliyor - mail: huseyin.ozger.teacher@instulearn.com
+2026-04-27 00:43:02 [main] WARN  stepdefinitions.US033_LoginSteps - Submit click hatasi, Enter ile deneniyor: element not interactable: element has zero size
+  (Session info: chrome=147.0.7727.116)
+Build info: version: '4.14.0', revision: 'e5a96349ce'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.10'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [32c0b18ea60a816bf03a47cc931d65bd, clickElement {id=f.4F5508F072C5CACEB78783720867C99F.d.EB957D1663CEEDECCA608032591A4B0D.e.24}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 147.0.7727.116, chrome: {chromedriverVersion: 147.0.7727.117 (474cc805edd..., userDataDir: C:\Users\Pc\AppData\Local\T...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:56322}, goog:processID: 21836, networkConnectionEnabled: false, pageLoadStrategy: eager, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:56322/devtoo..., se:cdpVersion: 147.0.7727.116, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (32c0b18ea60a816bf03a47cc931d65bd)] -> xpath: //button[@class='btn btn-primary btn-block mt-20'] | //button[@type='submit']]
+Session ID: 32c0b18ea60a816bf03a47cc931d65bd
+2026-04-27 00:43:35 [main] INFO  stepdefinitions.US033_LoginSteps - ✅ Guvenli login tamamlandi
+2026-04-27 00:43:37 [main] INFO  utils.LoggerHelper - Test başarıyla tamamlandı: TC02 - Courses sayfasinda Search textbox ve Search buton gorunur ve aktif olmali
+2026-04-27 00:43:38 [main] INFO  utils.LoggerHelper - Driver kapatıldı.
+2026-04-27 00:43:38 [main] INFO  utils.LoggerHelper - Test Başlıyor: TC03 - Kurs secmeden once filtreleme/siralama islemi yapilabilmelidir
+2026-04-27 00:43:39 [main] INFO  utils.LoggerHelper - Driver başlatıldı
+2026-04-27 00:43:39 [main] INFO  stepdefinitions.US033_LoginSteps - 🌏 Login sayfasina guvenli gidiliyor: https://qa.instulearn.com/login
+2026-04-27 00:44:09 [main] WARN  stepdefinitions.US033_LoginSteps - ⏱️ Page load timeout - sayfa yuklemesi durduruldu: timeout: Timed out receiving message from renderer: 27.219
+  (Session info: chrome=147.0.7727.116)
+Build info: version: '4.14.0', revision: 'e5a96349ce'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.10'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [b517fd8130afdf94dfc80e91465512da, get {url=https://qa.instulearn.com/login}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 147.0.7727.116, chrome: {chromedriverVersion: 147.0.7727.117 (474cc805edd..., userDataDir: C:\Users\Pc\AppData\Local\T...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:56401}, goog:processID: 5196, networkConnectionEnabled: false, pageLoadStrategy: eager, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:56401/devtoo..., se:cdpVersion: 147.0.7727.116, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: b517fd8130afdf94dfc80e91465512da
+2026-04-27 00:44:11 [main] INFO  stepdefinitions.US033_LoginSteps - 🔐 Guvenli login basliyor - mail: huseyin.ozger.teacher@instulearn.com
+2026-04-27 00:44:11 [main] WARN  stepdefinitions.US033_LoginSteps - Submit click hatasi, Enter ile deneniyor: element not interactable: element has zero size
+  (Session info: chrome=147.0.7727.116)
+Build info: version: '4.14.0', revision: 'e5a96349ce'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.10'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [b517fd8130afdf94dfc80e91465512da, clickElement {id=f.DA76FC5C466589CA1068E0B7299B199C.d.86E26389DBE885979997F50E354C0C8E.e.27}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 147.0.7727.116, chrome: {chromedriverVersion: 147.0.7727.117 (474cc805edd..., userDataDir: C:\Users\Pc\AppData\Local\T...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:56401}, goog:processID: 5196, networkConnectionEnabled: false, pageLoadStrategy: eager, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:56401/devtoo..., se:cdpVersion: 147.0.7727.116, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (b517fd8130afdf94dfc80e91465512da)] -> xpath: //button[@class='btn btn-primary btn-block mt-20'] | //button[@type='submit']]
+Session ID: b517fd8130afdf94dfc80e91465512da
+2026-04-27 00:45:14 [main] INFO  runners.TestRunner - Cucumber Test Runner başlatılıyor...
+2026-04-27 00:45:14 [main] INFO  utils.LoggerHelper - Test Başlıyor: TC01 - Ana sayfada Courses linki gorunur ve aktif olmali, tiklandiginda Courses sayfasi acilmali
+2026-04-27 00:45:16 [main] INFO  utils.LoggerHelper - Driver başlatıldı
+2026-04-27 00:45:16 [main] INFO  stepdefinitions.US033_LoginSteps - 🌏 Login sayfasina guvenli gidiliyor: https://qa.instulearn.com/login
+2026-04-27 00:45:21 [main] INFO  stepdefinitions.US033_LoginSteps - 🔐 Guvenli login basliyor - mail: huseyin.ozger.teacher@instulearn.com
+2026-04-27 00:45:36 [main] ERROR stepdefinitions.US033_LoginSteps - ❌ Login sirasinda hata: Expected condition failed: waiting for visibility of element located by By.id: email (tried for 15 second(s) with 500 milliseconds interval)
+Build info: version: '4.14.0', revision: 'e5a96349ce'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.10'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 147.0.7727.116, chrome: {chromedriverVersion: 147.0.7727.117 (474cc805edd..., userDataDir: C:\Users\Pc\AppData\Local\T...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:56493}, goog:processID: 17664, networkConnectionEnabled: false, pageLoadStrategy: eager, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:56493/devtoo..., se:cdpVersion: 147.0.7727.116, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 17552bc974005b8b65ea299941084827
+2026-04-27 00:45:36 [main] ERROR utils.LoggerHelper - Test başarısız oldu: TC01 - Ana sayfada Courses linki gorunur ve aktif olmali, tiklandiginda Courses sayfasi acilmali
+2026-04-27 00:45:36 [main] INFO  utils.LoggerHelper - Driver kapatıldı.
+2026-04-27 00:45:36 [main] INFO  utils.LoggerHelper - Test Başlıyor: TC02 - Courses sayfasinda Search textbox ve Search buton gorunur ve aktif olmali
+2026-04-27 00:45:37 [main] INFO  utils.LoggerHelper - Driver başlatıldı
+2026-04-27 00:45:37 [main] INFO  stepdefinitions.US033_LoginSteps - 🌏 Login sayfasina guvenli gidiliyor: https://qa.instulearn.com/login
+2026-04-27 00:46:07 [main] WARN  stepdefinitions.US033_LoginSteps - ⏱️ Page load timeout - sayfa yuklemesi durduruldu: timeout: Timed out receiving message from renderer: 27.053
+  (Session info: chrome=147.0.7727.116)
+Build info: version: '4.14.0', revision: 'e5a96349ce'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.10'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [11864d94a2e763e2c4ca5ec45d12c64f, get {url=https://qa.instulearn.com/login}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 147.0.7727.116, chrome: {chromedriverVersion: 147.0.7727.117 (474cc805edd..., userDataDir: C:\Users\Pc\AppData\Local\T...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:56536}, goog:processID: 21908, networkConnectionEnabled: false, pageLoadStrategy: eager, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:56536/devtoo..., se:cdpVersion: 147.0.7727.116, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 11864d94a2e763e2c4ca5ec45d12c64f
+2026-04-27 00:46:09 [main] INFO  stepdefinitions.US033_LoginSteps - 🔐 Guvenli login basliyor - mail: huseyin.ozger.teacher@instulearn.com
+2026-04-27 00:46:09 [main] WARN  stepdefinitions.US033_LoginSteps - Submit click hatasi, Enter ile deneniyor: element not interactable: element has zero size
+  (Session info: chrome=147.0.7727.116)
+Build info: version: '4.14.0', revision: 'e5a96349ce'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.10'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [11864d94a2e763e2c4ca5ec45d12c64f, clickElement {id=f.53AAC0B50106912CF92E9032E098BAD1.d.2FE0AA2B08E525F814F5C4348BBA8720.e.28}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 147.0.7727.116, chrome: {chromedriverVersion: 147.0.7727.117 (474cc805edd..., userDataDir: C:\Users\Pc\AppData\Local\T...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:56536}, goog:processID: 21908, networkConnectionEnabled: false, pageLoadStrategy: eager, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:56536/devtoo..., se:cdpVersion: 147.0.7727.116, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (11864d94a2e763e2c4ca5ec45d12c64f)] -> xpath: //button[@class='btn btn-primary btn-block mt-20'] | //button[@type='submit']]
+Session ID: 11864d94a2e763e2c4ca5ec45d12c64f
+2026-04-27 00:46:43 [main] INFO  stepdefinitions.US033_LoginSteps - ✅ Guvenli login tamamlandi
+2026-04-27 00:46:47 [main] INFO  utils.LoggerHelper - Test başarıyla tamamlandı: TC02 - Courses sayfasinda Search textbox ve Search buton gorunur ve aktif olmali
+2026-04-27 00:46:47 [main] INFO  utils.LoggerHelper - Driver kapatıldı.
+2026-04-27 00:46:47 [main] INFO  utils.LoggerHelper - Test Başlıyor: TC03 - Kurs secmeden once filtreleme/siralama islemi yapilabilmelidir
+2026-04-27 00:46:48 [main] INFO  utils.LoggerHelper - Driver başlatıldı
+2026-04-27 00:46:48 [main] INFO  stepdefinitions.US033_LoginSteps - 🌏 Login sayfasina guvenli gidiliyor: https://qa.instulearn.com/login
+2026-04-27 00:47:18 [main] WARN  stepdefinitions.US033_LoginSteps - ⏱️ Page load timeout - sayfa yuklemesi durduruldu: timeout: Timed out receiving message from renderer: 26.991
+  (Session info: chrome=147.0.7727.116)
+Build info: version: '4.14.0', revision: 'e5a96349ce'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.10'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [b02fded3fea76825d1ff1fe1adcf5b07, get {url=https://qa.instulearn.com/login}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 147.0.7727.116, chrome: {chromedriverVersion: 147.0.7727.117 (474cc805edd..., userDataDir: C:\Users\Pc\AppData\Local\T...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:56627}, goog:processID: 14404, networkConnectionEnabled: false, pageLoadStrategy: eager, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:56627/devtoo..., se:cdpVersion: 147.0.7727.116, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: b02fded3fea76825d1ff1fe1adcf5b07
+2026-04-27 00:47:20 [main] INFO  stepdefinitions.US033_LoginSteps - 🔐 Guvenli login basliyor - mail: huseyin.ozger.teacher@instulearn.com
+2026-04-27 00:47:20 [main] WARN  stepdefinitions.US033_LoginSteps - Submit click hatasi, Enter ile deneniyor: element not interactable: element has zero size
+  (Session info: chrome=147.0.7727.116)
+Build info: version: '4.14.0', revision: 'e5a96349ce'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.10'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [b02fded3fea76825d1ff1fe1adcf5b07, clickElement {id=f.42C0EC14D7921344964829B65C7805FD.d.C70E840DE1A07D5CDC9F64F9C3C9FC32.e.27}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 147.0.7727.116, chrome: {chromedriverVersion: 147.0.7727.117 (474cc805edd..., userDataDir: C:\Users\Pc\AppData\Local\T...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:56627}, goog:processID: 14404, networkConnectionEnabled: false, pageLoadStrategy: eager, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:56627/devtoo..., se:cdpVersion: 147.0.7727.116, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (b02fded3fea76825d1ff1fe1adcf5b07)] -> xpath: //button[@class='btn btn-primary btn-block mt-20'] | //button[@type='submit']]
+Session ID: b02fded3fea76825d1ff1fe1adcf5b07
+2026-04-27 00:47:53 [main] INFO  stepdefinitions.US033_LoginSteps - ✅ Guvenli login tamamlandi
+2026-04-27 00:48:47 [main] INFO  utils.LoggerHelper - Test başarıyla tamamlandı: TC03 - Kurs secmeden once filtreleme/siralama islemi yapilabilmelidir
+2026-04-27 00:48:47 [main] INFO  utils.LoggerHelper - Driver kapatıldı.
+2026-04-27 00:48:47 [main] INFO  utils.LoggerHelper - Test Başlıyor: TC04 - Secilen kurslarin ders adi, instructor, tarih ve fiyat bilgileri gorunur olmalidir
+2026-04-27 00:48:48 [main] INFO  utils.LoggerHelper - Driver başlatıldı
+2026-04-27 00:48:48 [main] INFO  stepdefinitions.US033_LoginSteps - 🌏 Login sayfasina guvenli gidiliyor: https://qa.instulearn.com/login
+2026-04-27 00:49:18 [main] WARN  stepdefinitions.US033_LoginSteps - ⏱️ Page load timeout - sayfa yuklemesi durduruldu: timeout: Timed out receiving message from renderer: 26.893
+  (Session info: chrome=147.0.7727.116)
+Build info: version: '4.14.0', revision: 'e5a96349ce'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.10'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [a78d32f98b395d73af172c41b08fef60, get {url=https://qa.instulearn.com/login}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 147.0.7727.116, chrome: {chromedriverVersion: 147.0.7727.117 (474cc805edd..., userDataDir: C:\Users\Pc\AppData\Local\T...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:56729}, goog:processID: 8716, networkConnectionEnabled: false, pageLoadStrategy: eager, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:56729/devtoo..., se:cdpVersion: 147.0.7727.116, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: a78d32f98b395d73af172c41b08fef60
+2026-04-27 00:49:20 [main] INFO  stepdefinitions.US033_LoginSteps - 🔐 Guvenli login basliyor - mail: huseyin.ozger.teacher@instulearn.com
+2026-04-27 00:49:20 [main] WARN  stepdefinitions.US033_LoginSteps - Submit click hatasi, Enter ile deneniyor: element not interactable: element has zero size
+  (Session info: chrome=147.0.7727.116)
+Build info: version: '4.14.0', revision: 'e5a96349ce'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.10'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [a78d32f98b395d73af172c41b08fef60, clickElement {id=f.5809DBE7C85ADF8D4F2DF82FC9217505.d.1C08C6BD643DCEC8BB8513DBDD1F2DBE.e.29}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 147.0.7727.116, chrome: {chromedriverVersion: 147.0.7727.117 (474cc805edd..., userDataDir: C:\Users\Pc\AppData\Local\T...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:56729}, goog:processID: 8716, networkConnectionEnabled: false, pageLoadStrategy: eager, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:56729/devtoo..., se:cdpVersion: 147.0.7727.116, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (a78d32f98b395d73af172c41b08fef60)] -> xpath: //button[@class='btn btn-primary btn-block mt-20'] | //button[@type='submit']]
+Session ID: a78d32f98b395d73af172c41b08fef60
+2026-04-27 00:49:54 [main] INFO  stepdefinitions.US033_LoginSteps - ✅ Guvenli login tamamlandi
+2026-04-27 00:50:15 [main] ERROR utils.LoggerHelper - Test başarısız oldu: TC04 - Secilen kurslarin ders adi, instructor, tarih ve fiyat bilgileri gorunur olmalidir
+2026-04-27 00:50:15 [main] INFO  utils.LoggerHelper - Driver kapatıldı.
+2026-04-27 00:50:15 [main] INFO  utils.LoggerHelper - Test Başlıyor: TC05 - Istenen kurs secildiginde kurs detay sayfasina yonlendirme yapilmali
+2026-04-27 00:50:16 [main] INFO  utils.LoggerHelper - Driver başlatıldı
+2026-04-27 00:50:16 [main] INFO  stepdefinitions.US033_LoginSteps - 🌏 Login sayfasina guvenli gidiliyor: https://qa.instulearn.com/login
+2026-04-27 00:50:46 [main] WARN  stepdefinitions.US033_LoginSteps - ⏱️ Page load timeout - sayfa yuklemesi durduruldu: timeout: Timed out receiving message from renderer: 26.776
+  (Session info: chrome=147.0.7727.116)
+Build info: version: '4.14.0', revision: 'e5a96349ce'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.10'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [9495bd3c6ced1e93a5c7d37430e9d602, get {url=https://qa.instulearn.com/login}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 147.0.7727.116, chrome: {chromedriverVersion: 147.0.7727.117 (474cc805edd..., userDataDir: C:\Users\Pc\AppData\Local\T...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:56811}, goog:processID: 20128, networkConnectionEnabled: false, pageLoadStrategy: eager, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:56811/devtoo..., se:cdpVersion: 147.0.7727.116, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 9495bd3c6ced1e93a5c7d37430e9d602
+2026-04-27 00:50:48 [main] INFO  stepdefinitions.US033_LoginSteps - 🔐 Guvenli login basliyor - mail: huseyin.ozger.teacher@instulearn.com
+2026-04-27 00:50:48 [main] WARN  stepdefinitions.US033_LoginSteps - Submit click hatasi, Enter ile deneniyor: element not interactable: element has zero size
+  (Session info: chrome=147.0.7727.116)
+Build info: version: '4.14.0', revision: 'e5a96349ce'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.10'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [9495bd3c6ced1e93a5c7d37430e9d602, clickElement {id=f.6CFA6C607678ADF9C1B0543AD029E076.d.04611B17FA77F5E3335F29CD48DB52D2.e.25}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 147.0.7727.116, chrome: {chromedriverVersion: 147.0.7727.117 (474cc805edd..., userDataDir: C:\Users\Pc\AppData\Local\T...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:56811}, goog:processID: 20128, networkConnectionEnabled: false, pageLoadStrategy: eager, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:56811/devtoo..., se:cdpVersion: 147.0.7727.116, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (9495bd3c6ced1e93a5c7d37430e9d602)] -> xpath: //button[@class='btn btn-primary btn-block mt-20'] | //button[@type='submit']]
+Session ID: 9495bd3c6ced1e93a5c7d37430e9d602
+2026-04-27 00:51:26 [main] INFO  runners.TestRunner - Cucumber Test Runner başlatılıyor...
+2026-04-27 00:51:27 [main] INFO  utils.LoggerHelper - Test Başlıyor: TC01 - Ana sayfada Courses linki gorunur ve aktif olmali, tiklandiginda Courses sayfasi acilmali
+2026-04-27 00:51:28 [main] INFO  utils.LoggerHelper - Driver başlatıldı
+2026-04-27 00:51:28 [main] INFO  stepdefinitions.US033_LoginSteps - 🌏 Login sayfasina guvenli gidiliyor: https://qa.instulearn.com/login
+2026-04-27 00:51:59 [main] WARN  stepdefinitions.US033_LoginSteps - ⏱️ Page load timeout - sayfa yuklemesi durduruldu: timeout: Timed out receiving message from renderer: 27.158
+  (Session info: chrome=147.0.7727.116)
+Build info: version: '4.14.0', revision: 'e5a96349ce'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.10'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [9b3b8573349bebe835a830a5a6ad6316, get {url=https://qa.instulearn.com/login}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 147.0.7727.116, chrome: {chromedriverVersion: 147.0.7727.117 (474cc805edd..., userDataDir: C:\Users\Pc\AppData\Local\T...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:56904}, goog:processID: 3640, networkConnectionEnabled: false, pageLoadStrategy: eager, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:56904/devtoo..., se:cdpVersion: 147.0.7727.116, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 9b3b8573349bebe835a830a5a6ad6316
+2026-04-27 00:52:01 [main] INFO  stepdefinitions.US033_LoginSteps - 🔐 Guvenli login basliyor - mail: huseyin.ozger.teacher@instulearn.com
+2026-04-27 00:52:01 [main] WARN  stepdefinitions.US033_LoginSteps - Submit click hatasi, Enter ile deneniyor: element not interactable: element has zero size
+  (Session info: chrome=147.0.7727.116)
+Build info: version: '4.14.0', revision: 'e5a96349ce'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.10'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [9b3b8573349bebe835a830a5a6ad6316, clickElement {id=f.A3D6DFA7702F78C8BF96BE0F69605CDA.d.65B4225E98C66958AF63D99D16B32D68.e.23}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 147.0.7727.116, chrome: {chromedriverVersion: 147.0.7727.117 (474cc805edd..., userDataDir: C:\Users\Pc\AppData\Local\T...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:56904}, goog:processID: 3640, networkConnectionEnabled: false, pageLoadStrategy: eager, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:56904/devtoo..., se:cdpVersion: 147.0.7727.116, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (9b3b8573349bebe835a830a5a6ad6316)] -> xpath: //button[@class='btn btn-primary btn-block mt-20'] | //button[@type='submit']]
+Session ID: 9b3b8573349bebe835a830a5a6ad6316
+2026-04-27 00:52:34 [main] INFO  stepdefinitions.US033_LoginSteps - ✅ Guvenli login tamamlandi
+2026-04-27 00:52:38 [main] ERROR utils.LoggerHelper - Test başarısız oldu: TC01 - Ana sayfada Courses linki gorunur ve aktif olmali, tiklandiginda Courses sayfasi acilmali
+2026-04-27 00:52:38 [main] INFO  utils.LoggerHelper - Driver kapatıldı.
+2026-04-27 00:52:38 [main] INFO  utils.LoggerHelper - Test Başlıyor: TC02 - Courses sayfasinda Search textbox ve Search buton gorunur ve aktif olmali
+2026-04-27 00:52:39 [main] INFO  utils.LoggerHelper - Driver başlatıldı
+2026-04-27 00:52:39 [main] INFO  stepdefinitions.US033_LoginSteps - 🌏 Login sayfasina guvenli gidiliyor: https://qa.instulearn.com/login
+2026-04-27 00:53:09 [main] WARN  stepdefinitions.US033_LoginSteps - ⏱️ Page load timeout - sayfa yuklemesi durduruldu: timeout: Timed out receiving message from renderer: 26.909
+  (Session info: chrome=147.0.7727.116)
+Build info: version: '4.14.0', revision: 'e5a96349ce'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.10'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [e488b717500d9b48f41ae68fe7c6bfcd, get {url=https://qa.instulearn.com/login}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 147.0.7727.116, chrome: {chromedriverVersion: 147.0.7727.117 (474cc805edd..., userDataDir: C:\Users\Pc\AppData\Local\T...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:56983}, goog:processID: 22784, networkConnectionEnabled: false, pageLoadStrategy: eager, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:56983/devtoo..., se:cdpVersion: 147.0.7727.116, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: e488b717500d9b48f41ae68fe7c6bfcd
+2026-04-27 00:53:11 [main] INFO  stepdefinitions.US033_LoginSteps - 🔐 Guvenli login basliyor - mail: huseyin.ozger.teacher@instulearn.com
+2026-04-27 00:53:12 [main] WARN  stepdefinitions.US033_LoginSteps - Submit click hatasi, Enter ile deneniyor: element not interactable: element has zero size
+  (Session info: chrome=147.0.7727.116)
+Build info: version: '4.14.0', revision: 'e5a96349ce'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.10'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [e488b717500d9b48f41ae68fe7c6bfcd, clickElement {id=f.CC0FFF744CBCE3DA81AADA2822257E47.d.D846ABF16D0246749A60D29DFFFAFC76.e.31}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 147.0.7727.116, chrome: {chromedriverVersion: 147.0.7727.117 (474cc805edd..., userDataDir: C:\Users\Pc\AppData\Local\T...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:56983}, goog:processID: 22784, networkConnectionEnabled: false, pageLoadStrategy: eager, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:56983/devtoo..., se:cdpVersion: 147.0.7727.116, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (e488b717500d9b48f41ae68fe7c6bfcd)] -> xpath: //button[@class='btn btn-primary btn-block mt-20'] | //button[@type='submit']]
+Session ID: e488b717500d9b48f41ae68fe7c6bfcd
+2026-04-27 00:53:45 [main] INFO  stepdefinitions.US033_LoginSteps - ✅ Guvenli login tamamlandi
+2026-04-27 00:53:49 [main] INFO  utils.LoggerHelper - Test başarıyla tamamlandı: TC02 - Courses sayfasinda Search textbox ve Search buton gorunur ve aktif olmali
+2026-04-27 00:53:49 [main] INFO  utils.LoggerHelper - Driver kapatıldı.
+2026-04-27 00:53:49 [main] INFO  utils.LoggerHelper - Test Başlıyor: TC03 - Kurs secmeden once filtreleme/siralama islemi yapilabilmelidir
+2026-04-27 00:53:50 [main] INFO  utils.LoggerHelper - Driver başlatıldı
+2026-04-27 00:53:50 [main] INFO  stepdefinitions.US033_LoginSteps - 🌏 Login sayfasina guvenli gidiliyor: https://qa.instulearn.com/login
+2026-04-27 00:54:20 [main] WARN  stepdefinitions.US033_LoginSteps - ⏱️ Page load timeout - sayfa yuklemesi durduruldu: timeout: Timed out receiving message from renderer: 26.549
+  (Session info: chrome=147.0.7727.116)
+Build info: version: '4.14.0', revision: 'e5a96349ce'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.10'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [3c2c6f57c38812d8c918620c286e77d8, get {url=https://qa.instulearn.com/login}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 147.0.7727.116, chrome: {chromedriverVersion: 147.0.7727.117 (474cc805edd..., userDataDir: C:\Users\Pc\AppData\Local\T...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:57065}, goog:processID: 14392, networkConnectionEnabled: false, pageLoadStrategy: eager, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:57065/devtoo..., se:cdpVersion: 147.0.7727.116, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 3c2c6f57c38812d8c918620c286e77d8
+2026-04-27 00:54:22 [main] INFO  stepdefinitions.US033_LoginSteps - 🔐 Guvenli login basliyor - mail: huseyin.ozger.teacher@instulearn.com
+2026-04-27 00:54:22 [main] WARN  stepdefinitions.US033_LoginSteps - Submit click hatasi, Enter ile deneniyor: element not interactable: element has zero size
+  (Session info: chrome=147.0.7727.116)
+Build info: version: '4.14.0', revision: 'e5a96349ce'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.10'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [3c2c6f57c38812d8c918620c286e77d8, clickElement {id=f.36FAF1122D5CC97702E5C7582676D920.d.1AACDD7D7E46E4105D4EE67347AB90A4.e.27}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 147.0.7727.116, chrome: {chromedriverVersion: 147.0.7727.117 (474cc805edd..., userDataDir: C:\Users\Pc\AppData\Local\T...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:57065}, goog:processID: 14392, networkConnectionEnabled: false, pageLoadStrategy: eager, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:57065/devtoo..., se:cdpVersion: 147.0.7727.116, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (3c2c6f57c38812d8c918620c286e77d8)] -> xpath: //button[@class='btn btn-primary btn-block mt-20'] | //button[@type='submit']]
+Session ID: 3c2c6f57c38812d8c918620c286e77d8
+2026-04-27 00:54:52 [main] ERROR stepdefinitions.US033_LoginSteps - ❌ Login sirasinda hata: timeout: Timed out receiving message from renderer: 30.000
+  (Session info: chrome=147.0.7727.116)
+Build info: version: '4.14.0', revision: 'e5a96349ce'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.10'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [3c2c6f57c38812d8c918620c286e77d8, sendKeysToElement {id=f.36FAF1122D5CC97702E5C7582676D920.d.1AACDD7D7E46E4105D4EE67347AB90A4.e.21, value=[Ljava.lang.CharSequence;@472c9f88}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 147.0.7727.116, chrome: {chromedriverVersion: 147.0.7727.117 (474cc805edd..., userDataDir: C:\Users\Pc\AppData\Local\T...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:57065}, goog:processID: 14392, networkConnectionEnabled: false, pageLoadStrategy: eager, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:57065/devtoo..., se:cdpVersion: 147.0.7727.116, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (3c2c6f57c38812d8c918620c286e77d8)] -> id: password]
+Session ID: 3c2c6f57c38812d8c918620c286e77d8
+2026-04-27 00:54:52 [main] ERROR utils.LoggerHelper - Test başarısız oldu: TC03 - Kurs secmeden once filtreleme/siralama islemi yapilabilmelidir
+2026-04-27 00:54:53 [main] INFO  utils.LoggerHelper - Driver kapatıldı.
+2026-04-27 00:54:53 [main] INFO  utils.LoggerHelper - Test Başlıyor: TC04 - Secilen kurslarin ders adi, instructor, tarih ve fiyat bilgileri gorunur olmalidir
+2026-04-27 00:54:54 [main] INFO  utils.LoggerHelper - Driver başlatıldı
+2026-04-27 00:54:54 [main] INFO  stepdefinitions.US033_LoginSteps - 🌏 Login sayfasina guvenli gidiliyor: https://qa.instulearn.com/login
+2026-04-27 00:55:24 [main] WARN  stepdefinitions.US033_LoginSteps - ⏱️ Page load timeout - sayfa yuklemesi durduruldu: timeout: Timed out receiving message from renderer: 27.062
+  (Session info: chrome=147.0.7727.116)
+Build info: version: '4.14.0', revision: 'e5a96349ce'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.10'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [62d023bc457734a7cbec253f32b98c6c, get {url=https://qa.instulearn.com/login}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 147.0.7727.116, chrome: {chromedriverVersion: 147.0.7727.117 (474cc805edd..., userDataDir: C:\Users\Pc\AppData\Local\T...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:57138}, goog:processID: 7484, networkConnectionEnabled: false, pageLoadStrategy: eager, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:57138/devtoo..., se:cdpVersion: 147.0.7727.116, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 62d023bc457734a7cbec253f32b98c6c
+2026-04-27 00:55:26 [main] INFO  stepdefinitions.US033_LoginSteps - 🔐 Guvenli login basliyor - mail: huseyin.ozger.teacher@instulearn.com
+2026-04-27 00:55:26 [main] WARN  stepdefinitions.US033_LoginSteps - Submit click hatasi, Enter ile deneniyor: element not interactable: element has zero size
+  (Session info: chrome=147.0.7727.116)
+Build info: version: '4.14.0', revision: 'e5a96349ce'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.10'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [62d023bc457734a7cbec253f32b98c6c, clickElement {id=f.F0D21E4584DD6098BA92464E90197D34.d.9F22655164DEC3744D2932E42C0C32A5.e.28}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 147.0.7727.116, chrome: {chromedriverVersion: 147.0.7727.117 (474cc805edd..., userDataDir: C:\Users\Pc\AppData\Local\T...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:57138}, goog:processID: 7484, networkConnectionEnabled: false, pageLoadStrategy: eager, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:57138/devtoo..., se:cdpVersion: 147.0.7727.116, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (62d023bc457734a7cbec253f32b98c6c)] -> xpath: //button[@class='btn btn-primary btn-block mt-20'] | //button[@type='submit']]
+Session ID: 62d023bc457734a7cbec253f32b98c6c
+2026-04-27 00:55:31 [main] INFO  stepdefinitions.US033_LoginSteps - ✅ Guvenli login tamamlandi
+2026-04-27 00:55:52 [main] ERROR utils.LoggerHelper - Test başarısız oldu: TC04 - Secilen kurslarin ders adi, instructor, tarih ve fiyat bilgileri gorunur olmalidir
+2026-04-27 00:55:52 [main] INFO  utils.LoggerHelper - Driver kapatıldı.
+2026-04-27 00:55:52 [main] INFO  utils.LoggerHelper - Test Başlıyor: TC05 - Istenen kurs secildiginde kurs detay sayfasina yonlendirme yapilmali
+2026-04-27 00:55:53 [main] INFO  utils.LoggerHelper - Driver başlatıldı
+2026-04-27 00:55:53 [main] INFO  stepdefinitions.US033_LoginSteps - 🌏 Login sayfasina guvenli gidiliyor: https://qa.instulearn.com/login
+2026-04-27 00:55:59 [main] INFO  stepdefinitions.US033_LoginSteps - 🔐 Guvenli login basliyor - mail: huseyin.ozger.teacher@instulearn.com
+2026-04-27 00:56:03 [main] INFO  stepdefinitions.US033_LoginSteps - ✅ Guvenli login tamamlandi
+2026-04-27 00:56:27 [main] ERROR utils.LoggerHelper - Test başarısız oldu: TC05 - Istenen kurs secildiginde kurs detay sayfasina yonlendirme yapilmali
+2026-04-27 00:56:27 [main] INFO  utils.LoggerHelper - Driver kapatıldı.
+2026-04-27 00:56:27 [main] INFO  utils.LoggerHelper - Test Başlıyor: TC06 - Kurs ile ilgili yorum yapilabilmeli
+2026-04-27 00:56:28 [main] INFO  utils.LoggerHelper - Driver başlatıldı
+2026-04-27 00:56:28 [main] INFO  stepdefinitions.US033_LoginSteps - 🌏 Login sayfasina guvenli gidiliyor: https://qa.instulearn.com/login
+2026-04-27 00:56:58 [main] WARN  stepdefinitions.US033_LoginSteps - ⏱️ Page load timeout - sayfa yuklemesi durduruldu: timeout: Timed out receiving message from renderer: 27.155
+  (Session info: chrome=147.0.7727.116)
+Build info: version: '4.14.0', revision: 'e5a96349ce'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.10'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [91ec45a055c810254d24936bbf67ffb3, get {url=https://qa.instulearn.com/login}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 147.0.7727.116, chrome: {chromedriverVersion: 147.0.7727.117 (474cc805edd..., userDataDir: C:\Users\Pc\AppData\Local\T...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:57267}, goog:processID: 16628, networkConnectionEnabled: false, pageLoadStrategy: eager, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:57267/devtoo..., se:cdpVersion: 147.0.7727.116, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 91ec45a055c810254d24936bbf67ffb3
+2026-04-27 00:57:00 [main] INFO  stepdefinitions.US033_LoginSteps - 🔐 Guvenli login basliyor - mail: huseyin.ozger.teacher@instulearn.com
+2026-04-27 00:57:00 [main] WARN  stepdefinitions.US033_LoginSteps - Submit click hatasi, Enter ile deneniyor: element not interactable: element has zero size
+  (Session info: chrome=147.0.7727.116)
+Build info: version: '4.14.0', revision: 'e5a96349ce'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.10'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [91ec45a055c810254d24936bbf67ffb3, clickElement {id=f.DBCC6EFA44EDD403D9ED6F716C103B29.d.25AA1CFD6594D8E9F3B770AC560490EB.e.27}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 147.0.7727.116, chrome: {chromedriverVersion: 147.0.7727.117 (474cc805edd..., userDataDir: C:\Users\Pc\AppData\Local\T...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:57267}, goog:processID: 16628, networkConnectionEnabled: false, pageLoadStrategy: eager, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:57267/devtoo..., se:cdpVersion: 147.0.7727.116, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (91ec45a055c810254d24936bbf67ffb3)] -> xpath: //button[@class='btn btn-primary btn-block mt-20'] | //button[@type='submit']]
+Session ID: 91ec45a055c810254d24936bbf67ffb3
+2026-04-27 00:57:46 [main] INFO  utils.LoggerHelper - Test Başlıyor: TC01 - Ana sayfada Courses linki gorunur ve aktif olmali, tiklandiginda Courses sayfasi acilmali
+2026-04-27 00:57:47 [main] INFO  utils.LoggerHelper - Driver başlatıldı
+2026-04-27 00:57:47 [main] INFO  stepdefinitions.US033_LoginSteps - 🌏 Login sayfasina guvenli gidiliyor: https://qa.instulearn.com/login
+2026-04-27 00:58:38 [main] INFO  utils.LoggerHelper - Test Başlıyor: TC01 - Ana sayfada Courses linki gorunur ve aktif olmali, tiklandiginda Courses sayfasi acilmali
+2026-04-27 00:58:39 [main] INFO  utils.LoggerHelper - Driver başlatıldı
+2026-04-27 00:58:39 [main] INFO  stepdefinitions.US033_LoginSteps - 🌏 Login sayfasina guvenli gidiliyor: https://qa.instulearn.com/login
+2026-04-27 00:58:45 [main] INFO  stepdefinitions.US033_LoginSteps - 🔐 Guvenli login basliyor - mail: huseyin.ozger.teacher@instulearn.com
+2026-04-27 00:58:50 [main] INFO  stepdefinitions.US033_LoginSteps - ✅ Guvenli login tamamlandi
+2026-04-27 00:58:55 [main] ERROR utils.LoggerHelper - Test başarısız oldu: TC01 - Ana sayfada Courses linki gorunur ve aktif olmali, tiklandiginda Courses sayfasi acilmali
+2026-04-27 00:58:55 [main] INFO  utils.LoggerHelper - Driver kapatıldı.
+2026-04-27 01:14:46 [main] INFO  runners.TestRunner - Cucumber Test Runner başlatılıyor...
+2026-04-27 01:14:47 [main] INFO  utils.LoggerHelper - Test Başlıyor: TC01 Anasayfada 'Courses' linki görünür ve aktif olmalı
+2026-04-27 01:14:48 [main] INFO  utils.LoggerHelper - Driver başlatıldı
+2026-04-27 01:14:48 [main] INFO  stepdefinitions.US033_LoginSteps - 🌏 Login sayfasina guvenli gidiliyor: https://qa.instulearn.com/login
+2026-04-27 01:15:18 [main] WARN  stepdefinitions.US033_LoginSteps - ⏱️ Page load timeout - sayfa yuklemesi durduruldu: timeout: Timed out receiving message from renderer: 27.172
+  (Session info: chrome=147.0.7727.116)
+Build info: version: '4.14.0', revision: 'e5a96349ce'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.10'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [787a4d45a6add5034d649ec36fb172d4, get {url=https://qa.instulearn.com/login}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 147.0.7727.116, chrome: {chromedriverVersion: 147.0.7727.117 (474cc805edd..., userDataDir: C:\Users\Pc\AppData\Local\T...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:57953}, goog:processID: 9496, networkConnectionEnabled: false, pageLoadStrategy: eager, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:57953/devtoo..., se:cdpVersion: 147.0.7727.116, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 787a4d45a6add5034d649ec36fb172d4
+2026-04-27 01:15:19 [main] INFO  stepdefinitions.US033_LoginSteps - 🔐 Guvenli login basliyor - mail: huseyin.ozger.teacher@instulearn.com
+2026-04-27 01:15:20 [main] WARN  stepdefinitions.US033_LoginSteps - Submit click hatasi, Enter ile deneniyor: element not interactable: element has zero size
+  (Session info: chrome=147.0.7727.116)
+Build info: version: '4.14.0', revision: 'e5a96349ce'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.10'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [787a4d45a6add5034d649ec36fb172d4, clickElement {id=f.E47563E7FDBB03A6D634508A11B3AA8E.d.23448434867AD92B0BF8F46DB2A62568.e.30}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 147.0.7727.116, chrome: {chromedriverVersion: 147.0.7727.117 (474cc805edd..., userDataDir: C:\Users\Pc\AppData\Local\T...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:57953}, goog:processID: 9496, networkConnectionEnabled: false, pageLoadStrategy: eager, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:57953/devtoo..., se:cdpVersion: 147.0.7727.116, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (787a4d45a6add5034d649ec36fb172d4)] -> xpath: //button[@class='btn btn-primary btn-block mt-20'] | //button[@type='submit']]
+Session ID: 787a4d45a6add5034d649ec36fb172d4
+2026-04-27 01:15:50 [main] ERROR stepdefinitions.US033_LoginSteps - ❌ Login sirasinda hata: timeout: Timed out receiving message from renderer: 30.000
+  (Session info: chrome=147.0.7727.116)
+Build info: version: '4.14.0', revision: 'e5a96349ce'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.10'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [787a4d45a6add5034d649ec36fb172d4, sendKeysToElement {id=f.E47563E7FDBB03A6D634508A11B3AA8E.d.23448434867AD92B0BF8F46DB2A62568.e.24, value=[Ljava.lang.CharSequence;@74c9e11}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 147.0.7727.116, chrome: {chromedriverVersion: 147.0.7727.117 (474cc805edd..., userDataDir: C:\Users\Pc\AppData\Local\T...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:57953}, goog:processID: 9496, networkConnectionEnabled: false, pageLoadStrategy: eager, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:57953/devtoo..., se:cdpVersion: 147.0.7727.116, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (787a4d45a6add5034d649ec36fb172d4)] -> id: password]
+Session ID: 787a4d45a6add5034d649ec36fb172d4
+2026-04-27 01:15:50 [main] ERROR utils.LoggerHelper - Test başarısız oldu: TC01 Anasayfada 'Courses' linki görünür ve aktif olmalı
+2026-04-27 01:15:50 [main] INFO  utils.LoggerHelper - Driver kapatıldı.
+2026-04-27 01:17:48 [main] INFO  utils.LoggerHelper - Test Başlıyor: TC01 Anasayfada 'Courses' linki görünür ve aktif olmalı
+2026-04-27 01:17:49 [main] INFO  utils.LoggerHelper - Driver başlatıldı
+2026-04-27 01:17:49 [main] INFO  stepdefinitions.US033_LoginSteps - 🌏 Login sayfasina guvenli gidiliyor: https://qa.instulearn.com/login
+2026-04-27 01:18:18 [main] INFO  stepdefinitions.US033_LoginSteps - 🔐 Guvenli login basliyor - mail: huseyin.ozger.teacher@instulearn.com
+2026-04-27 01:18:23 [main] INFO  utils.LoggerHelper - Test Başlıyor: TC01 Anasayfada 'Courses' linki görünür ve aktif olmalı
+2026-04-27 01:18:24 [main] INFO  utils.LoggerHelper - Driver başlatıldı
+2026-04-27 01:18:24 [main] INFO  stepdefinitions.US033_LoginSteps - 🌏 Login sayfasina guvenli gidiliyor: https://qa.instulearn.com/login
+2026-04-27 01:18:30 [main] INFO  stepdefinitions.US033_LoginSteps - 🔐 Guvenli login basliyor - mail: huseyin.ozger.teacher@instulearn.com
+2026-04-27 01:18:34 [main] INFO  stepdefinitions.US033_LoginSteps - ✅ Guvenli login tamamlandi
+2026-04-27 01:18:40 [main] INFO  utils.LoggerHelper - coursesTitle - isDisplayed: true
+2026-04-27 01:18:44 [main] INFO  utils.LoggerHelper - Test başarıyla tamamlandı: TC01 Anasayfada 'Courses' linki görünür ve aktif olmalı
+2026-04-27 01:18:44 [main] INFO  utils.LoggerHelper - Driver kapatıldı.
+2026-04-27 01:20:13 [main] INFO  runners.TestRunner - Cucumber Test Runner başlatılıyor...
+2026-04-27 01:20:13 [main] INFO  utils.LoggerHelper - Test Başlıyor: TC01 - Ana sayfada Courses linki gorunur ve aktif olmali, tiklandiginda Courses sayfasi acilmali
+2026-04-27 01:20:15 [main] INFO  utils.LoggerHelper - Driver başlatıldı
+2026-04-27 01:20:15 [main] INFO  stepdefinitions.US033_LoginSteps - 🌏 Login sayfasina guvenli gidiliyor: https://qa.instulearn.com/login
+2026-04-27 01:20:46 [main] INFO  runners.TestRunner - Cucumber Test Runner başlatılıyor...
+2026-04-27 01:20:46 [main] INFO  utils.LoggerHelper - Test Başlıyor: TC01 - Ana sayfada Courses linki gorunur ve aktif olmali, tiklandiginda Courses sayfasi acilmali
+2026-04-27 01:20:48 [main] INFO  utils.LoggerHelper - Driver başlatıldı
+2026-04-27 01:20:48 [main] INFO  stepdefinitions.US033_LoginSteps - 🌏 Login sayfasina guvenli gidiliyor: https://qa.instulearn.com/login
+2026-04-27 01:20:54 [main] INFO  stepdefinitions.US033_LoginSteps - 🔐 Guvenli login basliyor - mail: huseyin.ozger.teacher@instulearn.com
+2026-04-27 01:20:57 [main] INFO  stepdefinitions.US033_LoginSteps - ✅ Guvenli login tamamlandi
+2026-04-27 01:21:18 [main] ERROR utils.LoggerHelper - Test başarısız oldu: TC01 - Ana sayfada Courses linki gorunur ve aktif olmali, tiklandiginda Courses sayfasi acilmali
+2026-04-27 01:21:18 [main] INFO  utils.LoggerHelper - Driver kapatıldı.
+2026-04-27 01:21:18 [main] INFO  utils.LoggerHelper - Test Başlıyor: TC02 - Courses sayfasinda Search textbox ve Search buton gorunur ve aktif olmali
+2026-04-27 01:21:19 [main] INFO  utils.LoggerHelper - Driver başlatıldı
+2026-04-27 01:21:19 [main] INFO  stepdefinitions.US033_LoginSteps - 🌏 Login sayfasina guvenli gidiliyor: https://qa.instulearn.com/login
+2026-04-27 01:21:49 [main] WARN  stepdefinitions.US033_LoginSteps - ⏱️ Page load timeout - sayfa yuklemesi durduruldu: timeout: Timed out receiving message from renderer: 26.447
+  (Session info: chrome=147.0.7727.116)
+Build info: version: '4.14.0', revision: 'e5a96349ce'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.10'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [767b392d4b09a9b6645fab68d028c540, get {url=https://qa.instulearn.com/login}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 147.0.7727.116, chrome: {chromedriverVersion: 147.0.7727.117 (474cc805edd..., userDataDir: C:\Users\Pc\AppData\Local\T...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:58344}, goog:processID: 22508, networkConnectionEnabled: false, pageLoadStrategy: eager, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:58344/devtoo..., se:cdpVersion: 147.0.7727.116, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 767b392d4b09a9b6645fab68d028c540
+2026-04-27 01:21:51 [main] INFO  stepdefinitions.US033_LoginSteps - 🔐 Guvenli login basliyor - mail: huseyin.ozger.teacher@instulearn.com
+2026-04-27 01:21:51 [main] WARN  stepdefinitions.US033_LoginSteps - Submit click hatasi, Enter ile deneniyor: element not interactable: element has zero size
+  (Session info: chrome=147.0.7727.116)
+Build info: version: '4.14.0', revision: 'e5a96349ce'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.10'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [767b392d4b09a9b6645fab68d028c540, clickElement {id=f.C8F5DC53DFDFF9478C8485013ABBC30D.d.D485A87132EE08EA0E86E7F5374D30AF.e.28}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 147.0.7727.116, chrome: {chromedriverVersion: 147.0.7727.117 (474cc805edd..., userDataDir: C:\Users\Pc\AppData\Local\T...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:58344}, goog:processID: 22508, networkConnectionEnabled: false, pageLoadStrategy: eager, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:58344/devtoo..., se:cdpVersion: 147.0.7727.116, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (767b392d4b09a9b6645fab68d028c540)] -> xpath: //button[@class='btn btn-primary btn-block mt-20'] | //button[@type='submit']]
+Session ID: 767b392d4b09a9b6645fab68d028c540
+2026-04-27 01:22:21 [main] ERROR stepdefinitions.US033_LoginSteps - ❌ Login sirasinda hata: timeout: Timed out receiving message from renderer: 30.000
+  (Session info: chrome=147.0.7727.116)
+Build info: version: '4.14.0', revision: 'e5a96349ce'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.10'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [767b392d4b09a9b6645fab68d028c540, sendKeysToElement {id=f.C8F5DC53DFDFF9478C8485013ABBC30D.d.D485A87132EE08EA0E86E7F5374D30AF.e.22, value=[Ljava.lang.CharSequence;@7c0df4ab}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 147.0.7727.116, chrome: {chromedriverVersion: 147.0.7727.117 (474cc805edd..., userDataDir: C:\Users\Pc\AppData\Local\T...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:58344}, goog:processID: 22508, networkConnectionEnabled: false, pageLoadStrategy: eager, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:58344/devtoo..., se:cdpVersion: 147.0.7727.116, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (767b392d4b09a9b6645fab68d028c540)] -> id: password]
+Session ID: 767b392d4b09a9b6645fab68d028c540
+2026-04-27 01:22:21 [main] ERROR utils.LoggerHelper - Test başarısız oldu: TC02 - Courses sayfasinda Search textbox ve Search buton gorunur ve aktif olmali
+2026-04-27 01:22:21 [main] INFO  utils.LoggerHelper - Driver kapatıldı.
+2026-04-27 01:22:21 [main] INFO  utils.LoggerHelper - Test Başlıyor: TC03 - Kurs secmeden once filtreleme/siralama islemi yapilabilmelidir
+2026-04-27 01:22:22 [main] INFO  utils.LoggerHelper - Driver başlatıldı
+2026-04-27 01:22:22 [main] INFO  stepdefinitions.US033_LoginSteps - 🌏 Login sayfasina guvenli gidiliyor: https://qa.instulearn.com/login
+2026-04-27 01:22:52 [main] WARN  stepdefinitions.US033_LoginSteps - ⏱️ Page load timeout - sayfa yuklemesi durduruldu: timeout: Timed out receiving message from renderer: 27.169
+  (Session info: chrome=147.0.7727.116)
+Build info: version: '4.14.0', revision: 'e5a96349ce'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.10'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [e1eb555601bf5303bbd2a721c2ad1e91, get {url=https://qa.instulearn.com/login}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 147.0.7727.116, chrome: {chromedriverVersion: 147.0.7727.117 (474cc805edd..., userDataDir: C:\Users\Pc\AppData\Local\T...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:58416}, goog:processID: 9544, networkConnectionEnabled: false, pageLoadStrategy: eager, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:58416/devtoo..., se:cdpVersion: 147.0.7727.116, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: e1eb555601bf5303bbd2a721c2ad1e91
+2026-04-27 01:22:54 [main] INFO  stepdefinitions.US033_LoginSteps - 🔐 Guvenli login basliyor - mail: huseyin.ozger.teacher@instulearn.com
+2026-04-27 01:22:54 [main] WARN  stepdefinitions.US033_LoginSteps - Submit click hatasi, Enter ile deneniyor: element not interactable: element has zero size
+  (Session info: chrome=147.0.7727.116)
+Build info: version: '4.14.0', revision: 'e5a96349ce'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.10'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [e1eb555601bf5303bbd2a721c2ad1e91, clickElement {id=f.4A1FF20790759E192877B5B83933C6BA.d.28AD7609A7EAE8D2E5327B41F52D3078.e.21}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 147.0.7727.116, chrome: {chromedriverVersion: 147.0.7727.117 (474cc805edd..., userDataDir: C:\Users\Pc\AppData\Local\T...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:58416}, goog:processID: 9544, networkConnectionEnabled: false, pageLoadStrategy: eager, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:58416/devtoo..., se:cdpVersion: 147.0.7727.116, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (e1eb555601bf5303bbd2a721c2ad1e91)] -> xpath: //button[@class='btn btn-primary btn-block mt-20'] | //button[@type='submit']]
+Session ID: e1eb555601bf5303bbd2a721c2ad1e91
+2026-04-27 01:23:25 [main] INFO  utils.LoggerHelper - Test Başlıyor: TC01 - Ana sayfada Courses linki gorunur ve aktif olmali, tiklandiginda Courses sayfasi acilmali
+2026-04-27 01:23:26 [main] INFO  utils.LoggerHelper - Driver başlatıldı
+2026-04-27 01:23:26 [main] INFO  stepdefinitions.US033_LoginSteps - 🌏 Login sayfasina guvenli gidiliyor: https://qa.instulearn.com/login
+2026-04-27 01:23:54 [main] INFO  stepdefinitions.US033_LoginSteps - 🔐 Guvenli login basliyor - mail: huseyin.ozger.teacher@instulearn.com
+2026-04-27 01:24:17 [main] INFO  utils.LoggerHelper - Test Başlıyor: TC01 - Ana sayfada Courses linki gorunur ve aktif olmali, tiklandiginda Courses sayfasi acilmali
+2026-04-27 01:24:19 [main] INFO  utils.LoggerHelper - Driver başlatıldı
+2026-04-27 01:24:19 [main] INFO  stepdefinitions.US033_LoginSteps - 🌏 Login sayfasina guvenli gidiliyor: https://qa.instulearn.com/login
+2026-04-27 01:24:24 [main] INFO  stepdefinitions.US033_LoginSteps - 🔐 Guvenli login basliyor - mail: huseyin.ozger.teacher@instulearn.com
+2026-04-27 01:24:27 [main] INFO  stepdefinitions.US033_LoginSteps - ✅ Guvenli login tamamlandi
+2026-04-27 01:24:48 [main] ERROR utils.LoggerHelper - Test başarısız oldu: TC01 - Ana sayfada Courses linki gorunur ve aktif olmali, tiklandiginda Courses sayfasi acilmali
+2026-04-27 01:24:48 [main] INFO  utils.LoggerHelper - Driver kapatıldı.
+2026-04-27 21:31:14 [main] INFO  utils.LoggerHelper - Test Başlıyor: TC01 Anasayfada 'Courses' linki görünür ve aktif olmalı
+2026-04-27 21:31:20 [main] INFO  utils.LoggerHelper - Driver başlatıldı
+2026-04-27 21:31:20 [main] INFO  stepdefinitions.US033_LoginSteps - 🌏 Login sayfasina guvenli gidiliyor: https://qa.instulearn.com/login
+2026-04-27 21:31:50 [main] WARN  stepdefinitions.US033_LoginSteps - ⏱️ Page load timeout - sayfa yuklemesi durduruldu: timeout: Timed out receiving message from renderer: 25.228
+  (Session info: chrome=147.0.7727.116)
+Build info: version: '4.14.0', revision: 'e5a96349ce'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.10'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [c4667e23c333bb244d048bdb9e2a4952, get {url=https://qa.instulearn.com/login}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 147.0.7727.116, chrome: {chromedriverVersion: 147.0.7727.117 (474cc805edd..., userDataDir: C:\Users\Pc\AppData\Local\T...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:65223}, goog:processID: 19080, networkConnectionEnabled: false, pageLoadStrategy: eager, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:65223/devtoo..., se:cdpVersion: 147.0.7727.116, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: c4667e23c333bb244d048bdb9e2a4952
+2026-04-27 21:31:52 [main] INFO  stepdefinitions.US033_LoginSteps - 🔐 Guvenli login basliyor - mail: huseyin.ozger.teacher@instulearn.com
+2026-04-27 21:31:53 [main] WARN  stepdefinitions.US033_LoginSteps - Submit click hatasi, Enter ile deneniyor: element not interactable: element has zero size
+  (Session info: chrome=147.0.7727.116)
+Build info: version: '4.14.0', revision: 'e5a96349ce'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.10'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [c4667e23c333bb244d048bdb9e2a4952, clickElement {id=f.B7D2935D1504C57625BD544D14678910.d.6231681A640547FC876EA8168C98E28A.e.23}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 147.0.7727.116, chrome: {chromedriverVersion: 147.0.7727.117 (474cc805edd..., userDataDir: C:\Users\Pc\AppData\Local\T...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:65223}, goog:processID: 19080, networkConnectionEnabled: false, pageLoadStrategy: eager, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:65223/devtoo..., se:cdpVersion: 147.0.7727.116, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (c4667e23c333bb244d048bdb9e2a4952)] -> xpath: //button[@class='btn btn-primary btn-block mt-20'] | //button[@type='submit']]
+Session ID: c4667e23c333bb244d048bdb9e2a4952
+2026-04-27 21:32:23 [main] ERROR stepdefinitions.US033_LoginSteps - ❌ Login sirasinda hata: timeout: Timed out receiving message from renderer: 30.000
+  (Session info: chrome=147.0.7727.116)
+Build info: version: '4.14.0', revision: 'e5a96349ce'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.10'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [c4667e23c333bb244d048bdb9e2a4952, sendKeysToElement {id=f.B7D2935D1504C57625BD544D14678910.d.6231681A640547FC876EA8168C98E28A.e.17, value=[Ljava.lang.CharSequence;@708f018e}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 147.0.7727.116, chrome: {chromedriverVersion: 147.0.7727.117 (474cc805edd..., userDataDir: C:\Users\Pc\AppData\Local\T...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:65223}, goog:processID: 19080, networkConnectionEnabled: false, pageLoadStrategy: eager, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:65223/devtoo..., se:cdpVersion: 147.0.7727.116, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (c4667e23c333bb244d048bdb9e2a4952)] -> id: password]
+Session ID: c4667e23c333bb244d048bdb9e2a4952
+2026-04-27 21:32:23 [main] ERROR utils.LoggerHelper - Test başarısız oldu: TC01 Anasayfada 'Courses' linki görünür ve aktif olmalı
+2026-04-27 21:32:24 [main] INFO  utils.LoggerHelper - Driver kapatıldı.
